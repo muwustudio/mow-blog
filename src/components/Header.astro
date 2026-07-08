@@ -1,0 +1,44 @@
+---
+import { SITE, NAV, SOCIAL } from '../site.config';
+---
+<header class="site-header">
+  <a href="/" class="site-brand">
+    <div class="logo">🐑</div>
+    <span class="site-title">{SITE.title}</span>
+  </a>
+  <nav>
+    <ul class="site-nav">
+      {NAV.map(item => (
+        <li><a href={item.href} class:list={[{ 'nav-optional': item.label === '项目' || item.label === '关于' }]}>
+          <svg class="icon" style="width:0.95em;height:0.95em;margin-right:2px;"><use href={`#icon-${item.icon}`}/></svg>
+          {item.label}
+        </a></li>
+      ))}
+    </ul>
+  </nav>
+  <div class="search-wrapper" id="searchWrapper">
+    <div class="search-inner">
+      <span class="search-icon"><svg class="icon"><use href="#icon-search"/></svg></span>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." aria-label="搜索文章">
+      <button class="search-clear" id="searchClear" aria-label="清除搜索">×</button>
+    </div>
+  </div>
+  <div class="header-tools">
+    {SOCIAL.map(s => (
+      <a href={s.href} class="social-btn" title={s.label} aria-label={s.label}
+         target={s.icon === 'github' ? '_blank' : undefined} rel={s.icon === 'github' ? 'noopener' : undefined}>
+        <svg class="icon"><use href={`#icon-${s.icon}`}/></svg>
+      </a>
+    ))}
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题" title="切换日/夜主题">
+      <div class="toggle-track"></div>
+      <div class="toggle-thumb" id="toggleThumb">☀️</div>
+      <div class="stars">
+        <span class="star-dot" style="top:20%;left:30%;"></span>
+        <span class="star-dot" style="top:50%;left:60%;"></span>
+        <span class="star-dot" style="top:35%;left:75%;"></span>
+        <span class="star-dot" style="top:65%;left:20%;"></span>
+      </div>
+    </button>
+  </div>
+</header>

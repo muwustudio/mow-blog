@@ -1,0 +1,66 @@
+/* ============================================
+   标签云 + 信息卡片
+   ============================================ */
+.info-strip {
+  max-width: 820px; margin: 0 auto; padding: 0 32px 40px;
+}
+
+.info-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 14px 17px 15px 16px / 15px 14px 17px 16px;
+  padding: 24px 28px;
+  box-shadow: var(--card-shadow);
+  transition: background var(--transition-theme), border-color var(--transition-theme), box-shadow var(--transition-theme);
+}
+
+/* 标签云 */
+.tag-cloud-header {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.88rem; color: var(--text-muted);
+  transition: color var(--transition-theme);
+}
+
+.tag-cloud-header .icon { width: 1.05em; height: 1.05em; }
+
+.tag-cloud {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+
+.tag-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 14px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid transparent;
+  border-radius: 16px;
+  font-size: 0.84rem; font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  transform: rotate(var(--tag-rot, 0deg));
+  text-decoration: none;
+}
+
+.tag-pill:hover {
+  background: var(--tag-bg-hover);
+  border-color: var(--accent);
+  transform: rotate(0deg) translateY(-1px);
+}
+
+.tag-pill.active {
+  background: var(--tag-active-bg);
+  color: var(--tag-active-text);
+  border-color: var(--tag-active-bg);
+  transform: rotate(0deg);
+}
+
+.tag-count {
+  font-size: 0.75rem;
+  opacity: 0.65;
+}
+
+.tag-pill.active .tag-count {
+  opacity: 0.85;
+}

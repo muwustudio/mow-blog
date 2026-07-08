@@ -1,0 +1,55 @@
+  /* ============================================
+     Responsive
+     ============================================ */
+  @media (max-width: 768px) {
+    .site-header {
+      padding: 8px 12px; gap: 6px; flex-wrap: wrap;
+    }
+    .site-nav { gap: 10px; }
+    .site-nav a { font-size: 0.8rem; }
+    .site-nav .nav-optional { display: none; }
+    .site-brand .site-title { font-size: 0.95rem; }
+
+    /* 搜索在移动端换行 */
+    .search-wrapper {
+      order: 10; flex: 1 1 100%; max-width: 100%;
+      padding: 4px 0;
+    }
+
+    .hero {
+      min-height: 50vh; padding: 40px 18px 70px;
+    }
+    .hero h1 { font-size: 1.5rem; }
+    .hero .bio { font-size: 0.9rem; }
+    .avatar { width: 72px; height: 72px; font-size: 32px; }
+    .hero-stats { gap: 12px; }
+    .hero-stat { font-size: 0.8rem; padding: 4px 12px; }
+
+    .info-strip { padding: 0 16px 30px; }
+    .info-card { padding: 16px; }
+
+    .posts-section { padding: 0 16px 70px; }
+    .post-card { padding: 18px 16px; }
+    .post-card h3 { font-size: 1.05rem; }
+
+    .steam-layer { bottom: 18%; right: 6%; }
+
+    .footer-social { gap: 8px; }
+    .footer-social-link { padding: 6px 12px; font-size: 0.8rem; }
+
+    .easter-egg { bottom: 16px; right: 16px; width: 36px; height: 36px; }
+
+    .header-tools { gap: 2px; }
+    .header-tools .social-btn { width: 30px; height: 30px; }
+  }
+
+  @media (max-width: 480px) {
+    .site-nav { gap: 8px; }
+    .site-nav a { font-size: 0.75rem; }
+    .site-brand .site-title { font-size: 0.85rem; }
+    .header-tools { gap: 0; }
+    .header-tools .social-btn { width: 28px; height: 28px; }
+    .theme-toggle { width: 52px; height: 26px; }
+    [data-theme="night"] .theme-toggle .toggle-thumb { transform: translateX(26px); }
+    .hero h1 { font-size: 1.3rem; }
+  }

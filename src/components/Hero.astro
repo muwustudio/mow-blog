@@ -1,0 +1,40 @@
+---
+import { HERO } from '../site.config';
+
+interface Props {
+  postCount: number;
+  projectCount: number;
+  tagCount: number;
+}
+
+const { postCount, projectCount, tagCount } = Astro.props;
+---
+<section class="hero">
+  <div class="avatar-wrapper">
+    <div class="avatar" id="avatarEl">
+      <img src="/assets/avatar.jpg" alt="Castiel" onerror="this.style.display='none';this.parentElement.setAttribute('data-fallback','1')" />
+    </div>
+    <div class="avatar-status" title="在线"></div>
+  </div>
+  <p class="greeting">{HERO.greeting}</p>
+  <h1>{HERO.headline.split('\n').map((line, i) => (<>{i > 0 && <br/>}{line}</>))}</h1>
+  <p class="bio">{HERO.bio}<br/>{HERO.bioExtended}</p>
+  <div class="hero-stats">
+    <span class="hero-stat"><svg class="icon"><use href="#icon-book"/></svg><strong>{postCount}</strong> 篇文章</span>
+    <span class="hero-stat"><svg class="icon"><use href="#icon-folder"/></svg><strong>{projectCount}</strong> 个项目</span>
+    <span class="hero-stat"><svg class="icon"><use href="#icon-tag"/></svg><strong>{tagCount}</strong> 个标签</span>
+  </div>
+  <a href={HERO.ctaHref} class="cta-btn">
+    <svg class="icon"><use href="#icon-book"/></svg>
+    {HERO.ctaLabel}
+    <svg class="icon" style="width:0.85em;height:0.85em;"><use href="#icon-external"/></svg>
+  </a>
+  <div class="scroll-hint">↓</div>
+</section>
+
+<style>
+  .avatar[data-fallback="1"]::before {
+    content: '🐑';
+    font-size: 44px;
+  }
+</style>

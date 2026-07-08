@@ -1,0 +1,68 @@
+  /* ============================================
+     CSS Custom Properties — 双主题
+     ============================================ */
+  :root {
+    --bg-day: url('/assets/mu01.jpg');
+    --bg-night: url('/assets/mu02.jpg');
+    --transition-theme: 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-theme="day"] {
+    --bg-opacity-day: 1;
+    --bg-opacity-night: 0;
+    --text: #2c1810;
+    --text-secondary: #5c3d2e;
+    --text-muted: #8b7355;
+    --card-bg: rgba(255, 252, 245, 0.85);
+    --card-bg-hover: rgba(255, 252, 245, 0.94);
+    --card-border: rgba(139, 90, 43, 0.2);
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --accent: #8b5a2b;
+    --accent-light: #c4956a;
+    --accent-glow: rgba(139, 90, 43, 0.3);
+    --nav-bg: rgba(255, 252, 245, 0.75);
+    --divider: rgba(139, 90, 43, 0.15);
+    --tag-bg: rgba(139, 90, 43, 0.08);
+    --tag-bg-hover: rgba(139, 90, 43, 0.18);
+    --tag-text: #6b3a1f;
+    --tag-active-bg: #8b5a2b;
+    --tag-active-text: #fff;
+    --search-bg: rgba(255, 252, 245, 0.65);
+    --search-border: rgba(139, 90, 43, 0.25);
+    --search-focus-bg: rgba(255, 252, 245, 0.92);
+    --icon-color: #5c3d2e;
+    --icon-hover: #2c1810;
+    --avatar-border: rgba(139, 90, 43, 0.35);
+    --stat-bg: rgba(139, 90, 43, 0.06);
+    --vignette: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.15) 100%);
+  }
+
+  [data-theme="night"] {
+    --bg-opacity-day: 0;
+    --bg-opacity-night: 1;
+    --text: #e8d5c4;
+    --text-secondary: #b8a089;
+    --text-muted: #8a7560;
+    --card-bg: rgba(30, 20, 15, 0.82);
+    --card-bg-hover: rgba(35, 24, 18, 0.92);
+    --card-border: rgba(180, 140, 100, 0.2);
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    --accent: #d4a574;
+    --accent-light: #e0c0a0;
+    --accent-glow: rgba(212, 165, 116, 0.3);
+    --nav-bg: rgba(25, 16, 10, 0.78);
+    --divider: rgba(180, 140, 100, 0.12);
+    --tag-bg: rgba(212, 165, 116, 0.1);
+    --tag-bg-hover: rgba(212, 165, 116, 0.22);
+    --tag-text: #c99a6b;
+    --tag-active-bg: #d4a574;
+    --tag-active-text: #1a1008;
+    --search-bg: rgba(25, 16, 10, 0.65);
+    --search-border: rgba(180, 140, 100, 0.25);
+    --search-focus-bg: rgba(30, 20, 12, 0.92);
+    --icon-color: #a08970;
+    --icon-hover: #e8d5c4;
+    --avatar-border: rgba(180, 140, 100, 0.35);
+    --stat-bg: rgba(212, 165, 116, 0.06);
+    --vignette: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.35) 100%);
+  }

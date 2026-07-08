@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import SquigglyDivider from '../components/SquigglyDivider.astro';
+import TagCloud from '../components/TagCloud.astro';
+import PostList from '../components/PostList.astro';
+
+// Get all non-draft posts, sorted by date descending
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Build tag counts from all posts
+const tagMap = new Map<string, number>();
+const projectSet = new Set<string>();
+for (const post of allPosts) {
+  // Use user-defined tags, or derive from dimensions
+  const tags = post.data.tags && post.data.tags.length > 0
+    ? post.data.tags
+    : [post.data.project, post.data.type, ...post.data.tech, post.data.difficulty].filter(Boolean);
+  for (const tag of tags) {
+    tagMap.set(tag, (tagMap.get(tag) ?? 0) + 1);
+  }
+  if (post.data.project) projectSet.add(post.data.project);
+}
+
+// Build tag array with "全部" first
+const totalCount = allPosts.length;
+const tagCloud = [
+  { name: '全部', count: totalCount },
+  ...[...tagMap.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, count]) => ({ name, count })),
+];
+
+const projectCount = projectSet.size;
+const tagTypeCount = tagMap.size;
+---
+
+<MainLayout>
+  <Hero
+    postCount={totalCount}
+    projectCount={projectCount}
+    tagCount={tagTypeCount}
+  />
+  <SquigglyDivider />
+  <TagCloud tags={tagCloud} />
+  <PostList posts={allPosts} />
+</MainLayout>

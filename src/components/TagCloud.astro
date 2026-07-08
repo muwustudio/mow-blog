@@ -1,0 +1,39 @@
+---
+interface Props {
+  tags: { name: string; count: number }[];
+}
+
+const { tags } = Astro.props;
+
+// Sort: "全部" first, then by count descending
+const sorted = [...tags].sort((a, b) => {
+  if (a.name === '全部') return -1;
+  if (b.name === '全部') return 1;
+  return b.count - a.count;
+});
+
+const rotations = [-0.5, 1, -1.5, 0.5, -2, 1.5, -1, 0.5, -1.5, 2, -0.5];
+---
+
+<section class="info-strip" id="infoStrip">
+  <div class="info-card">
+
+    <div class="tag-cloud-header">
+      <svg class="icon"><use href="#icon-tag"/></svg>
+      按标签浏览
+    </div>
+    <div class="tag-cloud">
+      {sorted.map((tag, i) => (
+        <span
+          class:list={['tag-pill', { active: tag.name === '全部' }]}
+          data-tag={tag.name}
+          style={`--tag-rot:${rotations[i % rotations.length]}deg`}
+        >
+          {tag.name}
+          <span class="tag-count">{tag.count}</span>
+        </span>
+      ))}
+    </div>
+
+  </div>
+</section>

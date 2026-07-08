@@ -1,0 +1,66 @@
+  /* ============================================
+     Reset & Base
+     ============================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Georgia', 'Noto Serif SC', 'Source Han Serif SC', serif;
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #1a1008;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============================================
+     SVG Icon Sprite (hidden)
+     ============================================ */
+  .icon-sprite {
+    position: absolute; width: 0; height: 0; overflow: hidden;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1em; height: 1em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+  }
+
+  .icon-filled {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  /* ============================================
+     Content Layer
+     ============================================ */
+  .content {
+    position: relative; z-index: 1; pointer-events: auto;
+  }
+
+  /* 搜索无结果 */
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .no-results.show { display: block; }
+
+  /* 高亮匹配文本 */
+  .highlight {
+    background: rgba(212, 165, 116, 0.35);
+    border-radius: 2px; padding: 0 2px;
+  }

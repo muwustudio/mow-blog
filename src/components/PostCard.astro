@@ -1,0 +1,44 @@
+---
+interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+
+// Derive tags: use post.data.tags if available, otherwise derive from tech/project/type/difficulty
+let derivedTags: string[] = [];
+if (post.data.tags && post.data.tags.length > 0) {
+  derivedTags = post.data.tags;
+} else {
+  const parts: string[] = [];
+  if (post.data.project) parts.push(post.data.project);
+  if (post.data.type) parts.push(post.data.type);
+  if (post.data.tech && post.data.tech.length > 0) parts.push(...post.data.tech);
+  if (post.data.difficulty) parts.push(post.data.difficulty);
+  derivedTags = parts;
+}
+
+// Format date as YYYY-MM-DD
+const dateObj = post.data.date instanceof Date ? post.data.date : new Date(post.data.date);
+const dateStr = dateObj.toISOString().split('T')[0];
+
+// Rotation values for tags
+const tagRotations = [-0.5, 1, -1.5, 0.5, -2, 1.5, -1, 0.5, -1.5, 2, -0.5];
+
+// Difficulty label
+const difficultyLabel = post.data.difficulty || '';
+---
+
+<article class="post-card" data-tags={derivedTags.join(' ')}>
+  <div class="post-meta">
+    <span class="post-date">{dateStr}</span>
+    <span class="post-tags">
+      {derivedTags.map((tag: string, i: number) => (
+        <span class="post-tag" style={`--tag-rot:${tagRotations[i % tagRotations.length]}deg`}>{tag}</span>
+      ))}
+    </span>
+  </div>
+  <h3><a href={`/posts/${post.id}`}>{post.data.title}</a></h3>
+  {post.data.description && <p class="post-excerpt">{post.data.description}</p>}
+  {difficultyLabel && <span class="post-difficulty">{difficultyLabel}</span>}
+</article>

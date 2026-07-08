@@ -1,0 +1,373 @@
+---
+// ============================================================
+// MainLayout -- 装配全站组件，加载 CSS 和 JS
+// ============================================================
+import BaseLayout from '../components/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<!-- Global CSS (imported once here, cachable across pages) -->
+<style is:global>
+  @import '../styles/global.css';
+  @import '../styles/scene.css';
+  @import '../styles/effects.css';
+  @import '../styles/header.css';
+  @import '../styles/hero.css';
+  @import '../styles/tags.css';
+  @import '../styles/cards.css';
+  @import '../styles/footer.css';
+  @import '../styles/responsive.css';
+</style>
+
+<script>
+  // ============================================================
+  // Combined init: theme + parallax + search + easter egg + keyboard
+  // ============================================================
+
+  // --- Theme ---
+  var THEME_KEY = 'blog-theme';
+  var DAY_START = 6;
+  var NIGHT_START = 18;
+
+  function detectTheme() {
+    var saved = localStorage.getItem(THEME_KEY);
+    if (saved === 'day' || saved === 'night') return saved;
+    var hour = new Date().getHours();
+    return hour >= DAY_START && hour < NIGHT_START ? 'day' : 'night';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    var toggle = document.getElementById('themeToggle');
+    if (toggle) {
+      toggle.setAttribute('aria-label', theme === 'day' ? '切换到夜晚主题' : '切换到白天主题');
+    }
+  }
+
+  function showToast(msg) {
+    var toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toast.__timeout);
+    toast.__timeout = setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = current === 'day' ? 'night' : 'day';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+    showToast(next === 'day' ? '☀️ 切换到白天模式' : '🌙 切换到夜晚模式');
+  }
+
+  // Theme toggle button
+  var themeToggleBtn = document.getElementById('themeToggle');
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+
+  // Init theme
+  applyTheme(detectTheme());
+
+  // Update toggle-thumb emoji on theme change
+  var observer = new MutationObserver(function() {
+    var theme = document.documentElement.getAttribute('data-theme');
+    var thumb = document.getElementById('toggleThumb');
+    if (thumb) thumb.textContent = theme === 'day' ? '☀️' : '🌙';
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  // Set initial thumb emoji
+  var initialTheme = document.documentElement.getAttribute('data-theme');
+  var thumb = document.getElementById('toggleThumb');
+  if (thumb) thumb.textContent = initialTheme === 'day' ? '☀️' : '🌙';
+
+  // Auto-detect theme if no manual preference saved
+  if (!localStorage.getItem(THEME_KEY)) {
+    setInterval(function() {
+      var current = detectTheme();
+      var active = document.documentElement.getAttribute('data-theme');
+      if (current !== active) {
+        applyTheme(current);
+        thumb = document.getElementById('toggleThumb');
+        if (thumb) thumb.textContent = current === 'day' ? '☀️' : '🌙';
+      }
+    }, 60000);
+  }
+
+  // --- Easter Egg: "风花雪月" sequence ---
+  var EASTER_SEQUENCE = ['风', '花', '雪', '月'];
+  var easterIndex = 0;
+  var easterBtn = document.getElementById('easterEgg');
+  if (easterBtn) {
+    easterBtn.addEventListener('click', function() {
+      easterIndex++;
+      if (easterIndex >= EASTER_SEQUENCE.length) {
+        easterIndex = 0;
+        showToast('🌸 风花雪月 — 我在风花雪月里等你');
+      }
+    });
+  }
+
+  // --- Keyboard shortcuts ---
+  document.addEventListener('keydown', function(e) {
+    // t = toggle theme
+    if (e.key === 't' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      var target = e.target;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
+      toggleTheme();
+    }
+    // / or Ctrl+K = focus search
+    if ((e.key === '/' && !e.ctrlKey && !e.metaKey) || (e.key === 'k' && e.ctrlKey)) {
+      var t2 = e.target;
+      if (t2.tagName === 'INPUT' || t2.tagName === 'TEXTAREA') return;
+      e.preventDefault();
+      var si = document.getElementById('searchInput');
+      if (si) si.focus();
+    }
+    // Escape = clear search
+    if (e.key === 'Escape') {
+      var input = document.getElementById('searchInput');
+      if (input && document.activeElement === input) {
+        input.value = '';
+        input.dispatchEvent(new Event('input'));
+        input.blur();
+      }
+    }
+  });
+
+  // --- Parallax ---
+  // Grass generation
+  var grassLayer = document.querySelector('.grass-layer');
+  if (grassLayer) {
+    for (var i = 0; i < 80; i++) {
+      var blade = document.createElement('div');
+      blade.className = 'grass-blade';
+      blade.style.setProperty('--sway-dur', (2.5 + Math.random() * 4) + 's');
+      blade.style.setProperty('--sway-delay', (Math.random() * 5) + 's');
+      blade.style.setProperty('--skew-a', (-3 + Math.random() * 6) + 'deg');
+      blade.style.setProperty('--skew-b', (-3 + Math.random() * 6) + 'deg');
+      blade.style.setProperty('--skew-c', (-3 + Math.random() * 6) + 'deg');
+      blade.style.setProperty('--skew-d', (-3 + Math.random() * 6) + 'deg');
+      blade.style.setProperty('--rot-a', (-2 + Math.random() * 4) + 'deg');
+      blade.style.setProperty('--rot-b', (-2 + Math.random() * 4) + 'deg');
+      blade.style.setProperty('--rot-c', (-2 + Math.random() * 4) + 'deg');
+      blade.style.setProperty('--rot-d', (-2 + Math.random() * 4) + 'deg');
+      blade.style.left = (Math.random() * 100) + '%';
+      blade.style.width = (3 + Math.random() * 8) + 'px';
+      blade.style.height = (40 + Math.random() * 80) + 'px';
+      grassLayer.appendChild(blade);
+    }
+  }
+
+  // Firefly generation
+  var fireflyLayer = document.querySelector('.firefly-layer');
+  if (fireflyLayer) {
+    for (var j = 0; j < 15; j++) {
+      var ff = document.createElement('div');
+      ff.className = 'firefly';
+      ff.style.setProperty('--ff-dur', (4 + Math.random() * 8) + 's');
+      ff.style.setProperty('--ff-delay', (Math.random() * 10) + 's');
+      ff.style.setProperty('--ff-dx1', (-40 + Math.random() * 80) + 'px');
+      ff.style.setProperty('--ff-dy1', (-60 - Math.random() * 40) + 'px');
+      ff.style.setProperty('--ff-dx2', (-30 + Math.random() * 60) + 'px');
+      ff.style.setProperty('--ff-dy2', (-100 - Math.random() * 40) + 'px');
+      ff.style.setProperty('--ff-dx3', (-20 + Math.random() * 40) + 'px');
+      ff.style.setProperty('--ff-dy3', (-130 - Math.random() * 30) + 'px');
+      ff.style.left = (10 + Math.random() * 80) + '%';
+      ff.style.top = (20 + Math.random() * 60) + '%';
+      fireflyLayer.appendChild(ff);
+    }
+  }
+
+  // Mouse parallax
+  var mouseX = 0, mouseY = 0;
+  var targetX = 0, targetY = 0;
+
+  document.addEventListener('mousemove', function(e) {
+    targetX = (e.clientX / window.innerWidth - 0.5) * 2;
+    targetY = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', function(e) {
+      if (e.gamma !== null && e.beta !== null) {
+        targetX = Math.max(-1, Math.min(1, (e.gamma || 0) / 30));
+        targetY = Math.max(-1, Math.min(1, (e.beta || 0) / 30));
+      }
+    });
+  }
+
+  function animateParallax() {
+    mouseX += (targetX - mouseX) * 0.05;
+    mouseY += (targetY - mouseY) * 0.05;
+
+    var bgDay = document.querySelector('.bg-day');
+    var bgNight = document.querySelector('.bg-night');
+    var content = document.querySelector('.content');
+    var grass = document.querySelector('.grass-layer');
+
+    if (bgDay) bgDay.style.transform = 'translate3d(' + (mouseX * 20) + 'px, ' + (mouseY * 20) + 'px, 0)';
+    if (bgNight) bgNight.style.transform = 'translate3d(' + (mouseX * 20) + 'px, ' + (mouseY * 20) + 'px, 0)';
+    if (content) content.style.transform = 'translate3d(' + (mouseX * 8) + 'px, ' + (mouseY * 8) + 'px, 0)';
+    if (grass) grass.style.transform = 'translate3d(' + (mouseX * 15) + 'px, 0, 0)';
+
+    requestAnimationFrame(animateParallax);
+  }
+
+  requestAnimationFrame(animateParallax);
+
+  // --- Search ---
+  var activeTag = '全部';
+
+  function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function deriveTags(el) {
+    return (el.getAttribute('data-tags') || '').split(' ').map(function(t) { return t.trim(); }).filter(Boolean);
+  }
+
+  function highlightInElement(root, query) {
+    var walker = document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: function(node) {
+          if (!node.textContent) return NodeFilter.FILTER_REJECT;
+          var parent = node.parentElement;
+          if (parent && (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE' || parent.classList.contains('highlight'))) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          return node.textContent.toLowerCase().indexOf(query) !== -1
+            ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+        },
+      },
+    );
+
+    var nodes = [];
+    var node;
+    while ((node = walker.nextNode())) {
+      nodes.push(node);
+    }
+
+    var regex = new RegExp('(' + escapeRegex(query) + ')', 'gi');
+
+    nodes.forEach(function(textNode) {
+      var parent = textNode.parentNode;
+      if (!parent) return;
+      var fragment = document.createDocumentFragment();
+      var parts = textNode.textContent.split(regex);
+      parts.forEach(function(part) {
+        if (part.toLowerCase() === query) {
+          var mark = document.createElement('mark');
+          mark.className = 'highlight';
+          mark.textContent = part;
+          fragment.appendChild(mark);
+        } else {
+          fragment.appendChild(document.createTextNode(part));
+        }
+      });
+      parent.replaceChild(fragment, textNode);
+    });
+  }
+
+  function removeHighlight() {
+    document.querySelectorAll('mark.highlight').forEach(function(mark) {
+      var parent = mark.parentNode;
+      if (parent) {
+        parent.replaceChild(document.createTextNode(mark.textContent || ''), mark);
+        parent.normalize();
+      }
+    });
+  }
+
+  function filterPosts(query) {
+    var cards = document.querySelectorAll('.post-card');
+    var noResults = document.getElementById('noResults');
+    var visibleCount = 0;
+
+    removeHighlight();
+
+    cards.forEach(function(card) {
+      var dataTags = deriveTags(card);
+      var titleEl = card.querySelector('h3');
+      var excerptEl = card.querySelector('.post-excerpt');
+      var title = (titleEl ? titleEl.textContent || '' : '').toLowerCase();
+      var excerpt = (excerptEl ? excerptEl.textContent || '' : '').toLowerCase();
+      var allText = title + ' ' + excerpt + ' ' + dataTags.join(' ');
+
+      var tagMatch = activeTag === '全部' || dataTags.indexOf(activeTag) !== -1;
+      var searchMatch = !query || allText.indexOf(query) !== -1;
+
+      if (tagMatch && searchMatch) {
+        card.classList.remove('hidden');
+        visibleCount++;
+        if (query) highlightInElement(card, query);
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (noResults) {
+      noResults.classList.toggle('show', visibleCount === 0);
+    }
+
+    var countEl = document.getElementById('resultCount');
+    if (countEl) {
+      countEl.textContent = visibleCount + ' 篇';
+    }
+  }
+
+  // Search input
+  var searchInput = document.getElementById('searchInput');
+  var searchClear = document.getElementById('searchClear');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var query = searchInput.value.trim().toLowerCase();
+      if (searchClear) {
+        searchClear.classList.toggle('show', query.length > 0);
+      }
+      filterPosts(query);
+    });
+  }
+
+  if (searchClear) {
+    searchClear.addEventListener('click', function() {
+      searchInput.value = '';
+      searchClear.classList.remove('show');
+      filterPosts('');
+      searchInput.focus();
+    });
+  }
+
+  // Tag pill click handlers
+  document.querySelectorAll('.tag-pill').forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      var tag = pill.getAttribute('data-tag') || '全部';
+      document.querySelectorAll('.tag-pill').forEach(function(p) { p.classList.remove('active'); });
+      pill.classList.add('active');
+      activeTag = tag;
+      if (searchInput) searchInput.value = '';
+      if (searchClear) searchClear.classList.remove('show');
+      removeHighlight();
+      filterPosts('');
+    });
+  });
+</script>

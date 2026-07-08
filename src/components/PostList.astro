@@ -1,0 +1,28 @@
+---
+import PostCard from './PostCard.astro';
+
+interface Props {
+  posts: any[];
+}
+
+const { posts } = Astro.props;
+---
+
+<section class="posts-section" id="postsSection">
+  <div class="section-header">
+    <h2>
+      <svg class="icon"><use href="#icon-book"/></svg>
+      最近文章
+      <span class="result-count" id="resultCount">{posts.length} 篇</span>
+    </h2>
+    <a href="/posts" class="view-all">查看全部</a>
+  </div>
+
+  {posts.map(post => (
+    <PostCard post={post} />
+  ))}
+
+  <div class="no-results" id="noResults">
+    没有找到匹配的文章，试试其他关键词或标签。
+  </div>
+</section>
