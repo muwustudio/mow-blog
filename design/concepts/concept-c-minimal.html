@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castiel — Notes on Games & Code</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Noto Sans", system-ui, sans-serif;
+    background-color: #faf8f5;
+    color: #2d2d2d;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  /* Subtle warm texture — a barely-there grain via repeating gradient */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9999;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180,160,140,0.15) 2px, rgba(180,160,140,0.15) 4px),
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(180,160,140,0.08) 2px, rgba(180,160,140,0.08) 4px);
+  }
+
+  /* ── Layout ─────────────────────── */
+
+  .site {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── Header ─────────────────────── */
+
+  .site-header {
+    padding: 5rem 0 3rem;
+  }
+
+  .site-title {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #2d2d2d;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+
+  .site-title a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .site-subtitle {
+    font-size: 0.95rem;
+    color: #6b6560;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 440px;
+  }
+
+  /* ── Navigation ─────────────────── */
+
+  .site-nav {
+    display: flex;
+    gap: 2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e8d5c4;
+    margin-bottom: 0;
+  }
+
+  .site-nav a {
+    text-decoration: none;
+    color: #6b6560;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .site-nav a:hover,
+  .site-nav a.active {
+    color: #2d2d2d;
+    border-bottom-color: #3a5a40;
+  }
+
+  /* ── Posts ──────────────────────── */
+
+  .posts {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .post-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid #e8d5c4;
+  }
+
+  .post-item:first-child {
+    padding-top: 0;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-date {
+    font-size: 0.8rem;
+    color: #8c8580;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .post-tag {
+    font-size: 0.72rem;
+    color: #3a5a40;
+    background: #eef4ea;
+    padding: 0.15em 0.6em;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .post-reading-time {
+    font-size: 0.78rem;
+    color: #a09890;
+  }
+
+  .post-title {
+    font-size: 1.45rem;
+    font-weight: 650;
+    line-height: 1.3;
+    margin-bottom: 0.45rem;
+    letter-spacing: -0.01em;
+  }
+
+  .post-title a {
+    text-decoration: none;
+    color: #2d2d2d;
+    transition: color 0.15s ease;
+  }
+
+  .post-title a:hover {
+    color: #3a5a40;
+  }
+
+  .post-excerpt {
+    font-size: 0.95rem;
+    color: #5c5650;
+    line-height: 1.7;
+    max-width: 580px;
+  }
+
+  /* ── Footer ─────────────────────── */
+
+  .site-footer {
+    padding: 2.5rem 0 4rem;
+    border-top: 1px solid #e8d5c4;
+    font-size: 0.82rem;
+    color: #8c8580;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .site-footer p { max-width: 360px; line-height: 1.65; }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: #6b6560;
+    transition: color 0.15s ease;
+    font-weight: 500;
+  }
+
+  .footer-links a:hover { color: #3a5a40; }
+
+  /* ── Accent touches ─────────────── */
+
+  /* A warm wood-toned rule divider between the header area and content */
+  .divider-wood {
+    height: 3px;
+    background: linear-gradient(to right, #d4c4b0, transparent);
+    margin: 0 0 0.5rem;
+    border-radius: 2px;
+  }
+
+  /* The green accent appears sparingly — only on the active nav underline and link hovers */
+
+  /* ── Responsive ─────────────────── */
+
+  @media (max-width: 600px) {
+    html { font-size: 16px; }
+    .site { padding: 0 1.25rem; }
+    .site-header { padding: 3rem 0 2rem; }
+    .site-title { font-size: 1.9rem; }
+    .post-title { font-size: 1.25rem; }
+    .site-footer { flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<main class="site">
+
+  <header class="site-header">
+    <h1 class="site-title"><a href="#">Castiel</a></h1>
+    <p class="site-subtitle">
+      Learning to build worlds. Notes on Unreal Engine, C++, and the craft of game development.
+    </p>
+  </header>
+
+  <nav class="site-nav">
+    <a href="#" class="active">Notes</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div class="divider-wood"></div>
+
+  <section class="posts">
+
+    <article class="post-item">
+      <div class="post-meta">
+        <span class="post-date">Jun 28, 2026</span>
+        <span class="post-tag">UE5</span>
+        <span class="post-reading-time">8 min read</span>
+      </div>
+      <h2 class="post-title">
+        <a href="#">Understanding the Gameplay Ability System — A Practical Walkthrough</a>
+      </h2>
+      <p class="post-excerpt">
+        GAS is not just another UE5 subsystem — it is a philosophy for building multiplayer-first game logic.
+        After weeks of wrestling with GameplayEffects, Tags, and AbilityTasks, I have started to see the shape
+        of it. Here is what I wish someone had told me on day one.
+      </p>
+    </article>
+
+    <article class="post-item">
+      <div class="post-meta">
+        <span class="post-date">Jun 14, 2026</span>
+        <span class="post-tag">C++</span>
+        <span class="post-reading-time">6 min read</span>
+      </div>
+      <h2 class="post-title">
+        <a href="#">Clean Architecture in Unreal — Separating Game Logic from Engine Code</a>
+      </h2>
+      <p class="post-excerpt">
+        Unreal encourages you to put everything in your GameMode or Character class. Resist that. I have been
+        experimenting with a layered approach: pure C++ core logic that knows nothing about Actors, wrapped by
+        thin UE5-specific shells. The result is faster iteration and far less coupling.
+      </p>
+    </article>
+
+    <article class="post-item">
+      <div class="post-meta">
+        <span class="post-date">May 30, 2026</span>
+        <span class="post-tag">C++</span>
+        <span class="post-reading-time">5 min read</span>
+      </div>
+      <h2 class="post-title">
+        <a href="#">Smart Pointers in UE5 — TUniquePtr, TSharedPtr, and When to Use Raw Pointers</a>
+      </h2>
+      <p class="post-excerpt">
+        UE5 has its own memory management conventions that can trip up developers coming from standard C++.
+        The rule of thumb is simpler than the documentation makes it seem: UObjects use the garbage collector,
+        non-UObjects use TUniquePtr by default, and TSharedPtr is a last resort. Here is a clear decision tree.
+      </p>
+    </article>
+
+    <article class="post-item">
+      <div class="post-meta">
+        <span class="post-date">May 12, 2026</span>
+        <span class="post-tag">Design</span>
+        <span class="post-reading-time">4 min read</span>
+      </div>
+      <h2 class="post-title">
+        <a href="#">Why I Build Systems Before Content</a>
+      </h2>
+      <p class="post-excerpt">
+        Every game project starts with a rush of creative energy — characters, levels, mechanics. But I have
+        learned to channel that energy into the scaffolding first. A solid editor workflow, a clean build
+        pipeline, and a well-structured data layer make the creative phase ten times faster and more joyful.
+      </p>
+    </article>
+
+    <article class="post-item">
+      <div class="post-meta">
+        <span class="post-date">Apr 25, 2026</span>
+        <span class="post-tag">UE5</span>
+        <span class="post-reading-time">10 min read</span>
+      </div>
+      <h2 class="post-title">
+        <a href="#">Setting Up a UE5 C++ Project from Scratch — Editor Extensions, Build Config, and Source Control</a>
+      </h2>
+      <p class="post-excerpt">
+        The first hour of a project determines the next hundred. I walk through my personal template: a minimal
+        UE5 C++ project with custom editor toolbar buttons, a sane .gitignore, precompiled headers configured
+        properly, and a module structure that scales. Not exciting, but deeply satisfying.
+      </p>
+    </article>
+
+    <article class="post-item">
+      <div class="post-meta">
+        <span class="post-date">Apr 08, 2026</span>
+        <span class="post-tag">Reflection</span>
+        <span class="post-reading-time">3 min read</span>
+      </div>
+      <h2 class="post-title">
+        <a href="#">The Shepherd and the Engine — On Patience in Learning</a>
+      </h2>
+      <p class="post-excerpt">
+        Learning UE5 C++ feels less like climbing a mountain and more like tending a field. Some days you make
+        visible progress — a feature ships, a bug dies. Other days you just read headers, trace call stacks, and
+        absorb patterns. Both kinds of days are the work. The engine is vast, but time is on your side.
+      </p>
+    </article>
+
+  </section>
+
+  <footer class="site-footer">
+    <p>
+      Castiel writes about game development from somewhere with good coffee and quiet mornings.
+      Currently building with Unreal Engine 5 and modern C++.
+    </p>
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+      <a href="#">RSS</a>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>

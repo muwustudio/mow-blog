@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castiel — The Cabin Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --amber: #c4935a;
+  --amber-light: #d4a76a;
+  --amber-pale: rgba(196,147,90,0.12);
+  --navy: #1a1a2e;
+  --navy-deep: #141428;
+  --cream: #f5f0e8;
+  --cream-warm: #f8f3eb;
+  --cream-dark: #efe8d8;
+  --cream-shadow: #e8dfcc;
+  --rose: #c2787c;
+  --rose-deep: #a8606a;
+  --rose-pale: rgba(194,120,124,0.08);
+  --wood: #3c2415;
+  --wood-deep: #2a1810;
+  --wood-pale: rgba(60,36,21,0.06);
+  --text-primary: #2a1810;
+  --text-secondary: #5c4a3a;
+  --text-muted: #8a7a6a;
+  --text-whisper: #b5a898;
+  --divider: rgba(60,36,21,0.1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Karla', 'Georgia', 'Times New Roman', serif;
+  color: var(--text-primary);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:
+    radial-gradient(ellipse at 25% 15%, rgba(196,147,90,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 85%, rgba(194,120,124,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse at 60% 40%, rgba(196,147,90,0.03) 0%, transparent 60%),
+    var(--cream);
+  min-height: 100vh;
+}
+
+svg.grain-defs { position: absolute; width: 0; height: 0; }
+
+.grain-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+}
+
+h1, h2, h3, h4, h5, .serif {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', 'Book Antiqua', serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2.2rem 0 1.6rem;
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: 0;
+  position: relative;
+}
+
+.site-nav .brand {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.35s ease;
+}
+
+.site-nav .brand:hover { color: var(--amber); }
+
+.nav-links {
+  display: flex;
+  gap: 2.8rem;
+  list-style: none;
+  align-items: baseline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  transition: color 0.35s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--amber);
+  transition: width 0.35s ease;
+}
+
+.nav-links a:hover { color: var(--amber); }
+.nav-links a:hover::after { width: 100%; }
+
+/* ---------- HEADER / HERO ---------- */
+
+.site-header {
+  padding: 4.5rem 0 3rem;
+  text-align: center;
+}
+
+.header-epigraph {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--text-primary);
+  max-width: 620px;
+  margin: 0 auto 1rem;
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.header-ornament {
+  margin: 2rem auto 0;
+  width: 50px;
+  height: 1px;
+  background: var(--amber-light);
+  position: relative;
+}
+
+.header-ornament::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.45rem;
+  color: var(--amber);
+  background:
+    radial-gradient(ellipse at 25% 15%, rgba(196,147,90,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 85%, rgba(194,120,124,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse at 60% 40%, rgba(196,147,90,0.03) 0%, transparent 60%),
+    var(--cream);
+  padding: 0 8px;
+}
+
+/* ---------- SECTION DIVIDER ---------- */
+
+.section-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+  margin: 0;
+}
+
+/* ---------- ARTICLES ---------- */
+
+.articles {
+  padding: 0 0 4rem;
+}
+
+/* Article 1 — Featured */
+
+.article-featured {
+  padding: 4.5rem 0 3rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.article-featured .post-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.article-featured .post-date {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.article-featured .post-category {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.article-featured .post-title {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--text-primary);
+  max-width: 780px;
+  margin-bottom: 1.6rem;
+}
+
+.article-featured .post-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.35s ease;
+}
+
+.article-featured .post-title a:hover { color: var(--amber); }
+
+.article-featured .post-excerpt {
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Pull Quote */
+
+.pull-quote {
+  margin: 2.8rem 0 2.8rem -2.5rem;
+  padding: 1.8rem 2.5rem 1.8rem 3.2rem;
+  border-left: 3px solid var(--amber-light);
+  position: relative;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  max-width: 680px;
+}
+
+.pull-quote::before {
+  content: '\201C';
+  position: absolute;
+  left: 0.6rem;
+  top: -0.4rem;
+  font-size: 4.5rem;
+  color: var(--amber);
+  opacity: 0.22;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: normal;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.continue-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--amber);
+  text-decoration: none;
+  transition: gap 0.3s ease, color 0.35s ease;
+  position: relative;
+}
+
+.continue-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--amber-light);
+  transition: width 0.35s ease;
+}
+
+.continue-link:hover { gap: 0.7rem; color: var(--amber-light); }
+.continue-link:hover::after { width: 100%; }
+
+.continue-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.continue-link:hover .continue-arrow { transform: translateX(3px); }
+
+/* Article 2 — With Sidenote */
+
+.article-with-note {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--divider);
+  position: relative;
+}
+
+.article-with-note .post-body {
+  max-width: 580px;
+}
+
+.article-with-note .post-date {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.article-with-note .post-title {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+}
+
+.article-with-note .post-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.35s ease;
+}
+
+.article-with-note .post-title a:hover { color: var(--amber); }
+
+.article-with-note .post-excerpt {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.sidenote {
+  position: absolute;
+  right: 0;
+  top: 4.8rem;
+  width: 220px;
+  padding: 1.2rem 1.4rem;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  border-left: 1px solid var(--amber-pale);
+}
+
+.sidenote-label {
+  display: block;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.5rem;
+}
+
+/* Article 3 — With Code */
+
+.article-with-code {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+.article-with-code .post-date {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.article-with-code .post-title {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+  max-width: 700px;
+}
+
+.article-with-code .post-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.35s ease;
+}
+
+.article-with-code .post-title a:hover { color: var(--amber); }
+
+.article-with-code .post-excerpt {
+  max-width: 640px;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.code-snippet {
+  margin: 1.6rem 0 1.2rem;
+  padding: 1.6rem 2rem;
+  background: rgba(26,26,46,0.03);
+  border-left: 2px solid var(--amber-light);
+  font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: var(--wood-deep);
+  overflow-x: auto;
+  max-width: 640px;
+  position: relative;
+}
+
+.code-snippet::before {
+  content: 'cpp';
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-whisper);
+}
+
+.code-snippet .kw { color: #a8606a; }
+.code-snippet .fn { color: #c4935a; }
+.code-snippet .str { color: #5c4a3a; }
+.code-snippet .cm { color: #b5a898; font-style: italic; }
+
+/* ---------- JOURNAL ENTRY (Subtle aside) ---------- */
+
+.journal-marker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--divider);
+}
+
+.journal-marker::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber-light);
+  opacity: 0.5;
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  padding: 3.5rem 0 3rem;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-bottom: 1.4rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  transition: color 0.35s ease;
+}
+
+.footer-links a:hover { color: var(--amber); }
+
+.footer-whisper {
+  font-size: 0.75rem;
+  color: var(--text-whisper);
+  letter-spacing: 0.04em;
+}
+
+.footer-ornament {
+  margin: 1rem auto 1.2rem;
+  color: var(--amber);
+  opacity: 0.4;
+  font-size: 0.55rem;
+  letter-spacing: 0.5em;
+}
+
+/* ---------- PAGE LOAD ANIMATIONS ---------- */
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.d0 { animation-delay: 0s; }
+.d1 { animation-delay: 0.1s; }
+.d2 { animation-delay: 0.2s; }
+.d3 { animation-delay: 0.3s; }
+.d4 { animation-delay: 0.42s; }
+.d5 { animation-delay: 0.54s; }
+.d6 { animation-delay: 0.66s; }
+.d7 { animation-delay: 0.78s; }
+.d8 { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- DROP CAP (first article) ---------- */
+
+.article-featured .post-excerpt .drop-cap {
+  float: left;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  font-size: 3.8rem;
+  font-weight: 500;
+  line-height: 0.78;
+  padding-right: 0.35rem;
+  padding-top: 0.1rem;
+  color: var(--amber);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (min-width: 1500px) {
+  .container { max-width: 1000px; }
+}
+
+@media (max-width: 1024px) {
+  .sidenote {
+    position: static;
+    width: 100%;
+    max-width: 580px;
+    margin: 1.5rem 0;
+    padding: 1rem 1.4rem;
+    border-left: 2px solid var(--amber-pale);
+    background: var(--wood-pale);
+  }
+  .pull-quote { margin-left: 0; }
+  .article-featured .post-title { font-size: 2.3rem; }
+}
+
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .container { padding: 0 1.4rem; }
+  .site-nav { flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+  .nav-links { gap: 1.8rem; }
+  .header-epigraph { font-size: 1.9rem; }
+  .article-featured .post-title { font-size: 1.8rem; }
+  .article-featured .post-meta { flex-direction: column; gap: 0.2rem; }
+  .article-with-note .post-title,
+  .article-with-code .post-title { font-size: 1.55rem; }
+  .pull-quote { padding: 1.2rem 1.2rem 1.2rem 2.2rem; font-size: 1.15rem; }
+  .pull-quote::before { font-size: 3.5rem; left: 0.2rem; }
+  .code-snippet { padding: 1.2rem 1.2rem; font-size: 0.72rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .header-epigraph { font-size: 1.55rem; }
+  .article-featured .post-title { font-size: 1.5rem; }
+  .article-with-note .post-title,
+  .article-with-code .post-title { font-size: 1.35rem; }
+  .nav-links { gap: 1.2rem; }
+  .site-header { padding: 3rem 0 2rem; }
+  .footer-links { gap: 1.2rem; flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<div class="container">
+
+  <!-- Navigation -->
+  <nav class="site-nav reveal d0" aria-label="Site navigation">
+    <a href="#" class="brand">Castiel</a>
+    <ul class="nav-links">
+      <li><a href="#">Writing</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header class="site-header">
+    <p class="header-epigraph reveal d1">深夜木屋。咖啡已冷，但故事刚开始。</p>
+    <p class="header-subtitle reveal d2">Notes on game development &middot; Written by lamplight</p>
+    <div class="header-ornament reveal d2" aria-hidden="true"></div>
+  </header>
+
+  <div class="section-rule reveal d2" aria-hidden="true"></div>
+
+  <!-- Articles -->
+  <main class="articles">
+
+    <!-- Article 1 — Featured -->
+    <article class="article-featured reveal d3" aria-labelledby="post1-title">
+      <div class="post-meta">
+        <time class="post-date" datetime="2026-07-02">Second of July, 2026</time>
+        <span class="post-category">Engine Deep Dive</span>
+      </div>
+      <h2 class="post-title" id="post1-title">
+        <a href="#">Unreal&#8217;s Gameplay Ability System &mdash; Thinking in Abilities and Attributes</a>
+      </h2>
+      <p class="post-excerpt">
+        <span class="drop-cap">T</span>he first time you open the Gameplay Ability System, it feels like stepping into a cathedral. Vaulted ceilings. Echoes. Architecture that demands you slow down and look up. GAS is not a toolkit so much as a philosophy &mdash; a way of thinking about game logic as a conversation between abilities, attributes, and gameplay tags. And like any good conversation, the hard part isn&#8217;t speaking. It&#8217;s learning the grammar.
+      </p>
+      <p class="post-excerpt">
+        Most developers coming from Unity or Godot are used to MonoBehaviour-style scripting: attach a component, write an Update loop, fire a raycast. GAS asks you to unlearn that. You stop thinking about frames and start thinking about <em>predicates</em>. Can the character attack? That&#8217;s not an if-statement. That&#8217;s a GameplayTag query evaluated by an Ability System Component that may or may not be replicating across the network. The question is not &ldquo;is the button pressed&rdquo; but &ldquo;does the world permit this action.&rdquo;
+      </p>
+
+      <blockquote class="pull-quote">
+        Understanding GAS is less like learning an API and more like learning to think in a new grammar &mdash; one where every action is a conversation between abilities, attributes, and gameplay tags.
+      </blockquote>
+
+      <p class="post-excerpt">
+        I spent three weeks just reading the source. Not the docs &mdash; the source. <code style="font-family:'SF Mono','Cascadia Code','Fira Code',monospace;font-size:0.88rem;color:var(--rose-deep);background:var(--wood-pale);padding:0.1em 0.35em;">AbilitySystemComponent.cpp</code> is over eight thousand lines. You don&#8217;t read it. You live inside it for a while, like a cabin in winter, until the shape of it becomes familiar. And then one morning you wake up and realize: this isn&#8217;t an API. This is a worldview. Every action is a prediction. Every attribute change is a story.
+      </p>
+
+      <a href="#" class="continue-link">Continue reading <span class="continue-arrow" aria-hidden="true">&rarr;</span></a>
+    </article>
+
+    <!-- Article 2 — With Sidenote -->
+    <article class="article-with-note reveal d4" aria-labelledby="post2-title">
+      <aside class="sidenote" aria-label="Author's note">
+        <span class="sidenote-label">N.B.</span>
+        This piece began as a series of late-night notes scribbled between Unity builds and Unreal crashes. Against all odds, it became something more.
+      </aside>
+      <div class="post-body">
+        <time class="post-date" datetime="2026-06-18">Eighteenth of June, 2026</time>
+        <h2 class="post-title" id="post2-title">
+          <a href="#">From Unity C# to Unreal C++ &mdash; A Month of Unlearning</a>
+        </h2>
+        <p class="post-excerpt">
+          The first thing you notice is the silence. In Unity, C# holds your hand. Garbage collection hums quietly in the background. Null-reference exceptions are polite. Unreal C++ does not hold your hand. It hands you a macro &mdash; <code style="font-family:'SF Mono','Cascadia Code','Fira Code',monospace;font-size:0.88rem;color:var(--rose-deep);background:var(--wood-pale);padding:0.1em 0.35em;">UCLASS()</code> &mdash; and waits to see what you do with it.
+        </p>
+        <p class="post-excerpt">
+          I shipped three Unity titles before touching Unreal. Two mobile games and a small Steam release. I felt competent. The kind of competent where you forget how much scaffolding your tools have been quietly providing. Unreal strips that scaffolding away and replaces it with something older and stranger: a preprocessor that rewrites your headers before the compiler ever sees them. A garbage collector that only cares about <code style="font-family:'SF Mono','Cascadia Code','Fira Code',monospace;font-size:0.88rem;color:var(--rose-deep);background:var(--wood-pale);padding:0.1em 0.35em;">UObject</code> descendants. A reflection system that makes C# feel understated.
+        </p>
+        <p class="post-excerpt">
+          The hardest lesson was not technical. It was humility. I had to accept that knowing how to make games did not mean knowing how to make games <em>this way</em>. The engine is older than I am in some respects. It carries decisions made in 1998. And yet &mdash; and this is what kept me going &mdash; those decisions have a coherence to them. A stubborn, architectural coherence. Once you stop fighting the grain and start reading along it, the whole thing opens up.
+        </p>
+        <a href="#" class="continue-link">Continue reading <span class="continue-arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </article>
+
+    <!-- Article 3 — With Code -->
+    <article class="article-with-code reveal d5" aria-labelledby="post3-title">
+      <time class="post-date" datetime="2026-06-04">Fourth of June, 2026</time>
+      <h2 class="post-title" id="post3-title">
+        <a href="#">Building Responsive Combat with Enhanced Input and GAS</a>
+      </h2>
+      <p class="post-excerpt">
+        There is a moment in every combat system where the design document meets the codebase and something has to give. The designer wants the light attack to cancel into the heavy attack, but only during the first twelve frames. The engineer wants to know what &ldquo;cancel&rdquo; means in a networked environment with server reconciliation. Bridging that gap is what the Enhanced Input system and GAS were built to do &mdash; but the bridge itself is something you have to construct.
+      </p>
+
+      <div class="code-snippet" aria-label="C++ code example">
+<span class="cm">// Binding Enhanced Input to Gameplay Ability activation</span>
+<span class="kw">void</span> <span class="fn">ACastielCharacter::SetupPlayerInputComponent</span>(
+    UInputComponent* PlayerInputComponent)
+{
+    Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+    <span class="kw">if</span> (<span class="kw">auto</span>* EI = Cast&lt;UEnhancedInputComponent&gt;(
+        PlayerInputComponent))
+    {
+        <span class="kw">if</span> (AbilitySystemComponent && InputConfig)
+        {
+            EI-&gt;BindAction(InputConfig-&gt;LightAttackAction,
+                ETriggerEvent::Started, <span class="kw">this</span>,
+                &amp;<span class="fn">ACastielCharacter::OnLightAttackStarted</span>);
+
+            EI-&gt;BindAction(InputConfig-&gt;HeavyAttackAction,
+                ETriggerEvent::Triggered, <span class="kw">this</span>,
+                &amp;<span class="fn">ACastielCharacter::OnHeavyAttackTriggered</span>);
+        }
+    }
+}
+      </div>
+
+      <p class="post-excerpt">
+        The elegance of this approach is that the input layer and the ability layer remain completely decoupled. Enhanced Input handles the hardware &mdash; triggers, chorded actions, held vs. tapped &mdash; while GAS handles the game logic. They meet only at the binding point, which becomes the single place you need to debug when something goes wrong. And something always goes wrong, because combat systems are fundamentally about timing, and timing is the hardest thing to get right across a network.
+      </p>
+
+      <p class="post-excerpt">
+        What surprised me most was how much of the work was not in writing code but in designing the <em>tags</em>. <code style="font-family:'SF Mono','Cascadia Code','Fira Code',monospace;font-size:0.88rem;color:var(--rose-deep);background:var(--wood-pale);padding:0.1em 0.35em;">Ability.Attack.Light</code>, <code style="font-family:'SF Mono','Cascadia Code','Fira Code',monospace;font-size:0.88rem;color:var(--rose-deep);background:var(--wood-pale);padding:0.1em 0.35em;">State.Combat.InCombat</code>, <code style="font-family:'SF Mono','Cascadia Code','Fira Code',monospace;font-size:0.88rem;color:var(--rose-deep);background:var(--wood-pale);padding:0.1em 0.35em;">Cooldown.Attack.Light</code> &mdash; the tag hierarchy <em>is</em> the design. Get it right and your combat feels like a conversation. Get it wrong and you spend three days debugging an interaction between a dodge roll and a health potion.
+      </p>
+
+      <a href="#" class="continue-link">Continue reading <span class="continue-arrow" aria-hidden="true">&rarr;</span></a>
+
+      <div class="journal-marker reveal d6">Updated with server reconciliation notes on the seventh</div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer reveal d7">
+    <div class="footer-ornament" aria-hidden="true">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+    <p class="footer-text">Castiel &mdash; game developer, UE5 apprentice, permanent student of light.</p>
+    <ul class="footer-links">
+      <li><a href="#">RSS</a></li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p class="footer-whisper">Built with care. Deployed by lamplight. &copy; 2026</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>草地牧羊人 — Castiel</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green-deep: #4a7c59;
+  --green-meadow: #6b8c5c;
+  --green-pale: #8faa7b;
+  --sky-blue: #87CEEB;
+  --sky-pale: #a8d8ea;
+  --sky-wash: #d4eaf5;
+  --sunlight: #f4d06f;
+  --sunlight-pale: #f9e4b7;
+  --sunlight-wash: #fdf3dd;
+  --earth: #8b7355;
+  --earth-pale: #c4a882;
+  --earth-wash: #ede3d4;
+  --cream: #fefcf5;
+  --ink: #2c2419;
+  --ink-soft: #544e41;
+  --ink-muted: #7a7468;
+}
+
+html { font-size: 18px; scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ── SVG noise texture ── */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+}
+.grain svg { width: 100%; height: 100%; }
+
+/* ── Sky gradient backdrop ── */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, var(--sky-pale) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 85% 15%, var(--sunlight-pale) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 35% at 15% 85%, var(--green-pale) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 75% 90%, var(--earth-pale) 0%, transparent 50%),
+    var(--cream);
+}
+
+/* ── Header ── */
+.site-header {
+  padding: 3.5rem 5vw 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(139,115,85,0.15);
+}
+
+.site-title {
+  font-family: Georgia, "Noto Serif SC", "SimSun", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--green-deep);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.site-subtitle {
+  font-family: Georgia, "Noto Serif SC", "SimSun", serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-muted);
+  font-weight: 400;
+  margin-top: 0.3rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav a {
+  color: var(--earth);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.3s;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green-meadow);
+  transition: width 0.35s ease;
+}
+
+.nav a:hover { color: var(--green-deep); }
+.nav a:hover::after { width: 100%; }
+.nav a.active { color: var(--green-deep); }
+.nav a.active::after { width: 100%; background: var(--green-deep); }
+
+/* ── Hero ── */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 5vw 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text { padding-right: 2rem; }
+
+.hero-greeting {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 1.15rem;
+  color: var(--earth);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.hero-heading {
+  font-family: Georgia, "Noto Serif SC", "SimSun", serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.hero-heading em {
+  font-style: italic;
+  color: var(--green-deep);
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin-top: 1.5rem;
+  max-width: 28rem;
+  line-height: 1.9;
+}
+
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 2px;
+  overflow: hidden;
+  background:
+    linear-gradient(175deg, var(--sky-pale) 0%, var(--sky-wash) 35%, var(--green-pale) 70%, var(--green-meadow) 100%);
+  box-shadow: 0 2px 24px rgba(74,124,89,0.12);
+}
+
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(244,208,111,0.25) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(244,208,111,0.15) 0%, transparent 40%);
+}
+
+/* Small cloud shapes */
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  bottom: 18%;
+  left: 8%;
+  width: 55%;
+  height: 28%;
+  background:
+    radial-gradient(ellipse 30% 50% at 20% 50%, rgba(255,255,255,0.55) 0%, transparent 100%),
+    radial-gradient(ellipse 25% 45% at 45% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(ellipse 22% 40% at 70% 55%, rgba(255,255,255,0.45) 0%, transparent 100%),
+    radial-gradient(ellipse 20% 35% at 85% 50%, rgba(255,255,255,0.35) 0%, transparent 100%);
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--earth);
+  background: rgba(196,168,130,0.15);
+  border: 1px solid rgba(196,168,130,0.3);
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Decorative divider ── */
+.section-divider {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  color: var(--green-pale);
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(107,140,92,0.2), transparent);
+}
+
+/* ── Posts section ── */
+.posts-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 5vw 5rem;
+}
+
+.posts-heading {
+  font-family: Georgia, "Noto Serif SC", "SimSun", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+}
+
+.posts-heading::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: var(--sunlight);
+  margin-top: 0.6rem;
+}
+
+/* ── Individual post card ── */
+.post {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2.5rem;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid rgba(139,115,85,0.1);
+  align-items: start;
+}
+
+.post:first-of-type { padding-top: 0; }
+
+.post-meta {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  padding-top: 0.25rem;
+}
+
+.post-date {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--earth);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.post-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--green-meadow);
+  background: rgba(107,140,92,0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 1px;
+}
+
+.post-body { }
+
+.post-title {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.post-title a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.post-title a:hover { color: var(--green-deep); }
+
+.post-excerpt {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+}
+
+.post-read-more {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--green-meadow);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.3s;
+}
+
+.post-read-more:hover { gap: 0.7rem; }
+
+.post-read-more::after {
+  content: '→';
+  font-size: 0.85rem;
+}
+
+/* ── Footer ── */
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 5vw 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(139,115,85,0.15);
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--green-deep); }
+
+.footer-motto {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: var(--earth);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .nav { gap: 1.25rem; flex-wrap: wrap; }
+  .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 5vw 4rem; }
+  .hero-text { padding-right: 0; }
+  .hero-heading { font-size: 2.4rem; }
+  .hero-visual { aspect-ratio: 16 / 9; }
+  .post { grid-template-columns: 1fr; gap: 0.75rem; }
+  .post-meta { display: flex; gap: 1rem; align-items: baseline; }
+}
+
+@media (max-width: 480px) {
+  .hero-heading { font-size: 1.9rem; }
+  .site-title { font-size: 1.5rem; }
+  .nav { font-size: 0.82rem; }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: rgba(139,115,85,0.25); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(139,115,85,0.4); }
+
+/* ── Selection ── */
+::selection {
+  background: rgba(244,208,111,0.3);
+  color: var(--ink);
+}
+</style>
+</head>
+<body>
+
+<!-- Grain texture overlay -->
+<div class="grain">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noise)" opacity="1"/>
+  </svg>
+</div>
+
+<!-- Sky / meadow backdrop -->
+<div class="backdrop"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <div>
+    <div class="site-title">草地牧羊人</div>
+    <div class="site-subtitle">The Meadow Shepherd &mdash; 一个游戏开发者的白日梦</div>
+  </div>
+  <nav>
+    <ul class="nav">
+      <li><a href="#" class="active">文章</a></li>
+      <li><a href="#">笔记</a></li>
+      <li><a href="#">作品</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-greeting">下午好，旅行者。</p>
+    <h1 class="hero-heading">
+      在草地与天空之间<br>
+      <em>写代码，做游戏。</em>
+    </h1>
+    <p class="hero-desc">
+      Castiel，正在学习 Unreal Engine 5 与 C++ 的游戏开发者。
+      在这里记录技术学习、设计思考和创作过程。
+      像牧羊人躺在草地上看云一样，自由而专注。
+    </p>
+    <span class="hero-tag">Unreal Engine 5 &middot; C++ &middot; Game Design</span>
+  </div>
+  <div class="hero-visual"></div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <span>&sect; 最近的文章</span>
+</div>
+
+<!-- Blog posts -->
+<section class="posts-section">
+  <h2 class="posts-heading">写在草地上</h2>
+
+  <article class="post">
+    <div class="post-meta">
+      <span class="post-date">2026 &middot; 07 &middot; 02</span>
+      <span class="post-tag">UE5</span>
+    </div>
+    <div class="post-body">
+      <h3 class="post-title">
+        <a href="#">理解 GameplayAbilitySystem：一个初学者的诚实笔记</a>
+      </h3>
+      <p class="post-excerpt">
+        花了三周时间在 GAS 的源码里迷路。AttributeSet、GameplayEffect、AbilityTask ——
+        这些概念第一次接触时像是掉进了一座没有地图的森林。但当我终于让一个简单的技能在屏幕上播放出来时，
+        那种感觉就像在草丛里发现了一条溪流。这篇文章记录我从零开始理解 GAS 的过程，
+        以及那些官方文档没告诉你的陷阱。
+      </p>
+      <a href="#" class="post-read-more">继续阅读</a>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-meta">
+      <span class="post-date">2026 &middot; 06 &middot; 18</span>
+      <span class="post-tag">C++</span>
+    </div>
+    <div class="post-body">
+      <h3 class="post-title">
+        <a href="#">UE5 C++ 中那些让我困惑的指针：从 TSharedPtr 到 TObjectPtr</a>
+      </h3>
+      <p class="post-excerpt">
+        UE 的智能指针体系有自己的哲学。TSharedPtr 不是 std::shared_ptr，TObjectPtr 是 UE5
+        新引入的 —— 而 TWeakObjectPtr 的行为在编辑器和非编辑器构建中完全不同。
+        我在一个 Actor 池化的实现中踩了三个坑，这篇文章把它们一一记录下来。
+        希望下一个读到的人能少走一些弯路。
+      </p>
+      <a href="#" class="post-read-more">继续阅读</a>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-meta">
+      <span class="post-date">2026 &middot; 06 &middot; 05</span>
+      <span class="post-tag">设计</span>
+    </div>
+    <div class="post-body">
+      <h3 class="post-title">
+        <a href="#">草地、天空与关卡设计：为什么自然环境是游戏中最被低估的叙事工具</a>
+      </h3>
+      <p class="post-excerpt">
+        一片好的草地不只是草。它要有风的方向，有光线的温度，有让人想躺下来的冲动。
+        这篇文章不是教程 —— 它是我在玩《塞尔达传说：旷野之息》和《艾尔登法环》时的一些观察：
+        那些让我停下来的自然环境是如何被精心设计的，以及我在自己的 UE5 场景中尝试复现其中一些感觉时学到的东西。
+      </p>
+      <a href="#" class="post-read-more">继续阅读</a>
+    </div>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div>
+    <p>&copy; 2026 Castiel &middot; 牧羊人在草地上</p>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">作品集</a></li>
+    <li><a href="#">RSS</a></li>
+  </ul>
+  <p class="footer-motto">晴耕雨读，昼夜兼程。</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1230 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic:
+      - text:  
+      - generic [ref=e3]:
+        - link "CodeHim.com" [ref=e4] [cursor=pointer]:
+          - /url: https://www.codehim.com
+        - paragraph [ref=e5]:
+          - text: Free Web Design Code & Scripts
+          - link "Web Design & Development" [ref=e6] [cursor=pointer]:
+            - img [ref=e8]
+            - text: Web Design & Development
+      - generic [ref=e10]:
+        - complementary
+  - insertion [ref=e12]:
+    - iframe [ref=e14]:
+      - generic [active] [ref=f3e1]:
+        - generic [ref=f3e5]:
+          - generic [ref=f3e6]:
+            - link [ref=f3e7] [cursor=pointer]:
+              - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CgSbeHlpLaojALMaQ_tMP4JruiA2Azef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEJqQKsWsKG0CyzPqgDAcgDywSqBPwBT9D2-dmCPE815Ut7dFUUHR6GKJXk4RN2z1vmz0J0q8XvgL2VW_bTfUJ01X7SKtxCWyGMJ1Uq75i345ylspWg4bM5sgubEE9oGkA-vGCdh86IhV8wfrLPa-k0wXz6ndSp6x4UoZkJJKr9Q5uoUxwHT0CgrcZ5zaPsu1u3G7D4IDQ0pf0Y9wEey7si7DdTDyv5wM3QJKWQahg64mnzPZ-fCyjX2g4xCLpH2QwsSlVIsFfcWhXIRDbE5fBgwRBSoDOBlyiySLZNNKCETusfiW0jFZ-YL_oYEGupr_1xYNOKe6dUuMg56GQMt1gOzsgpTlsT0YkhgBXGVhdIhSL1wASw4sro8QSIBeDz-vFQoAYugAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHANIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYvMz6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGADAGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCNDM_b7EvZUDFUaIfwQdYI0b0fANAogOCbgT5APYEwyIFAfQFQGYFgHKFgIKAPgWAYAXAbIXBBgBUAa6FwI4AbIYCRICnWMYLiIBANAYAegYAcIZAggB&ae=1&gclid=EAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE&num=1&cid=CAQSiAIAEQoqgTF-KZJwFgz3rTtJ7eqKszJ58XjZUKbSvXd8VN0wlzaJIYaPa4yVzyT8rRpU-KUYEBWYHxRE1V8XCGOGFtNGgfd07K9kN57BnOv_vIUOfrwuQe9nUiPY7GhL50wrjit76Pf9g9Im_ddHTxf5SoYycZyrsK_W1NGXE7i1LiJe8wYhcCPViAMAG2328vuLtF7-vGjVoq9FKUc-XOnEEajhvTFEPFjDBtZEIVem9QfrR23BwUMvlA1JBhnEM-P5LkPHlmX8gp5JmoAwMlpbeUohnBVTHFoAI45zQ_xAYnN8Fd03T0Mzz7HYtFoSeRwphebw1DdMAd4cJh3dkgOS-R6Nt9vZ5egYAQ&sig=AOD64_3RD-aFhybuyqWz9qouON2rfsbZjw&client=ca-pub-9265886855150833&rf=1&nb=9&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE
+              - img [ref=f3e8]
+            - link "Download your CV in no time" [ref=f3e11] [cursor=pointer]:
+              - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CgSbeHlpLaojALMaQ_tMP4JruiA2Azef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEJqQKsWsKG0CyzPqgDAcgDywSqBPwBT9D2-dmCPE815Ut7dFUUHR6GKJXk4RN2z1vmz0J0q8XvgL2VW_bTfUJ01X7SKtxCWyGMJ1Uq75i345ylspWg4bM5sgubEE9oGkA-vGCdh86IhV8wfrLPa-k0wXz6ndSp6x4UoZkJJKr9Q5uoUxwHT0CgrcZ5zaPsu1u3G7D4IDQ0pf0Y9wEey7si7DdTDyv5wM3QJKWQahg64mnzPZ-fCyjX2g4xCLpH2QwsSlVIsFfcWhXIRDbE5fBgwRBSoDOBlyiySLZNNKCETusfiW0jFZ-YL_oYEGupr_1xYNOKe6dUuMg56GQMt1gOzsgpTlsT0YkhgBXGVhdIhSL1wASw4sro8QSIBeDz-vFQoAYugAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHANIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYvMz6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGADAGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCNDM_b7EvZUDFUaIfwQdYI0b0fANAogOCbgT5APYEwyIFAfQFQGYFgHKFgIKAPgWAYAXAbIXBBgBUAa6FwI4AbIYCRICnWMYLiIBANAYAegYAcIZAggB&ae=1&gclid=EAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE&num=1&cid=CAQSiAIAEQoqgTF-KZJwFgz3rTtJ7eqKszJ58XjZUKbSvXd8VN0wlzaJIYaPa4yVzyT8rRpU-KUYEBWYHxRE1V8XCGOGFtNGgfd07K9kN57BnOv_vIUOfrwuQe9nUiPY7GhL50wrjit76Pf9g9Im_ddHTxf5SoYycZyrsK_W1NGXE7i1LiJe8wYhcCPViAMAG2328vuLtF7-vGjVoq9FKUc-XOnEEajhvTFEPFjDBtZEIVem9QfrR23BwUMvlA1JBhnEM-P5LkPHlmX8gp5JmoAwMlpbeUohnBVTHFoAI45zQ_xAYnN8Fd03T0Mzz7HYtFoSeRwphebw1DdMAd4cJh3dkgOS-R6Nt9vZ5egYAQ&sig=AOD64_3RD-aFhybuyqWz9qouON2rfsbZjw&client=ca-pub-9265886855150833&rf=1&nb=0&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE
+          - generic [ref=f3e12]:
+            - link [ref=f3e13] [cursor=pointer]:
+              - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CgSbeHlpLaojALMaQ_tMP4JruiA2Azef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEJqQKsWsKG0CyzPqgDAcgDywSqBPwBT9D2-dmCPE815Ut7dFUUHR6GKJXk4RN2z1vmz0J0q8XvgL2VW_bTfUJ01X7SKtxCWyGMJ1Uq75i345ylspWg4bM5sgubEE9oGkA-vGCdh86IhV8wfrLPa-k0wXz6ndSp6x4UoZkJJKr9Q5uoUxwHT0CgrcZ5zaPsu1u3G7D4IDQ0pf0Y9wEey7si7DdTDyv5wM3QJKWQahg64mnzPZ-fCyjX2g4xCLpH2QwsSlVIsFfcWhXIRDbE5fBgwRBSoDOBlyiySLZNNKCETusfiW0jFZ-YL_oYEGupr_1xYNOKe6dUuMg56GQMt1gOzsgpTlsT0YkhgBXGVhdIhSL1wASw4sro8QSIBeDz-vFQoAYugAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHANIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYvMz6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGADAGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCNDM_b7EvZUDFUaIfwQdYI0b0fANAogOCbgT5APYEwyIFAfQFQGYFgHKFgIKAPgWAYAXAbIXBBgBUAa6FwI4AbIYCRICnWMYLiIBANAYAegYAcIZAggB&ae=1&gclid=EAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE&num=1&cid=CAQSiAIAEQoqgTF-KZJwFgz3rTtJ7eqKszJ58XjZUKbSvXd8VN0wlzaJIYaPa4yVzyT8rRpU-KUYEBWYHxRE1V8XCGOGFtNGgfd07K9kN57BnOv_vIUOfrwuQe9nUiPY7GhL50wrjit76Pf9g9Im_ddHTxf5SoYycZyrsK_W1NGXE7i1LiJe8wYhcCPViAMAG2328vuLtF7-vGjVoq9FKUc-XOnEEajhvTFEPFjDBtZEIVem9QfrR23BwUMvlA1JBhnEM-P5LkPHlmX8gp5JmoAwMlpbeUohnBVTHFoAI45zQ_xAYnN8Fd03T0Mzz7HYtFoSeRwphebw1DdMAd4cJh3dkgOS-R6Nt9vZ5egYAQ&sig=AOD64_3RD-aFhybuyqWz9qouON2rfsbZjw&client=ca-pub-9265886855150833&rf=1&nb=19&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE
+              - img [ref=f3e14]
+            - link "CVwizard" [ref=f3e16] [cursor=pointer]:
+              - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CgSbeHlpLaojALMaQ_tMP4JruiA2Azef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEJqQKsWsKG0CyzPqgDAcgDywSqBPwBT9D2-dmCPE815Ut7dFUUHR6GKJXk4RN2z1vmz0J0q8XvgL2VW_bTfUJ01X7SKtxCWyGMJ1Uq75i345ylspWg4bM5sgubEE9oGkA-vGCdh86IhV8wfrLPa-k0wXz6ndSp6x4UoZkJJKr9Q5uoUxwHT0CgrcZ5zaPsu1u3G7D4IDQ0pf0Y9wEey7si7DdTDyv5wM3QJKWQahg64mnzPZ-fCyjX2g4xCLpH2QwsSlVIsFfcWhXIRDbE5fBgwRBSoDOBlyiySLZNNKCETusfiW0jFZ-YL_oYEGupr_1xYNOKe6dUuMg56GQMt1gOzsgpTlsT0YkhgBXGVhdIhSL1wASw4sro8QSIBeDz-vFQoAYugAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHANIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYvMz6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGADAGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCNDM_b7EvZUDFUaIfwQdYI0b0fANAogOCbgT5APYEwyIFAfQFQGYFgHKFgIKAPgWAYAXAbIXBBgBUAa6FwI4AbIYCRICnWMYLiIBANAYAegYAcIZAggB&ae=1&gclid=EAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE&num=1&cid=CAQSiAIAEQoqgTF-KZJwFgz3rTtJ7eqKszJ58XjZUKbSvXd8VN0wlzaJIYaPa4yVzyT8rRpU-KUYEBWYHxRE1V8XCGOGFtNGgfd07K9kN57BnOv_vIUOfrwuQe9nUiPY7GhL50wrjit76Pf9g9Im_ddHTxf5SoYycZyrsK_W1NGXE7i1LiJe8wYhcCPViAMAG2328vuLtF7-vGjVoq9FKUc-XOnEEajhvTFEPFjDBtZEIVem9QfrR23BwUMvlA1JBhnEM-P5LkPHlmX8gp5JmoAwMlpbeUohnBVTHFoAI45zQ_xAYnN8Fd03T0Mzz7HYtFoSeRwphebw1DdMAd4cJh3dkgOS-R6Nt9vZ5egYAQ&sig=AOD64_3RD-aFhybuyqWz9qouON2rfsbZjw&client=ca-pub-9265886855150833&rf=1&nb=1&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE
+            - link "Open" [ref=f3e17] [cursor=pointer]:
+              - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CgSbeHlpLaojALMaQ_tMP4JruiA2Azef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEJqQKsWsKG0CyzPqgDAcgDywSqBPwBT9D2-dmCPE815Ut7dFUUHR6GKJXk4RN2z1vmz0J0q8XvgL2VW_bTfUJ01X7SKtxCWyGMJ1Uq75i345ylspWg4bM5sgubEE9oGkA-vGCdh86IhV8wfrLPa-k0wXz6ndSp6x4UoZkJJKr9Q5uoUxwHT0CgrcZ5zaPsu1u3G7D4IDQ0pf0Y9wEey7si7DdTDyv5wM3QJKWQahg64mnzPZ-fCyjX2g4xCLpH2QwsSlVIsFfcWhXIRDbE5fBgwRBSoDOBlyiySLZNNKCETusfiW0jFZ-YL_oYEGupr_1xYNOKe6dUuMg56GQMt1gOzsgpTlsT0YkhgBXGVhdIhSL1wASw4sro8QSIBeDz-vFQoAYugAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHANIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYvMz6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGADAGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCNDM_b7EvZUDFUaIfwQdYI0b0fANAogOCbgT5APYEwyIFAfQFQGYFgHKFgIKAPgWAYAXAbIXBBgBUAa6FwI4AbIYCRICnWMYLiIBANAYAegYAcIZAggB&ae=1&gclid=EAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE&num=1&cid=CAQSiAIAEQoqgTF-KZJwFgz3rTtJ7eqKszJ58XjZUKbSvXd8VN0wlzaJIYaPa4yVzyT8rRpU-KUYEBWYHxRE1V8XCGOGFtNGgfd07K9kN57BnOv_vIUOfrwuQe9nUiPY7GhL50wrjit76Pf9g9Im_ddHTxf5SoYycZyrsK_W1NGXE7i1LiJe8wYhcCPViAMAG2328vuLtF7-vGjVoq9FKUc-XOnEEajhvTFEPFjDBtZEIVem9QfrR23BwUMvlA1JBhnEM-P5LkPHlmX8gp5JmoAwMlpbeUohnBVTHFoAI45zQ_xAYnN8Fd03T0Mzz7HYtFoSeRwphebw1DdMAd4cJh3dkgOS-R6Nt9vZ5egYAQ&sig=AOD64_3RD-aFhybuyqWz9qouON2rfsbZjw&client=ca-pub-9265886855150833&rf=1&nb=8&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMIiMf9vsS9lQMVRoh_BB1gjRvREAEYASAAEgJD1PD_BwE
+              - generic [ref=f3e19]: Open
+        - img [ref=f3e23] [cursor=pointer]
+        - button [ref=f3e25] [cursor=pointer]:
+          - img [ref=f3e26]
+        - iframe
+  - navigation [ref=e15]:
+    - generic [ref=e16]:
+      - list [ref=e17]:
+        - listitem [ref=e18]:
+          - link "" [ref=e19] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e20]:
+          - generic [ref=e21] [cursor=pointer]:  Code Snippets
+          - text:              
+        - listitem [ref=e22]:
+          - link " HTML & CSS" [ref=e23] [cursor=pointer]:
+            - /url: /category/html5-css3/
+            - generic [ref=e24]: 
+            - text: HTML & CSS
+        - listitem [ref=e25]:
+          - link " Bootstrap" [ref=e26] [cursor=pointer]:
+            - /url: /category/bootstrap/
+            - generic [ref=e27]: 
+            - text: Bootstrap
+        - listitem [ref=e28]:
+          - link " JavaScript" [ref=e29] [cursor=pointer]:
+            - /url: /category/vanilla-javascript/
+            - generic [ref=e30]: 
+            - text: JavaScript
+        - listitem [ref=e31]:
+          - link " Collections" [ref=e32] [cursor=pointer]:
+            - /url: /category/collections/
+            - generic [ref=e33]: 
+            - text: Collections
+        - generic [ref=e34]:
+          - listitem [ref=e35]:
+            - link "About" [ref=e36] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=e37]:
+            - link "Contact" [ref=e38] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=e39]:
+            - link "Buy Me a Coffee" [ref=e40] [cursor=pointer]:
+              - /url: /buy-me-a-coffee/
+      - text:  
+  - generic [ref=e42]:
+    - main [ref=e44]:
+      - paragraph [ref=e45]:
+        - generic [ref=e46]: 
+        - generic [ref=e47]:
+          - link "Home" [ref=e49] [cursor=pointer]:
+            - /url: https://codehim.com/
+          - text: /
+          - link "HTML5 & CSS3" [ref=e51] [cursor=pointer]:
+            - /url: https://codehim.com/category/html5-css3/
+          - text: / HTML Code for Resume with Picture
+      - article [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - heading "HTML Code for Resume with Picture" [level=1] [ref=e55]:
+              - text: HTML Code for
+              - link "Resume" [ref=e56] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e57]
+                - text: Resume
+              - text: with Picture
+            - generic [ref=e59]:
+              - time [ref=e61]: January 10, 2024
+              - generic [ref=e62]:
+                - text: by
+                - link "Asif Mughal" [ref=e64] [cursor=pointer]:
+                  - /url: https://codehim.com/author/asif-mughal/
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - link "HTML Code for Resume with Picture" [ref=e67] [cursor=pointer]:
+                - /url: https://codehim.com/wp-content/uploads/2023/10/HTML-Code-for-Resume-with-Picture.png
+                - img "HTML Code for Resume with Picture" [ref=e68]
+              - strong [ref=e70]: "Share This:"
+            - generic [ref=e71]:
+              - figure [ref=e72]:
+                - table [ref=e73]:
+                  - rowgroup [ref=e74]:
+                    - 'row "Code Snippet: Resume/CV Design" [ref=e75]':
+                      - cell "Code Snippet:" [ref=e76]
+                      - cell "Resume/CV Design" [ref=e77]
+                    - 'row "Author: rajeshdn" [ref=e78]':
+                      - cell "Author:" [ref=e79]
+                      - cell "rajeshdn" [ref=e80]
+                    - 'row "Published: January 10, 2024" [ref=e81]':
+                      - cell "Published:" [ref=e82]
+                      - cell "January 10, 2024" [ref=e83]
+                    - 'row "Last Updated: January 22, 2024" [ref=e84]':
+                      - cell "Last Updated:" [ref=e85]
+                      - cell "January 22, 2024" [ref=e86]
+                    - 'row "Downloads: 18,772" [ref=e87]':
+                      - cell "Downloads:" [ref=e88]
+                      - cell "18,772" [ref=e89]
+              - generic [ref=e90] [cursor=pointer]: Read More
+              - generic [ref=e93]:
+                - link " Demo" [ref=e95] [cursor=pointer]:
+                  - /url: https://codehim.com/demo/html-code-for-resume-with-picture/
+                  - generic [ref=e96]: 
+                  - text: Demo
+                - link " Download (File path is not allowed!)" [ref=e98] [cursor=pointer]:
+                  - /url: https://codehim.com/download/html-code-for-resume-with-picture.zip
+                  - generic [ref=e99]: 
+                  - text: Download (File path is not allowed!)
+          - generic [ref=e100]:
+            - paragraph [ref=e101]:
+              - text: This HTML and CSS code provides a template for creating a
+              - link "resume" [ref=e102] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e103]
+                - text: resume
+              - text: with a picture. It defines the structure of the resume, including sections for personal information, skills, social links, work experience, education, and hobbies.
+              - link "Programming" [ref=e105] [cursor=pointer]:
+                - img [ref=e107]
+                - text: Programming
+            - generic:
+              - insertion:
+                - generic:
+                  - iframe
+            - paragraph [ref=e109]: The CSS code styles the resume, giving it a professional and visually appealing design, with a blue and white color scheme. Moreover, it is helpful for creating a well-designed and organized resume with a profile picture.
+            - paragraph [ref=e110]:
+              - text: You can integrate this resume template on your personal website or portfolio. It helps
+              - link "present your skills" [ref=e111] [cursor=pointer]:
+                - /url: https://codehim.com/html5-css3/skill-progressbar-using-html-css/
+              - text: and experience in a visually appealing manner.
+            - heading "How to Create a Resume With Picture using HTML & CSS" [level=2] [ref=e112]
+            - paragraph [ref=e113]:
+              - text: 1. First, load the
+              - link "Font Awesome icons" [ref=e114] [cursor=pointer]:
+                - /url: https://fontawesome.com/docs/web/setup/use-kit
+              - text: . Add the following links to your HTML file’s
+              - code [ref=e115]: <head>
+              - text: "section:"
+              - link "Scripting Languages" [ref=e116] [cursor=pointer]:
+                - img [ref=e118]
+                - text: Scripting Languages
+            - list [ref=e121]:
+              - listitem [ref=e122]: <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+            - iframe [ref=e127]:
+              - region [ref=f7e2]:
+                - generic [ref=f7e4]:
+                  - generic [ref=f7e6]: Discover related topics
+                  - link "HTML Resume Template" [ref=f7e9] [cursor=pointer]:
+                    - /url: https://syndicatedsearch.goog/afs/ads?sjk=jbi%2BtAuaQc%2BBS3lyujVYfw%3D%3D&psid=5134551505&channel=AutoRsVariant&cx=r-404e77c613dba5e13&fexp=31099344%2C95395662%2C95393280%2C21404%2C17300002%2C17301437%2C17301438%2C17301442%2C17301266%2C72717107&client=pub-9265886855150833&r=m&hl=en&rpbu=http%3A%2F%2Fgoogle.com&rpqp=q&type=3&rs_tt=c&oe=UTF-8&ie=UTF-8&format=r5&nocache=1651783323167014&num=0&output=afd_ads&domain_name=codehim.com&v=3&bsl=10&pac=2&u_his=2&u_tz=480&dt=1783323167014&u_w=1707&u_h=1067&biw=1027&bih=883&psw=1027&psh=6469&frm=0&uio=-&cont=autors-container-0&drt=0&jsid=csa&jsv=936599946&rurl=https%3A%2F%2Fcodehim.com%2Fhtml5-css3%2Fhtml-code-for-resume-with-picture%2F&lle=1#&nb=0
+                    - generic [ref=f7e11]: HTML Resume Template
+                  - link "Html Resume Template Download" [ref=f7e14] [cursor=pointer]:
+                    - /url: https://syndicatedsearch.goog/afs/ads?sjk=jbi%2BtAuaQc%2BBS3lyujVYfw%3D%3D&psid=5134551505&channel=AutoRsVariant&cx=r-404e77c613dba5e13&fexp=31099344%2C95395662%2C95393280%2C21404%2C17300002%2C17301437%2C17301438%2C17301442%2C17301266%2C72717107&client=pub-9265886855150833&r=m&hl=en&rpbu=http%3A%2F%2Fgoogle.com&rpqp=q&type=3&rs_tt=c&oe=UTF-8&ie=UTF-8&format=r5&nocache=1651783323167014&num=0&output=afd_ads&domain_name=codehim.com&v=3&bsl=10&pac=2&u_his=2&u_tz=480&dt=1783323167014&u_w=1707&u_h=1067&biw=1027&bih=883&psw=1027&psh=6469&frm=0&uio=-&cont=autors-container-0&drt=0&jsid=csa&jsv=936599946&rurl=https%3A%2F%2Fcodehim.com%2Fhtml5-css3%2Fhtml-code-for-resume-with-picture%2F&lle=1#&nb=0
+                    - generic [ref=f7e16]: Html Resume Template Download
+                  - link "Resume Builder Html Code" [ref=f7e19] [cursor=pointer]:
+                    - /url: https://syndicatedsearch.goog/afs/ads?sjk=jbi%2BtAuaQc%2BBS3lyujVYfw%3D%3D&psid=5134551505&channel=AutoRsVariant&cx=r-404e77c613dba5e13&fexp=31099344%2C95395662%2C95393280%2C21404%2C17300002%2C17301437%2C17301438%2C17301442%2C17301266%2C72717107&client=pub-9265886855150833&r=m&hl=en&rpbu=http%3A%2F%2Fgoogle.com&rpqp=q&type=3&rs_tt=c&oe=UTF-8&ie=UTF-8&format=r5&nocache=1651783323167014&num=0&output=afd_ads&domain_name=codehim.com&v=3&bsl=10&pac=2&u_his=2&u_tz=480&dt=1783323167014&u_w=1707&u_h=1067&biw=1027&bih=883&psw=1027&psh=6469&frm=0&uio=-&cont=autors-container-0&drt=0&jsid=csa&jsv=936599946&rurl=https%3A%2F%2Fcodehim.com%2Fhtml5-css3%2Fhtml-code-for-resume-with-picture%2F&lle=1#&nb=0
+                    - generic [ref=f7e21]: Resume Builder Html Code
+                  - link "Resume Builder Html Template" [ref=f7e24] [cursor=pointer]:
+                    - /url: https://syndicatedsearch.goog/afs/ads?sjk=jbi%2BtAuaQc%2BBS3lyujVYfw%3D%3D&psid=5134551505&channel=AutoRsVariant&cx=r-404e77c613dba5e13&fexp=31099344%2C95395662%2C95393280%2C21404%2C17300002%2C17301437%2C17301438%2C17301442%2C17301266%2C72717107&client=pub-9265886855150833&r=m&hl=en&rpbu=http%3A%2F%2Fgoogle.com&rpqp=q&type=3&rs_tt=c&oe=UTF-8&ie=UTF-8&format=r5&nocache=1651783323167014&num=0&output=afd_ads&domain_name=codehim.com&v=3&bsl=10&pac=2&u_his=2&u_tz=480&dt=1783323167014&u_w=1707&u_h=1067&biw=1027&bih=883&psw=1027&psh=6469&frm=0&uio=-&cont=autors-container-0&drt=0&jsid=csa&jsv=936599946&rurl=https%3A%2F%2Fcodehim.com%2Fhtml5-css3%2Fhtml-code-for-resume-with-picture%2F&lle=1#&nb=0
+                    - generic [ref=f7e26]: Resume Builder Html Template
+                  - link "Free Resume Templates Html5" [ref=f7e29] [cursor=pointer]:
+                    - /url: https://syndicatedsearch.goog/afs/ads?sjk=jbi%2BtAuaQc%2BBS3lyujVYfw%3D%3D&psid=5134551505&channel=AutoRsVariant&cx=r-404e77c613dba5e13&fexp=31099344%2C95395662%2C95393280%2C21404%2C17300002%2C17301437%2C17301438%2C17301442%2C17301266%2C72717107&client=pub-9265886855150833&r=m&hl=en&rpbu=http%3A%2F%2Fgoogle.com&rpqp=q&type=3&rs_tt=c&oe=UTF-8&ie=UTF-8&format=r5&nocache=1651783323167014&num=0&output=afd_ads&domain_name=codehim.com&v=3&bsl=10&pac=2&u_his=2&u_tz=480&dt=1783323167014&u_w=1707&u_h=1067&biw=1027&bih=883&psw=1027&psh=6469&frm=0&uio=-&cont=autors-container-0&drt=0&jsid=csa&jsv=936599946&rurl=https%3A%2F%2Fcodehim.com%2Fhtml5-css3%2Fhtml-code-for-resume-with-picture%2F&lle=1#&nb=0
+                    - generic [ref=f7e31]: Free Resume Templates Html5
+            - paragraph [ref=e128]:
+              - text: "2."
+              - link "Create" [ref=e129] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e130]
+                - text: Create
+              - text: the HTML structure for your resume as follows. Customize the content in each section with your personal information, skills, work experience, education, and hobbies. Be sure to replace the sample data with your own.
+            - generic:
+              - insertion:
+                - generic:
+                  - iframe
+            - list [ref=e133]:
+              - listitem [ref=e134]: <div class="resume">
+              - listitem [ref=e135]: <div class="resume_left">
+              - listitem [ref=e136]: <div class="resume_profile">
+              - listitem [ref=e137]: <img src="https://i.imgur.com/eCijVBe.png" alt="profile_pic">
+              - listitem [ref=e138]: </div>
+              - listitem [ref=e139]: <div class="resume_content">
+              - listitem [ref=e140]: <div class="resume_item resume_info">
+              - listitem [ref=e141]: <div class="title">
+              - listitem [ref=e142]: <p class="bold">stephen colbert</p>
+              - listitem [ref=e143]: <p class="regular">Designer</p>
+              - listitem [ref=e144]: </div>
+              - listitem [ref=e145]: <ul>
+              - listitem [ref=e146]: <li>
+              - listitem [ref=e147]: <div class="icon">
+              - listitem [ref=e148]: <i class="fas fa-map-signs"></i>
+              - listitem [ref=e149]: </div>
+              - listitem [ref=e150]: <div class="data">
+              - listitem [ref=e151]: 21 Street, Texas <br /> USA
+              - listitem [ref=e152]: </div>
+              - listitem [ref=e153]: </li>
+              - listitem [ref=e154]: <li>
+              - listitem [ref=e155]: <div class="icon">
+              - listitem [ref=e156]: <i class="fas fa-mobile-alt"></i>
+              - listitem [ref=e157]: </div>
+              - listitem [ref=e158]: <div class="data">
+              - listitem [ref=e159]: +324 4445678
+              - listitem [ref=e160]: </div>
+              - listitem [ref=e161]: </li>
+              - listitem [ref=e162]: <li>
+              - listitem [ref=e163]: <div class="icon">
+              - listitem [ref=e164]: <i class="fas fa-envelope"></i>
+              - listitem [ref=e165]: </div>
+              - listitem [ref=e166]: <div class="data">
+              - listitem [ref=e167]: stephen@gmail.com
+              - listitem [ref=e168]: </div>
+              - listitem [ref=e169]: </li>
+              - listitem [ref=e170]: <li>
+              - listitem [ref=e171]: <div class="icon">
+              - listitem [ref=e172]: <i class="fab fa-weebly"></i>
+              - listitem [ref=e173]: </div>
+              - listitem [ref=e174]: <div class="data">
+              - listitem [ref=e175]: www.stephen.com
+              - listitem [ref=e176]: </div>
+              - listitem [ref=e177]: </li>
+              - listitem [ref=e178]: </ul>
+              - listitem [ref=e179]: </div>
+              - listitem [ref=e180]: <div class="resume_item resume_skills">
+              - listitem [ref=e181]: <div class="title">
+              - listitem [ref=e182]: <p class="bold">skill's</p>
+              - listitem [ref=e183]: </div>
+              - listitem [ref=e184]: <ul>
+              - listitem [ref=e185]: <li>
+              - listitem [ref=e186]: <div class="skill_name">
+              - listitem [ref=e187]: HTML
+              - listitem [ref=e188]: </div>
+              - listitem [ref=e189]: <div class="skill_progress">
+              - listitem [ref=e190]: "<span style=\"width: 80%;\"></span>"
+              - listitem [ref=e191]: </div>
+              - listitem [ref=e192]: <div class="skill_per">80%</div>
+              - listitem [ref=e193]: </li>
+              - listitem [ref=e194]: <li>
+              - listitem [ref=e195]: <div class="skill_name">
+              - listitem [ref=e196]: CSS
+              - listitem [ref=e197]: </div>
+              - listitem [ref=e198]: <div class="skill_progress">
+              - listitem [ref=e199]: "<span style=\"width: 70%;\"></span>"
+              - listitem [ref=e200]: </div>
+              - listitem [ref=e201]: <div class="skill_per">70%</div>
+              - listitem [ref=e202]: </li>
+              - listitem [ref=e203]: <li>
+              - listitem [ref=e204]: <div class="skill_name">
+              - listitem [ref=e205]: SASS
+              - listitem [ref=e206]: </div>
+              - listitem [ref=e207]: <div class="skill_progress">
+              - listitem [ref=e208]: "<span style=\"width: 90%;\"></span>"
+              - listitem [ref=e209]: </div>
+              - listitem [ref=e210]: <div class="skill_per">90%</div>
+              - listitem [ref=e211]: </li>
+              - listitem [ref=e212]: <li>
+              - listitem [ref=e213]: <div class="skill_name">
+              - listitem [ref=e214]: JS
+              - listitem [ref=e215]: </div>
+              - listitem [ref=e216]: <div class="skill_progress">
+              - listitem [ref=e217]: "<span style=\"width: 60%;\"></span>"
+              - listitem [ref=e218]: </div>
+              - listitem [ref=e219]: <div class="skill_per">60%</div>
+              - listitem [ref=e220]: </li>
+              - listitem [ref=e221]: <li>
+              - listitem [ref=e222]: <div class="skill_name">
+              - listitem [ref=e223]: JQUERY
+              - listitem [ref=e224]: </div>
+              - listitem [ref=e225]: <div class="skill_progress">
+              - listitem [ref=e226]: "<span style=\"width: 88%;\"></span>"
+              - listitem [ref=e227]: </div>
+              - listitem [ref=e228]: <div class="skill_per">88%</div>
+              - listitem [ref=e229]: </li>
+              - listitem [ref=e230]: </ul>
+              - listitem [ref=e231]: </div>
+              - listitem [ref=e232]: <div class="resume_item resume_social">
+              - listitem [ref=e233]: <div class="title">
+              - listitem [ref=e234]: <p class="bold">Social</p>
+              - listitem [ref=e235]: </div>
+              - listitem [ref=e236]: <ul>
+              - listitem [ref=e237]: <li>
+              - listitem [ref=e238]: <div class="icon">
+              - listitem [ref=e239]: <i class="fab fa-facebook-square"></i>
+              - listitem [ref=e240]: </div>
+              - listitem [ref=e241]: <div class="data">
+              - listitem [ref=e242]: <p class="semi-bold">Facebook</p>
+              - listitem [ref=e243]: <p>Stephen@facebook</p>
+              - listitem [ref=e244]: </div>
+              - listitem [ref=e245]: </li>
+              - listitem [ref=e246]: <li>
+              - listitem [ref=e247]: <div class="icon">
+              - listitem [ref=e248]: <i class="fab fa-twitter-square"></i>
+              - listitem [ref=e249]: </div>
+              - listitem [ref=e250]: <div class="data">
+              - listitem [ref=e251]: <p class="semi-bold">Twitter</p>
+              - listitem [ref=e252]: <p>Stephen@twitter</p>
+              - listitem [ref=e253]: </div>
+              - listitem [ref=e254]: </li>
+              - listitem [ref=e255]: <li>
+              - listitem [ref=e256]: <div class="icon">
+              - listitem [ref=e257]: <i class="fab fa-youtube"></i>
+              - listitem [ref=e258]: </div>
+              - listitem [ref=e259]: <div class="data">
+              - listitem [ref=e260]: <p class="semi-bold">Youtube</p>
+              - listitem [ref=e261]: <p>Stephen@youtube</p>
+              - listitem [ref=e262]: </div>
+              - listitem [ref=e263]: </li>
+              - listitem [ref=e264]: <li>
+              - listitem [ref=e265]: <div class="icon">
+              - listitem [ref=e266]: <i class="fab fa-linkedin"></i>
+              - listitem [ref=e267]: </div>
+              - listitem [ref=e268]: <div class="data">
+              - listitem [ref=e269]: <p class="semi-bold">Linkedin</p>
+              - listitem [ref=e270]: <p>Stephen@linkedin</p>
+              - listitem [ref=e271]: </div>
+              - listitem [ref=e272]: </li>
+              - listitem [ref=e273]: </ul>
+              - listitem [ref=e274]: </div>
+              - listitem [ref=e275]: </div>
+              - listitem [ref=e276]: </div>
+              - listitem [ref=e277]: <div class="resume_right">
+              - listitem [ref=e278]: <div class="resume_item resume_about">
+              - listitem [ref=e279]: <div class="title">
+              - listitem [ref=e280]: <p class="bold">About us</p>
+              - listitem [ref=e281]: </div>
+              - listitem [ref=e282]: <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?</p>
+              - listitem [ref=e283]: </div>
+              - listitem [ref=e284]: <div class="resume_item resume_work">
+              - listitem [ref=e285]: <div class="title">
+              - listitem [ref=e286]: <p class="bold">Work Experience</p>
+              - listitem [ref=e287]: </div>
+              - listitem [ref=e288]: <ul>
+              - listitem [ref=e289]: <li>
+              - listitem [ref=e290]: <div class="date">2013 - 2015</div>
+              - listitem [ref=e291]: <div class="info">
+              - listitem [ref=e292]: <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
+              - listitem [ref=e293]: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              - listitem [ref=e294]: </div>
+              - listitem [ref=e295]: </li>
+              - listitem [ref=e296]: <li>
+              - listitem [ref=e297]: <div class="date">2015 - 2017</div>
+              - listitem [ref=e298]: <div class="info">
+              - listitem [ref=e299]: <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
+              - listitem [ref=e300]: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              - listitem [ref=e301]: </div>
+              - listitem [ref=e302]: </li>
+              - listitem [ref=e303]: <li>
+              - listitem [ref=e304]: <div class="date">2017 - Present</div>
+              - listitem [ref=e305]: <div class="info">
+              - listitem [ref=e306]: <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
+              - listitem [ref=e307]: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              - listitem [ref=e308]: </div>
+              - listitem [ref=e309]: </li>
+              - listitem [ref=e310]: </ul>
+              - listitem [ref=e311]: </div>
+              - listitem [ref=e312]: <div class="resume_item resume_education">
+              - listitem [ref=e313]: <div class="title">
+              - listitem [ref=e314]: <p class="bold">Education</p>
+              - listitem [ref=e315]: </div>
+              - listitem [ref=e316]: <ul>
+              - listitem [ref=e317]: <li>
+              - listitem [ref=e318]: <div class="date">2010 - 2013</div>
+              - listitem [ref=e319]: <div class="info">
+              - listitem [ref=e320]: <p class="semi-bold">Web Designing (Texas University)</p>
+              - listitem [ref=e321]: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              - listitem [ref=e322]: </div>
+              - listitem [ref=e323]: </li>
+              - listitem [ref=e324]: <li>
+              - listitem [ref=e325]: <div class="date">2000 - 2010</div>
+              - listitem [ref=e326]: <div class="info">
+              - listitem [ref=e327]: <p class="semi-bold">Texas International School</p>
+              - listitem [ref=e328]: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              - listitem [ref=e329]: </div>
+              - listitem [ref=e330]: </li>
+              - listitem [ref=e331]: </ul>
+              - listitem [ref=e332]: </div>
+              - listitem [ref=e333]: <div class="resume_item resume_hobby">
+              - listitem [ref=e334]: <div class="title">
+              - listitem [ref=e335]: <p class="bold">Hobby</p>
+              - listitem [ref=e336]: </div>
+              - listitem [ref=e337]: <ul>
+              - listitem [ref=e338]: <li><i class="fas fa-book"></i></li>
+              - listitem [ref=e339]: <li><i class="fas fa-gamepad"></i></li>
+              - listitem [ref=e340]: <li><i class="fas fa-music"></i></li>
+              - listitem [ref=e341]: <li><i class="fab fa-pagelines"></i></li>
+              - listitem [ref=e342]: </ul>
+              - listitem [ref=e343]: </div>
+              - listitem [ref=e344]: </div>
+              - listitem [ref=e345]: </div>
+            - paragraph [ref=e346]:
+              - text: 3. Use the following CSS code to style your resume. You can adjust colors, fonts, and layout to match your personal preferences. The CSS code is well-commented, making it easy to understand and modify.
+              - link "Resumes & Portfolios" [ref=e347] [cursor=pointer]:
+                - img [ref=e349]
+                - text: Resumes & Portfolios
+            - list [ref=e352]:
+              - listitem [ref=e353]: "@import url(\"https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap\");"
+              - listitem [ref=e354]
+              - listitem [ref=e355]: "* {"
+              - listitem [ref=e356]: "margin: 0;"
+              - listitem [ref=e357]: "padding: 0;"
+              - listitem [ref=e358]: "box-sizing: border-box;"
+              - listitem [ref=e359]: "list-style: none;"
+              - listitem [ref=e360]: "font-family: \"Montserrat\", sans-serif;"
+              - listitem [ref=e361]: "}"
+              - listitem [ref=e362]
+              - listitem [ref=e363]: "body {"
+              - listitem [ref=e364]: "background: #585c68;"
+              - listitem [ref=e365]: "font-size: 14px;"
+              - listitem [ref=e366]: "line-height: 22px;"
+              - listitem [ref=e367]: "color: #555555;"
+              - listitem [ref=e368]: "}"
+              - listitem [ref=e369]
+              - listitem [ref=e370]: ".bold {"
+              - listitem [ref=e371]: "font-weight: 700;"
+              - listitem [ref=e372]: "font-size: 20px;"
+              - listitem [ref=e373]: "text-transform: uppercase;"
+              - listitem [ref=e374]: "}"
+              - listitem [ref=e375]
+              - listitem [ref=e376]: ".semi-bold {"
+              - listitem [ref=e377]: "font-weight: 500;"
+              - listitem [ref=e378]: "font-size: 16px;"
+              - listitem [ref=e379]: "}"
+              - listitem [ref=e380]
+              - listitem [ref=e381]: ".resume {"
+              - listitem [ref=e382]: "width: 800px;"
+              - listitem [ref=e383]: "height: auto;"
+              - listitem [ref=e384]: "display: flex;"
+              - listitem [ref=e385]: "margin: 50px auto;"
+              - listitem [ref=e386]: "}"
+              - listitem [ref=e387]
+              - listitem [ref=e388]: ".resume .resume_left {"
+              - listitem [ref=e389]: "width: 280px;"
+              - listitem [ref=e390]: "background: #0bb5f4;"
+              - listitem [ref=e391]: "}"
+              - listitem [ref=e392]
+              - listitem [ref=e393]: ".resume .resume_left .resume_profile {"
+              - listitem [ref=e394]: "width: 100%;"
+              - listitem [ref=e395]: "height: 280px;"
+              - listitem [ref=e396]: "}"
+              - listitem [ref=e397]
+              - listitem [ref=e398]: ".resume .resume_left .resume_profile img {"
+              - listitem [ref=e399]: "width: 100%;"
+              - listitem [ref=e400]: "height: 100%;"
+              - listitem [ref=e401]: "}"
+              - listitem [ref=e402]
+              - listitem [ref=e403]: ".resume .resume_left .resume_content {"
+              - listitem [ref=e404]: "padding: 0 25px;"
+              - listitem [ref=e405]: "}"
+              - listitem [ref=e406]
+              - listitem [ref=e407]: ".resume .title {"
+              - listitem [ref=e408]: "margin-bottom: 20px;"
+              - listitem [ref=e409]: "}"
+              - listitem [ref=e410]
+              - listitem [ref=e411]: ".resume .resume_left .bold {"
+              - listitem [ref=e412]: "color: #fff;"
+              - listitem [ref=e413]: "}"
+              - listitem [ref=e414]
+              - listitem [ref=e415]: ".resume .resume_left .regular {"
+              - listitem [ref=e416]: "color: #b1eaff;"
+              - listitem [ref=e417]: "}"
+              - listitem [ref=e418]
+              - listitem [ref=e419]: ".resume .resume_item {"
+              - listitem [ref=e420]: "padding: 25px 0;"
+              - listitem [ref=e421]: "border-bottom: 2px solid #b1eaff;"
+              - listitem [ref=e422]: "}"
+              - listitem [ref=e423]
+              - listitem [ref=e424]: .resume .resume_left .resume_item:last-child,
+              - listitem [ref=e425]: ".resume .resume_right .resume_item:last-child {"
+              - listitem [ref=e426]: "border-bottom: 0px;"
+              - listitem [ref=e427]: "}"
+              - listitem [ref=e428]
+              - listitem [ref=e429]: ".resume .resume_left ul li {"
+              - listitem [ref=e430]: "display: flex;"
+              - listitem [ref=e431]: "margin-bottom: 10px;"
+              - listitem [ref=e432]: "align-items: center;"
+              - listitem [ref=e433]: "}"
+              - listitem [ref=e434]
+              - listitem [ref=e435]: ".resume .resume_left ul li:last-child {"
+              - listitem [ref=e436]: "margin-bottom: 0;"
+              - listitem [ref=e437]: "}"
+              - listitem [ref=e438]
+              - listitem [ref=e439]: ".resume .resume_left ul li .icon {"
+              - listitem [ref=e440]: "width: 35px;"
+              - listitem [ref=e441]: "height: 35px;"
+              - listitem [ref=e442]: "background: #fff;"
+              - listitem [ref=e443]: "color: #0bb5f4;"
+              - listitem [ref=e444]: "border-radius: 50%;"
+              - listitem [ref=e445]: "margin-right: 15px;"
+              - listitem [ref=e446]: "font-size: 16px;"
+              - listitem [ref=e447]: "position: relative;"
+              - listitem [ref=e448]: "}"
+              - listitem [ref=e449]
+              - listitem [ref=e450]: .resume .icon i,
+              - listitem [ref=e451]: ".resume .resume_right .resume_hobby ul li i {"
+              - listitem [ref=e452]: "position: absolute;"
+              - listitem [ref=e453]: "top: 50%;"
+              - listitem [ref=e454]: "left: 50%;"
+              - listitem [ref=e455]: "transform: translate(-50%, -50%);"
+              - listitem [ref=e456]: "}"
+              - listitem [ref=e457]
+              - listitem [ref=e458]: ".resume .resume_left ul li .data {"
+              - listitem [ref=e459]: "color: #b1eaff;"
+              - listitem [ref=e460]: "}"
+              - listitem [ref=e461]
+              - listitem [ref=e462]: ".resume .resume_left .resume_skills ul li {"
+              - listitem [ref=e463]: "display: flex;"
+              - listitem [ref=e464]: "margin-bottom: 10px;"
+              - listitem [ref=e465]: "color: #b1eaff;"
+              - listitem [ref=e466]: "justify-content: space-between;"
+              - listitem [ref=e467]: "align-items: center;"
+              - listitem [ref=e468]: "}"
+              - listitem [ref=e469]
+              - listitem [ref=e470]: ".resume .resume_left .resume_skills ul li .skill_name {"
+              - listitem [ref=e471]: "width: 25%;"
+              - listitem [ref=e472]: "}"
+              - listitem [ref=e473]
+              - listitem [ref=e474]: ".resume .resume_left .resume_skills ul li .skill_progress {"
+              - listitem [ref=e475]: "width: 60%;"
+              - listitem [ref=e476]: "margin: 0 5px;"
+              - listitem [ref=e477]: "height: 5px;"
+              - listitem [ref=e478]: "background: #009fd9;"
+              - listitem [ref=e479]: "position: relative;"
+              - listitem [ref=e480]: "}"
+              - listitem [ref=e481]
+              - listitem [ref=e482]: ".resume .resume_left .resume_skills ul li .skill_per {"
+              - listitem [ref=e483]: "width: 15%;"
+              - listitem [ref=e484]: "}"
+              - listitem [ref=e485]
+              - listitem [ref=e486]: ".resume .resume_left .resume_skills ul li .skill_progress span {"
+              - listitem [ref=e487]: "position: absolute;"
+              - listitem [ref=e488]: "top: 0;"
+              - listitem [ref=e489]: "left: 0;"
+              - listitem [ref=e490]: "height: 100%;"
+              - listitem [ref=e491]: "background: #fff;"
+              - listitem [ref=e492]: "}"
+              - listitem [ref=e493]
+              - listitem [ref=e494]: ".resume .resume_left .resume_social .semi-bold {"
+              - listitem [ref=e495]: "color: #fff;"
+              - listitem [ref=e496]: "margin-bottom: 3px;"
+              - listitem [ref=e497]: "}"
+              - listitem [ref=e498]
+              - listitem [ref=e499]: ".resume .resume_right {"
+              - listitem [ref=e500]: "width: 520px;"
+              - listitem [ref=e501]: "background: #fff;"
+              - listitem [ref=e502]: "padding: 25px;"
+              - listitem [ref=e503]: "}"
+              - listitem [ref=e504]
+              - listitem [ref=e505]: ".resume .resume_right .bold {"
+              - listitem [ref=e506]: "color: #0bb5f4;"
+              - listitem [ref=e507]: "}"
+              - listitem [ref=e508]
+              - listitem [ref=e509]: .resume .resume_right .resume_work ul,
+              - listitem [ref=e510]: ".resume .resume_right .resume_education ul {"
+              - listitem [ref=e511]: "padding-left: 40px;"
+              - listitem [ref=e512]: "overflow: hidden;"
+              - listitem [ref=e513]: "}"
+              - listitem [ref=e514]
+              - listitem [ref=e515]: ".resume .resume_right ul li {"
+              - listitem [ref=e516]: "position: relative;"
+              - listitem [ref=e517]: "}"
+              - listitem [ref=e518]
+              - listitem [ref=e519]: ".resume .resume_right ul li .date {"
+              - listitem [ref=e520]: "font-size: 16px;"
+              - listitem [ref=e521]: "font-weight: 500;"
+              - listitem [ref=e522]: "margin-bottom: 15px;"
+              - listitem [ref=e523]: "}"
+              - listitem [ref=e524]
+              - listitem [ref=e525]: ".resume .resume_right ul li .info {"
+              - listitem [ref=e526]: "margin-bottom: 20px;"
+              - listitem [ref=e527]: "}"
+              - listitem [ref=e528]
+              - listitem [ref=e529]: ".resume .resume_right ul li:last-child .info {"
+              - listitem [ref=e530]: "margin-bottom: 0;"
+              - listitem [ref=e531]: "}"
+              - listitem [ref=e532]
+              - listitem [ref=e533]: .resume .resume_right .resume_work ul li:before,
+              - listitem [ref=e534]: ".resume .resume_right .resume_education ul li:before {"
+              - listitem [ref=e535]: "content: \"\";"
+              - listitem [ref=e536]: "position: absolute;"
+              - listitem [ref=e537]: "top: 5px;"
+              - listitem [ref=e538]: "left: -25px;"
+              - listitem [ref=e539]: "width: 6px;"
+              - listitem [ref=e540]: "height: 6px;"
+              - listitem [ref=e541]: "border-radius: 50%;"
+              - listitem [ref=e542]: "border: 2px solid #0bb5f4;"
+              - listitem [ref=e543]: "}"
+              - listitem [ref=e544]
+              - listitem [ref=e545]: .resume .resume_right .resume_work ul li:after,
+              - listitem [ref=e546]: ".resume .resume_right .resume_education ul li:after {"
+              - listitem [ref=e547]: "content: \"\";"
+              - listitem [ref=e548]: "position: absolute;"
+              - listitem [ref=e549]: "top: 14px;"
+              - listitem [ref=e550]: "left: -21px;"
+              - listitem [ref=e551]: "width: 2px;"
+              - listitem [ref=e552]: "height: 115px;"
+              - listitem [ref=e553]: "background: #0bb5f4;"
+              - listitem [ref=e554]: "}"
+              - listitem [ref=e555]
+              - listitem [ref=e556]: ".resume .resume_right .resume_hobby ul {"
+              - listitem [ref=e557]: "display: flex;"
+              - listitem [ref=e558]: "justify-content: space-between;"
+              - listitem [ref=e559]: "}"
+              - listitem [ref=e560]
+              - listitem [ref=e561]: ".resume .resume_right .resume_hobby ul li {"
+              - listitem [ref=e562]: "width: 80px;"
+              - listitem [ref=e563]: "height: 80px;"
+              - listitem [ref=e564]: "border: 2px solid #0bb5f4;"
+              - listitem [ref=e565]: "border-radius: 50%;"
+              - listitem [ref=e566]: "position: relative;"
+              - listitem [ref=e567]: "color: #0bb5f4;"
+              - listitem [ref=e568]: "}"
+              - listitem [ref=e569]
+              - listitem [ref=e570]: ".resume .resume_right .resume_hobby ul li i {"
+              - listitem [ref=e571]: "font-size: 30px;"
+              - listitem [ref=e572]: "}"
+              - listitem [ref=e573]
+              - listitem [ref=e574]: ".resume .resume_right .resume_hobby ul li:before {"
+              - listitem [ref=e575]: "content: \"\";"
+              - listitem [ref=e576]: "position: absolute;"
+              - listitem [ref=e577]: "top: 40px;"
+              - listitem [ref=e578]: "right: -52px;"
+              - listitem [ref=e579]: "width: 50px;"
+              - listitem [ref=e580]: "height: 2px;"
+              - listitem [ref=e581]: "background: #0bb5f4;"
+              - listitem [ref=e582]: "}"
+              - listitem [ref=e583]
+              - listitem [ref=e584]: ".resume .resume_right .resume_hobby ul li:last-child:before {"
+              - listitem [ref=e585]: "display: none;"
+              - listitem [ref=e586]: "}"
+            - paragraph [ref=e587]:
+              - text: That’s all! hopefully, you have successfully integrated this HTML & CSS code For a
+              - link "Resume" [ref=e588] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e589]
+                - text: Resume
+              - text: with a Picture. If you have any questions or suggestions, feel free to comment below.
+              - link "Photo & Image Sharing" [ref=e591] [cursor=pointer]:
+                - img [ref=e593]
+                - text: Photo & Image Sharing
+            - generic [ref=e596]:
+              - heading "Similar Code Snippets:" [level=3] [ref=e597]
+              - list [ref=e598]:
+                - listitem [ref=e599]:
+                  - link "HTML5 Canvas Draw Straight Line with Mouse" [ref=e600] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/html5-canvas-draw-straight-line-with-mouse/
+                    - img "HTML5 Canvas Draw Straight Line with Mouse" [ref=e601]
+                  - link "HTML5 Canvas Draw Straight Line with Mouse" [ref=e602] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/html5-canvas-draw-straight-line-with-mouse/
+                    - heading "HTML5 Canvas Draw Straight Line with Mouse" [level=2] [ref=e604]
+                - listitem [ref=e605]:
+                  - link "Search in HTML Table Using JavaScript" [ref=e606] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/search-in-html-table-using-javascript-jquery-fancytable/
+                    - img "Search in HTML Table Using JavaScript" [ref=e608]
+                  - link "Search in HTML Table Using JavaScript - jQuery fancyTable" [ref=e609] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/search-in-html-table-using-javascript-jquery-fancytable/
+                    - heading "Search in HTML Table Using JavaScript - jQuery fancyTable" [level=2] [ref=e611]
+                - listitem [ref=e612]:
+                  - link "3x3 Image Grid In HTML and CSS" [ref=e613] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/3x3-image-grid-in-html-and-css/
+                    - img "3x3 Image Grid In HTML and CSS" [ref=e614]
+                  - link "3x3 Image Grid In HTML and CSS" [ref=e615] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/3x3-image-grid-in-html-and-css/
+                    - heading "3x3 Image Grid In HTML and CSS" [level=2] [ref=e617]
+                - listitem [ref=e618]:
+                  - link "CSS Button With Waving Text Effect" [ref=e619] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/css-button-with-waving-text-effect/
+                    - img "CSS Button With Waving Text Effect" [ref=e620]
+                  - link "CSS Button With Waving Text Effect" [ref=e621] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/css-button-with-waving-text-effect/
+                    - heading "CSS Button With Waving Text Effect" [level=2] [ref=e623]
+                - listitem [ref=e624]:
+                  - link "Pure CSS Cube Box Animation On Hover" [ref=e625] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/pure-css-cube-box-animation-on-hover/
+                    - img "Pure CSS Cube Box Animation On Hover" [ref=e626]
+                  - link "Pure CSS Cube Box Animation On Hover" [ref=e627] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/pure-css-cube-box-animation-on-hover/
+                    - heading "Pure CSS Cube Box Animation On Hover" [level=2] [ref=e629]
+                - listitem [ref=e630]:
+                  - link "CSS Expandable Card with Neon Glow" [ref=e631] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/css-expandable-card-with-neon-glow/
+                    - img "CSS Expandable Card with Neon Glow" [ref=e633]
+                  - link "CSS Expandable Card with Neon Glow" [ref=e634] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/css-expandable-card-with-neon-glow/
+                    - heading "CSS Expandable Card with Neon Glow" [level=2] [ref=e636]
+                - listitem [ref=e637]:
+                  - link "HTML CSS Image Comparison Slider" [ref=e638] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/html-css-image-comparison-slider/
+                    - img "HTML CSS Image Comparison Slider" [ref=e640]
+                  - link "HTML CSS Image Comparison Slider" [ref=e641] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/html-css-image-comparison-slider/
+                    - heading "HTML CSS Image Comparison Slider" [level=2] [ref=e643]
+                - listitem [ref=e644]:
+                  - link "CSS Card With 2 Columns and Scrollable Content" [ref=e645] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/css-card-with-2-columns-and-scrollable-content/
+                    - img "CSS Card With 2 Columns and Scrollable Content" [ref=e647]
+                  - link "CSS Card With 2 Columns and Scrollable Content" [ref=e648] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/css-card-with-2-columns-and-scrollable-content/
+                    - heading "CSS Card With 2 Columns and Scrollable Content" [level=2] [ref=e650]
+                - listitem [ref=e651]:
+                  - link "Simple Appointment Request Form HTML" [ref=e652] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/simple-appointment-request-form-html/
+                    - img "Simple Appointment Request Form HTML" [ref=e653]
+                  - link "Simple Appointment Request Form HTML" [ref=e654] [cursor=pointer]:
+                    - /url: https://codehim.com/html5-css3/simple-appointment-request-form-html/
+                    - heading "Simple Appointment Request Form HTML" [level=2] [ref=e656]
+            - generic [ref=e658]:
+              - link "Asif Mughal" [ref=e661] [cursor=pointer]:
+                - /url: https://codehim.com/author/asif-mughal/
+              - paragraph [ref=e664]:
+                - text: I code and create web elements for amazing people around the world. I like work with new people. New people new Experiences.
+                - text: I truly enjoy what I’m doing, which makes me more passionate about web development and coding. I am always ready to do challenging tasks whether it is about creating a custom CMS from scratch or customizing an existing system.
+                - link "Visual Art & Design" [ref=e665] [cursor=pointer]:
+                  - img [ref=e667]
+                  - text: Visual Art & Design
+              - generic [ref=e669]:
+                - link "Linkedin" [ref=e670] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/asif-mughal-b35a00104/
+                  - img [ref=e671]
+                - link "Wordpress" [ref=e673] [cursor=pointer]:
+                  - /url: https://codehim.com/asif-mughal-experienced-software-engineer-and-writer-at-code-him/
+                  - img [ref=e674]
+                - link "Twitter" [ref=e676] [cursor=pointer]:
+                  - /url: https://twitter.com/asifmughal93
+                  - img [ref=e677]
+                - link "Tumblr" [ref=e679] [cursor=pointer]:
+                  - /url: https://asifmughal93.tumblr.com/
+                  - img [ref=e680]
+                - link "Facebook" [ref=e682] [cursor=pointer]:
+                  - /url: https://www.facebook.com/asifmughal93
+                  - img [ref=e683]
+                - link "Pinterest" [ref=e685] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/asifmughal93/
+                  - img [ref=e686]
+          - generic "Entry meta" [ref=e688]:
+            - generic [ref=e689]:
+              - text: 
+              - generic [ref=e690]: Categories
+              - link "HTML5 & CSS3" [ref=e691] [cursor=pointer]:
+                - /url: https://codehim.com/category/html5-css3/
+            - navigation "Posts" [ref=e692]:
+              - generic [ref=e694]:
+                - text: 
+                - link "Credit Cart Checkout Form in Vanilla JavaScript" [ref=e695] [cursor=pointer]:
+                  - /url: https://codehim.com/vanilla-javascript/credit-cart-checkout-form-in-vanilla-javascript/
+              - generic [ref=e697]:
+                - text: 
+                - link "US Phone Number Validation in JavaScript" [ref=e698] [cursor=pointer]:
+                  - /url: https://codehim.com/text-input/us-phone-number-validation-javascript/
+      - generic [ref=e700]:
+        - generic [ref=e701]:
+          - heading "Leave a Comment" [level=3] [ref=e702]: Leave a Comment
+          - generic [ref=e703]:
+            - paragraph [ref=e704]:
+              - generic [ref=e705]: Comment
+              - textbox "Comment" [ref=e706]
+            - generic [ref=e707]: Name
+            - textbox "Name" [ref=e708]:
+              - /placeholder: Name *
+            - generic [ref=e709]: Email
+            - textbox "Email" [ref=e710]:
+              - /placeholder: Email *
+            - generic [ref=e711]: Website
+            - textbox "Website" [ref=e712]
+            - paragraph [ref=e713]:
+              - button "Post Comment" [ref=e714] [cursor=pointer]
+        - paragraph [ref=e715]:
+          - text: This site uses Akismet to reduce spam.
+          - link "Learn how your comment data is processed." [ref=e716] [cursor=pointer]:
+            - /url: https://akismet.com/privacy/
+    - generic [ref=e718]:
+      - complementary [ref=e719]:
+        - list [ref=e720]:
+          - listitem [ref=e721]:
+            - heading "Categories" [level=3] [ref=e722]
+            - list [ref=e723]:
+              - listitem [ref=e724]:
+                - link "Accordion" [ref=e725] [cursor=pointer]:
+                  - /url: https://codehim.com/category/accordion/
+                - generic [ref=e726]: "22"
+              - listitem [ref=e727]:
+                - link "Bootstrap" [ref=e728] [cursor=pointer]:
+                  - /url: https://codehim.com/category/bootstrap/
+                - text: (81)
+              - listitem [ref=e729]:
+                - link "Carousel" [ref=e730] [cursor=pointer]:
+                  - /url: https://codehim.com/category/carousel/
+                - generic [ref=e731]: "58"
+              - listitem [ref=e732]:
+                - link "Chart & Graph" [ref=e733] [cursor=pointer]:
+                  - /url: https://codehim.com/category/chart-graph/
+                - generic [ref=e734]: "15"
+              - listitem [ref=e735]:
+                - link "Date & Time" [ref=e736] [cursor=pointer]:
+                  - /url: https://codehim.com/category/date-time/
+                - generic [ref=e737]: "49"
+              - listitem [ref=e738]:
+                - link "Gallery" [ref=e739] [cursor=pointer]:
+                  - /url: https://codehim.com/category/gallery/
+                - generic [ref=e740]: "39"
+              - listitem [ref=e741]:
+                - link "HTML5 & CSS3" [ref=e742] [cursor=pointer]:
+                  - /url: https://codehim.com/category/html5-css3/
+                - generic [ref=e743]: "201"
+              - listitem [ref=e744]:
+                - link "Layout" [ref=e745] [cursor=pointer]:
+                  - /url: https://codehim.com/category/layout/
+                - generic [ref=e746]: "17"
+              - listitem [ref=e747]:
+                - link "LightBox" [ref=e748] [cursor=pointer]:
+                  - /url: https://codehim.com/category/lightbox/
+                - generic [ref=e749]: "19"
+              - listitem [ref=e750]:
+                - link "Menu & Nav" [ref=e751] [cursor=pointer]:
+                  - /url: https://codehim.com/category/menu/
+                - generic [ref=e752]: "95"
+              - listitem [ref=e753]:
+                - link "Modal" [ref=e754] [cursor=pointer]:
+                  - /url: https://codehim.com/category/modal/
+                - generic [ref=e755]: "18"
+              - listitem [ref=e756]:
+                - link "Others" [ref=e757] [cursor=pointer]:
+                  - /url: https://codehim.com/category/others/
+                - generic [ref=e758]: "58"
+              - listitem [ref=e759]:
+                - link "Portfolio" [ref=e760] [cursor=pointer]:
+                  - /url: https://codehim.com/category/portfolio/
+                - generic [ref=e761]: "8"
+              - listitem [ref=e762]:
+                - link "Social Media" [ref=e763] [cursor=pointer]:
+                  - /url: https://codehim.com/category/social-media/
+                - generic [ref=e764]: "10"
+              - listitem [ref=e765]:
+                - link "Text & Input" [ref=e766] [cursor=pointer]:
+                  - /url: https://codehim.com/category/text-input/
+                - generic [ref=e767]: "120"
+              - listitem [ref=e768]:
+                - link "Vanilla JavaScript" [ref=e769] [cursor=pointer]:
+                  - /url: https://codehim.com/category/vanilla-javascript/
+                - generic [ref=e770]: "163"
+              - listitem [ref=e771]:
+                - link "Zoom" [ref=e772] [cursor=pointer]:
+                  - /url: https://codehim.com/category/zoom/
+                - generic [ref=e773]: "12"
+      - generic:
+        - insertion:
+          - generic:
+            - iframe
+      - complementary [ref=e774]:
+        - heading "You May Like" [level=2] [ref=e775]
+        - generic [ref=e776]:
+          - link "Alert (7 items)" [ref=e777] [cursor=pointer]:
+            - /url: https://codehim.com/tag/alert/
+            - text: Alert (7)
+          - link "Analog Clock (4 items)" [ref=e778] [cursor=pointer]:
+            - /url: https://codehim.com/tag/analog-clock/
+            - text: Analog Clock (4)
+          - link "Analog Clocks (5 items)" [ref=e779] [cursor=pointer]:
+            - /url: https://codehim.com/tag/analog-clocks/
+            - text: Analog Clocks (5)
+          - link "Back to Top (4 items)" [ref=e780] [cursor=pointer]:
+            - /url: https://codehim.com/tag/back-to-top/
+            - text: Back to Top (4)
+          - link "Calculator (16 items)" [ref=e781] [cursor=pointer]:
+            - /url: https://codehim.com/tag/calculator/
+            - text: Calculator (16)
+          - link "Calendar (5 items)" [ref=e782] [cursor=pointer]:
+            - /url: https://codehim.com/tag/calendar/
+            - text: Calendar (5)
+          - link "Chart (3 items)" [ref=e783] [cursor=pointer]:
+            - /url: https://codehim.com/tag/chart/
+            - text: Chart (3)
+          - link "Color Picker (4 items)" [ref=e784] [cursor=pointer]:
+            - /url: https://codehim.com/tag/color-picker/
+            - text: Color Picker (4)
+          - link "Contact Us Forms (5 items)" [ref=e785] [cursor=pointer]:
+            - /url: https://codehim.com/tag/contact-us-forms/
+            - text: Contact Us Forms (5)
+          - link "Countdown Timer (6 items)" [ref=e786] [cursor=pointer]:
+            - /url: https://codehim.com/tag/countdown-timer/
+            - text: Countdown Timer (6)
+          - link "Datepicker (9 items)" [ref=e787] [cursor=pointer]:
+            - /url: https://codehim.com/tag/datepicker/
+            - text: Datepicker (9)
+          - link "Digital Clocks (10 items)" [ref=e788] [cursor=pointer]:
+            - /url: https://codehim.com/tag/digital-clocks/
+            - text: Digital Clocks (10)
+          - link "Drag and Drop (4 items)" [ref=e789] [cursor=pointer]:
+            - /url: https://codehim.com/tag/drag-and-drop/
+            - text: Drag and Drop (4)
+          - link "Dropdown Menu (23 items)" [ref=e790] [cursor=pointer]:
+            - /url: https://codehim.com/tag/dropdown-menu/
+            - text: Dropdown Menu (23)
+          - link "File Uploader (4 items)" [ref=e791] [cursor=pointer]:
+            - /url: https://codehim.com/tag/file-uploader/
+            - text: File Uploader (4)
+          - link "Hamburger Menu (9 items)" [ref=e792] [cursor=pointer]:
+            - /url: https://codehim.com/tag/hamburger-menu/
+            - text: Hamburger Menu (9)
+          - link "Horizontal Menu (24 items)" [ref=e793] [cursor=pointer]:
+            - /url: https://codehim.com/tag/horizontal-menu/
+            - text: Horizontal Menu (24)
+          - link "Hover Effects (5 items)" [ref=e794] [cursor=pointer]:
+            - /url: https://codehim.com/tag/hover-effect/
+            - text: Hover Effects (5)
+          - link "HTML5 Canvas (8 items)" [ref=e795] [cursor=pointer]:
+            - /url: https://codehim.com/tag/html5-canvas/
+            - text: HTML5 Canvas (8)
+          - link "Image Sliders (40 items)" [ref=e796] [cursor=pointer]:
+            - /url: https://codehim.com/tag/slider/
+            - text: Image Sliders (40)
+          - link "Mega Menu (11 items)" [ref=e797] [cursor=pointer]:
+            - /url: https://codehim.com/tag/mega-menu/
+            - text: Mega Menu (11)
+          - link "Modal (5 items)" [ref=e798] [cursor=pointer]:
+            - /url: https://codehim.com/tag/modal/
+            - text: Modal (5)
+          - link "Multi-Level Menu (9 items)" [ref=e799] [cursor=pointer]:
+            - /url: https://codehim.com/tag/multi-level-menu/
+            - text: Multi-Level Menu (9)
+          - link "News Ticker (4 items)" [ref=e800] [cursor=pointer]:
+            - /url: https://codehim.com/tag/news-ticker/
+            - text: News Ticker (4)
+          - link "Notification (9 items)" [ref=e801] [cursor=pointer]:
+            - /url: https://codehim.com/tag/notification/
+            - text: Notification (9)
+          - link "Off-Canvas Menu (10 items)" [ref=e802] [cursor=pointer]:
+            - /url: https://codehim.com/tag/off-canvas-menu/
+            - text: Off-Canvas Menu (10)
+          - link "Pagination (5 items)" [ref=e803] [cursor=pointer]:
+            - /url: https://codehim.com/tag/pagination/
+            - text: Pagination (5)
+          - link "Parallax (8 items)" [ref=e804] [cursor=pointer]:
+            - /url: https://codehim.com/tag/parallax/
+            - text: Parallax (8)
+          - link "Popup Lightbox (20 items)" [ref=e805] [cursor=pointer]:
+            - /url: https://codehim.com/tag/popup-lightbox/
+            - text: Popup Lightbox (20)
+          - link "Progress Bar (5 items)" [ref=e806] [cursor=pointer]:
+            - /url: https://codehim.com/tag/progress-bar/
+            - text: Progress Bar (5)
+          - link "Range Sliders (4 items)" [ref=e807] [cursor=pointer]:
+            - /url: https://codehim.com/tag/range-sliders/
+            - text: Range Sliders (4)
+          - link "Scrolling Effects (28 items)" [ref=e808] [cursor=pointer]:
+            - /url: https://codehim.com/tag/scrolling/
+            - text: Scrolling Effects (28)
+          - link "Search Box (4 items)" [ref=e809] [cursor=pointer]:
+            - /url: https://codehim.com/tag/search-box/
+            - text: Search Box (4)
+          - link "Select Dropdown (4 items)" [ref=e810] [cursor=pointer]:
+            - /url: https://codehim.com/tag/select-dropdown/
+            - text: Select Dropdown (4)
+          - link "Shopping Cart (3 items)" [ref=e811] [cursor=pointer]:
+            - /url: https://codehim.com/tag/shopping-cart/
+            - text: Shopping Cart (3)
+          - link "Side Menu (16 items)" [ref=e812] [cursor=pointer]:
+            - /url: https://codehim.com/tag/side-menu/
+            - text: Side Menu (16)
+          - link "Slideshow (19 items)" [ref=e813] [cursor=pointer]:
+            - /url: https://codehim.com/tag/slideshow/
+            - text: Slideshow (19)
+          - link "Social Share Buttons (3 items)" [ref=e814] [cursor=pointer]:
+            - /url: https://codehim.com/tag/social-share-buttons/
+            - text: Social Share Buttons (3)
+          - link "Tabs (9 items)" [ref=e815] [cursor=pointer]:
+            - /url: https://codehim.com/tag/tabs/
+            - text: Tabs (9)
+          - link "Text (11 items)" [ref=e816] [cursor=pointer]:
+            - /url: https://codehim.com/tag/text/
+            - text: Text (11)
+          - link "Timeline (5 items)" [ref=e817] [cursor=pointer]:
+            - /url: https://codehim.com/tag/timeline/
+            - text: Timeline (5)
+          - link "Timer (4 items)" [ref=e818] [cursor=pointer]:
+            - /url: https://codehim.com/tag/timer/
+            - text: Timer (4)
+          - link "Tooltip (4 items)" [ref=e819] [cursor=pointer]:
+            - /url: https://codehim.com/tag/tooltip/
+            - text: Tooltip (4)
+          - link "Typing Effect (6 items)" [ref=e820] [cursor=pointer]:
+            - /url: https://codehim.com/tag/typing-effect/
+            - text: Typing Effect (6)
+          - link "Vertical Menu (14 items)" [ref=e821] [cursor=pointer]:
+            - /url: https://codehim.com/tag/vertical-menu/
+            - text: Vertical Menu (14)
+        - generic:
+          - insertion:
+            - generic:
+              - iframe
+    - generic [ref=e823]:
+      - complementary [ref=e824]:
+        - generic [ref=e825]:
+          - heading "Latest Code Snippets" [level=2] [ref=e826]
+          - list [ref=e827]:
+            - listitem [ref=e828]:
+              - link "Common Open Source Security Vulnerabilities and How to Mitigate Them Common Open Source Security Vulnerabilities and How to Mitigate Them" [ref=e829] [cursor=pointer]:
+                - /url: https://codehim.com/blog/common-open-source-security-vulnerabilities-and-how-to-mitigate-them/
+                - img "Common Open Source Security Vulnerabilities and How to Mitigate Them" [ref=e830]
+                - text: Common Open Source Security Vulnerabilities and How to Mitigate Them
+              - generic [ref=e831]: October 12, 2024
+            - listitem [ref=e832]:
+              - link "Animating Grid-column on Hover Using CSS Animating Grid-column on Hover Using CSS" [ref=e833] [cursor=pointer]:
+                - /url: https://codehim.com/html5-css3/animating-grid-column-on-hover-using-css/
+                - img "Animating Grid-column on Hover Using CSS" [ref=e834]
+                - text: Animating Grid-column on Hover Using CSS
+              - generic [ref=e835]: April 1, 2024
+            - listitem [ref=e836]:
+              - link "Star Trails Animation On Mousemove in JavaScript Star Trails Animation On Mousemove in JavaScript" [ref=e837] [cursor=pointer]:
+                - /url: https://codehim.com/animation-effects/star-trails-animation-on-mousemove-in-javascript/
+                - img "Star Trails Animation On Mousemove in JavaScript" [ref=e838]
+                - text: Star Trails Animation On Mousemove in JavaScript
+              - generic [ref=e839]: March 31, 2024
+            - listitem [ref=e840]:
+              - link "Gravity Button Using Pure CSS Gravity Button Using Pure CSS" [ref=e841] [cursor=pointer]:
+                - /url: https://codehim.com/html5-css3/gravity-button-using-pure-css/
+                - img "Gravity Button Using Pure CSS" [ref=e842]
+                - text: Gravity Button Using Pure CSS
+              - generic [ref=e843]: March 31, 2024
+            - listitem [ref=e844]:
+              - link "Padlock Toggle Switch in CSS Padlock Toggle Switch in CSS" [ref=e845] [cursor=pointer]:
+                - /url: https://codehim.com/html5-css3/padlock-toggle-switch-in-css/
+                - img "Padlock Toggle Switch in CSS" [ref=e846]
+                - text: Padlock Toggle Switch in CSS
+              - generic [ref=e847]: March 31, 2024
+            - listitem [ref=e848]:
+              - link "Scroll-driven Animations in Pure CSS Scroll-driven Animations in Pure CSS" [ref=e849] [cursor=pointer]:
+                - /url: https://codehim.com/html5-css3/scroll-driven-animations-in-pure-css/
+                - img "Scroll-driven Animations in Pure CSS" [ref=e850]
+                - text: Scroll-driven Animations in Pure CSS
+              - generic [ref=e851]: March 31, 2024
+            - listitem [ref=e852]:
+              - link "Interactive Notification Center UI in Vanilla JS Interactive Notification Center UI in Vanilla JS" [ref=e853] [cursor=pointer]:
+                - /url: https://codehim.com/vanilla-javascript/interactive-notification-center-ui-in-vanilla-js/
+                - img "Interactive Notification Center UI in Vanilla JS" [ref=e854]
+                - text: Interactive Notification Center UI in Vanilla JS
+              - generic [ref=e855]: March 31, 2024
+            - listitem [ref=e856]:
+              - link "Emoji Spinner in Vanilla JavaScript Emoji Spinner in Vanilla JavaScript" [ref=e857] [cursor=pointer]:
+                - /url: https://codehim.com/vanilla-javascript/emoji-spinner-in-vanilla-javascript/
+                - img "Emoji Spinner in Vanilla JavaScript" [ref=e858]
+                - text: Emoji Spinner in Vanilla JavaScript
+              - generic [ref=e859]: March 31, 2024
+            - listitem [ref=e860]:
+              - link "Reveal Secret Code Using CSS Reveal Secret Code Using CSS" [ref=e861] [cursor=pointer]:
+                - /url: https://codehim.com/html5-css3/reveal-secret-code-using-css/
+                - img "Reveal Secret Code Using CSS" [ref=e862]
+                - text: Reveal Secret Code Using CSS
+              - generic [ref=e863]: March 31, 2024
+            - listitem [ref=e864]:
+              - link "Toggle Button in CSS With Stretchable Elastic Effect Toggle Button in CSS With Stretchable Elastic Effect" [ref=e865] [cursor=pointer]:
+                - /url: https://codehim.com/html5-css3/toggle-button-in-css-with-stretchable-elastic-effect/
+                - img "Toggle Button in CSS With Stretchable Elastic Effect" [ref=e866]
+                - text: Toggle Button in CSS With Stretchable Elastic Effect
+              - generic [ref=e867]: March 31, 2024
+      - complementary [ref=e868]:
+        - heading "Popular" [level=2] [ref=e869]
+        - list [ref=e870]:
+          - listitem [ref=e871]:
+            - link "65+ Login Page in HTML with CSS Code Sample Simple to Difficult" [ref=e872] [cursor=pointer]:
+              - /url: https://codehim.com/collections/login-page-in-html-with-css-code/
+            - text: "- 947,520 views"
+          - listitem [ref=e873]:
+            - link "25+ Best JavaScript Shopping Cart Examples with Demo" [ref=e874] [cursor=pointer]:
+              - /url: https://codehim.com/collections/javascript-shopping-cart-examples-with-demo/
+            - text: "- 212,036 views"
+          - listitem [ref=e875]:
+            - link "Bootstrap Multiselect Dropdown with Checkboxes" [ref=e876] [cursor=pointer]:
+              - /url: https://codehim.com/html5-css3/bootstrap-multiselect-dropdown-with-checkboxes/
+            - text: "- 150,988 views"
+          - listitem [ref=e877]:
+            - link "Bootstrap 5 Buttons with Icon and Text Tutorial & Demo" [ref=e878] [cursor=pointer]:
+              - /url: https://codehim.com/bootstrap/bootstrap-5-buttons-with-icon-and-text/
+            - text: "- 112,401 views"
+          - listitem [ref=e879]:
+            - link "19+ Bootstrap Select Dropdown with Search Box Tutorial & Examples" [ref=e880] [cursor=pointer]:
+              - /url: https://codehim.com/text-input/bootstrap-select-dropdown-with-search-box/
+            - text: "- 101,086 views"
+          - listitem [ref=e881]:
+            - link "Bootstrap 5 Sidebar Menu with Submenu Collapse/Hover Tutorial Demo" [ref=e882] [cursor=pointer]:
+              - /url: https://codehim.com/bootstrap/bootstrap-navbars/bootstrap-sidebar-menu-with-submenu/
+            - text: "- 88,148 views"
+          - listitem [ref=e883]:
+            - link "19+ Bootstrap 5 Mega Menu Responsive/Drop Down Examples" [ref=e884] [cursor=pointer]:
+              - /url: https://codehim.com/bootstrap/bootstrap-5-mega-menu-responsive-examples/
+            - text: "- 86,435 views"
+          - listitem [ref=e885]:
+            - link "99+ Social Media Buttons HTML Code Sample & Tutorial" [ref=e886] [cursor=pointer]:
+              - /url: https://codehim.com/social-media/social-media-buttons-html-code/
+            - text: "- 86,434 views"
+          - listitem [ref=e887]:
+            - link "Bootstrap 4 Modal Popup Login Form Tutorial & Demo" [ref=e888] [cursor=pointer]:
+              - /url: https://codehim.com/bootstrap/bootstrap-4-modal-popup-login-form/
+            - text: "- 82,172 views"
+          - listitem [ref=e889]:
+            - link "Bootstrap Vertical Menu with Submenu on Click" [ref=e890] [cursor=pointer]:
+              - /url: https://codehim.com/bootstrap/bootstrap-vertical-menu-with-submenu-on-click/
+            - text: "- 80,229 views"
+        - generic:
+          - insertion:
+            - generic:
+              - iframe
+      - complementary [ref=e891]:
+        - link [ref=e893] [cursor=pointer]:
+          - /url: https://codehim.com/codehim-ai-magic/
+          - img [ref=e894]
+      - complementary [ref=e895]
+      - complementary [ref=e896]
+      - complementary [ref=e897]:
+        - heading "Advertisement" [level=2] [ref=e898]
+      - complementary [ref=e899]
+  - text: 
+  - generic [ref=e901]:
+    - strong [ref=e902]: About CodeHim
+    - paragraph [ref=e903]:
+      - link "Free Web Design Code & Scripts" [ref=e904] [cursor=pointer]:
+        - /url: https://www.codehim.com
+      - text: "- CodeHim is one of the BEST developer websites that provide web designers and developers with a simple way to preview and download a variety of free code & scripts. All codes published on CodeHim are open source, distributed under"
+      - link "OSD-compliant license" [ref=e905] [cursor=pointer]:
+        - /url: https://opensource.org/licenses
+      - text: which grants all the rights to use, study, change and share the software in modified and unmodified form. Before publishing, we test and review each code snippet to avoid errors, but we cannot warrant the full correctness of all content. All trademarks, trade names, logos, and icons are the property of their respective owners...
+      - link "find out more..." [ref=e906] [cursor=pointer]:
+        - /url: /copyright-and-disclaimer/
+  - contentinfo [ref=e907]:
+    - generic [ref=e908]:
+      - generic [ref=e909]:
+        - generic [ref=e910]:
+          - heading "CodeHim" [level=5] [ref=e911]
+          - navigation [ref=e912]:
+            - listitem [ref=e913]:
+              - link "About" [ref=e914] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e915]:
+              - link "Contact Us" [ref=e916] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e917]:
+              - link "Terms and Conditions" [ref=e918] [cursor=pointer]:
+                - /url: /terms/
+            - listitem [ref=e919]:
+              - link "Privacy Policy" [ref=e920] [cursor=pointer]:
+                - /url: /privacy-policy
+        - generic [ref=e921]:
+          - heading "Top Categories" [level=5] [ref=e922]
+          - navigation [ref=e923]:
+            - listitem [ref=e924]:
+              - link "Bootstrap Snippets" [ref=e925] [cursor=pointer]:
+                - /url: /category/bootstrap/
+            - listitem [ref=e926]:
+              - link "JavaScript Snippets" [ref=e927] [cursor=pointer]:
+                - /url: /category/vanilla-javascript/
+            - listitem [ref=e928]:
+              - link "HTML CSS Snippets" [ref=e929] [cursor=pointer]:
+                - /url: /category/html5-css3/
+            - listitem [ref=e930]:
+              - link "Menu & Nav Snippets" [ref=e931] [cursor=pointer]:
+                - /url: /category/menu/
+        - generic [ref=e932]:
+          - heading "Get in Touch" [level=5] [ref=e933]
+          - paragraph [ref=e934]: Follow us on social media to be updated with latest web design code & scripts...
+          - generic [ref=e936]:
+            - link "" [ref=e937] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UC16aiEEtMR-5SN7MDWweQeQ
+              - generic [ref=e938]: 
+            - link "" [ref=e939] [cursor=pointer]:
+              - /url: https://www.twitter.com/@codehimofficial
+              - generic [ref=e940]: 
+            - link "" [ref=e941] [cursor=pointer]:
+              - /url: https://www.github.com/codehimblog
+            - link "" [ref=e942] [cursor=pointer]:
+              - /url: https://www.pinterest.com/codehim/
+      - generic [ref=e943]:
+        - text: All Rights Reserved © 2026 -
+        - link "CodeHim" [ref=e945] [cursor=pointer]:
+          - /url: https://www.codehim.com
+        - text: Inc
+  - generic [ref=e947]:
+    - paragraph [ref=e949]: Please Rel0ad/PressF5 this page if you can't click the download/preview link
+    - link "F5" [ref=e951] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=e952] [cursor=pointer]: X
+  - insertion [ref=e953]:
+    - iframe [ref=e956]:
+      - generic [active] [ref=f17e1]:
+        - generic [ref=f17e6]:
+          - generic [ref=f17e7]:
+            - generic "CVwizard" [ref=f17e8]:
+              - link "CVwizard" [ref=f17e9] [cursor=pointer]:
+                - /url: https://googleads.g.doubleclick.net/aclk?sa=l&ai=CA58UHlpLauS6LNeatdEP59aWsQGAzef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEBqQKsWsKG0CyzPqgDAcgDywSqBPwBT9A_Y3aDy4Ws-cl2C-GFA6WQq5xf6jlZnL0tikktE9LJ7Ph7EGwaE5CNuItK9jZreh2K52vrCr5NzavMU_BFWvb4KJIA_r8fZ-ueibsu0lo7QlR9nbG8MN8W1yaN31z_XRIeWSPv_NZMt5yLX0I3w3Nd6IRJeM3FGKpBOM-c37tgDkcL0S-xkWuWD_5p0QURX58XLEYyeGxHyma2ZL1ArVyztaIbNyhxDGGm1w2r37fM8ftc10u1lVIjPpGDjft6slcRcY7sgTNgiFlUYTTeLx-Gt_aWieNe-aJ6gBi0zLCmO9Los-MHcrJxacSP3dKCJxcs4_3jYMITD5oYwASw4sro8QSIBeDz-vFQgAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYxMn6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCLHI_b7EvZUDFVdNLQQdZ6slFvANAogOCdgTDIgUB9AVAZgWAcoWAgoA-BYBgBcBshcEGAFQBroXAjgBshgJEgKdYxgBIgEA0BgB6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE&num=1&cid=CAQSiAIAEQoqgSPJnekMrQHiYGfXNwqA324-Rvo-zbO0Yp9eaMsNsO-ZcS8JrhcPVXpA839MMkSzLVMyzzsNUOZAt03DM5adiVoCNnaYbqu7efYbQka2yYCzp4-MqUzl3txORDSi2IzxxplE8IsjsuQ70xtR09UPQmO2DQei7txYtdEhdjjlpqJj9FiB4h8K1Y-v9DZp_-By9RLxGuVfQUFa6NBs3SEIzSipHpfTSodbik_dlGSNc3sOcVymJoQCnm9D1Ge63D6kmzuty5w_rdJcQ0ecvrTEnqp_shwT01LSjIh8cG-JQbnvRBIDKNF4qemMak2Gf0GqWsAtSpPgUbOc0f-FsTgR1C7DAxIYAQ&sig=AOD64_1J-f6SWq24RM9JRdeVBSIYIq5Kjg&client=ca-pub-9265886855150833&rf=1&nb=1&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE
+            - generic "CVwizard" [ref=f17e10]:
+              - link "Create a professional CV" [ref=f17e11] [cursor=pointer]:
+                - /url: https://googleads.g.doubleclick.net/aclk?sa=l&ai=CA58UHlpLauS6LNeatdEP59aWsQGAzef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEBqQKsWsKG0CyzPqgDAcgDywSqBPwBT9A_Y3aDy4Ws-cl2C-GFA6WQq5xf6jlZnL0tikktE9LJ7Ph7EGwaE5CNuItK9jZreh2K52vrCr5NzavMU_BFWvb4KJIA_r8fZ-ueibsu0lo7QlR9nbG8MN8W1yaN31z_XRIeWSPv_NZMt5yLX0I3w3Nd6IRJeM3FGKpBOM-c37tgDkcL0S-xkWuWD_5p0QURX58XLEYyeGxHyma2ZL1ArVyztaIbNyhxDGGm1w2r37fM8ftc10u1lVIjPpGDjft6slcRcY7sgTNgiFlUYTTeLx-Gt_aWieNe-aJ6gBi0zLCmO9Los-MHcrJxacSP3dKCJxcs4_3jYMITD5oYwASw4sro8QSIBeDz-vFQgAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYxMn6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCLHI_b7EvZUDFVdNLQQdZ6slFvANAogOCdgTDIgUB9AVAZgWAcoWAgoA-BYBgBcBshcEGAFQBroXAjgBshgJEgKdYxgBIgEA0BgB6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE&num=1&cid=CAQSiAIAEQoqgSPJnekMrQHiYGfXNwqA324-Rvo-zbO0Yp9eaMsNsO-ZcS8JrhcPVXpA839MMkSzLVMyzzsNUOZAt03DM5adiVoCNnaYbqu7efYbQka2yYCzp4-MqUzl3txORDSi2IzxxplE8IsjsuQ70xtR09UPQmO2DQei7txYtdEhdjjlpqJj9FiB4h8K1Y-v9DZp_-By9RLxGuVfQUFa6NBs3SEIzSipHpfTSodbik_dlGSNc3sOcVymJoQCnm9D1Ge63D6kmzuty5w_rdJcQ0ecvrTEnqp_shwT01LSjIh8cG-JQbnvRBIDKNF4qemMak2Gf0GqWsAtSpPgUbOc0f-FsTgR1C7DAxIYAQ&sig=AOD64_1J-f6SWq24RM9JRdeVBSIYIq5Kjg&client=ca-pub-9265886855150833&rf=1&nb=0&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE
+            - generic "CVwizard" [ref=f17e12]:
+              - link "Create your unique CV with AI. 10M+ CVs created. Get started right away!" [ref=f17e13] [cursor=pointer]:
+                - /url: https://googleads.g.doubleclick.net/aclk?sa=l&ai=CA58UHlpLauS6LNeatdEP59aWsQGAzef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEBqQKsWsKG0CyzPqgDAcgDywSqBPwBT9A_Y3aDy4Ws-cl2C-GFA6WQq5xf6jlZnL0tikktE9LJ7Ph7EGwaE5CNuItK9jZreh2K52vrCr5NzavMU_BFWvb4KJIA_r8fZ-ueibsu0lo7QlR9nbG8MN8W1yaN31z_XRIeWSPv_NZMt5yLX0I3w3Nd6IRJeM3FGKpBOM-c37tgDkcL0S-xkWuWD_5p0QURX58XLEYyeGxHyma2ZL1ArVyztaIbNyhxDGGm1w2r37fM8ftc10u1lVIjPpGDjft6slcRcY7sgTNgiFlUYTTeLx-Gt_aWieNe-aJ6gBi0zLCmO9Los-MHcrJxacSP3dKCJxcs4_3jYMITD5oYwASw4sro8QSIBeDz-vFQgAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYxMn6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCLHI_b7EvZUDFVdNLQQdZ6slFvANAogOCdgTDIgUB9AVAZgWAcoWAgoA-BYBgBcBshcEGAFQBroXAjgBshgJEgKdYxgBIgEA0BgB6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE&num=1&cid=CAQSiAIAEQoqgSPJnekMrQHiYGfXNwqA324-Rvo-zbO0Yp9eaMsNsO-ZcS8JrhcPVXpA839MMkSzLVMyzzsNUOZAt03DM5adiVoCNnaYbqu7efYbQka2yYCzp4-MqUzl3txORDSi2IzxxplE8IsjsuQ70xtR09UPQmO2DQei7txYtdEhdjjlpqJj9FiB4h8K1Y-v9DZp_-By9RLxGuVfQUFa6NBs3SEIzSipHpfTSodbik_dlGSNc3sOcVymJoQCnm9D1Ge63D6kmzuty5w_rdJcQ0ecvrTEnqp_shwT01LSjIh8cG-JQbnvRBIDKNF4qemMak2Gf0GqWsAtSpPgUbOc0f-FsTgR1C7DAxIYAQ&sig=AOD64_1J-f6SWq24RM9JRdeVBSIYIq5Kjg&client=ca-pub-9265886855150833&rf=1&nb=7&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE
+                - text: Create your unique CV with AI. 10M+ CVs
+                - text: created. Get started right away!
+          - link "Open" [ref=f17e17] [cursor=pointer]:
+            - /url: https://googleads.g.doubleclick.net/aclk?sa=l&ai=CA58UHlpLauS6LNeatdEP59aWsQGAzef6hwHzlpb7gxPAjbcBEAEgnYWToAFgnQGgAcz4ov4CyAEBqQKsWsKG0CyzPqgDAcgDywSqBPwBT9A_Y3aDy4Ws-cl2C-GFA6WQq5xf6jlZnL0tikktE9LJ7Ph7EGwaE5CNuItK9jZreh2K52vrCr5NzavMU_BFWvb4KJIA_r8fZ-ueibsu0lo7QlR9nbG8MN8W1yaN31z_XRIeWSPv_NZMt5yLX0I3w3Nd6IRJeM3FGKpBOM-c37tgDkcL0S-xkWuWD_5p0QURX58XLEYyeGxHyma2ZL1ArVyztaIbNyhxDGGm1w2r37fM8ftc10u1lVIjPpGDjft6slcRcY7sgTNgiFlUYTTeLx-Gt_aWieNe-aJ6gBi0zLCmO9Los-MHcrJxacSP3dKCJxcs4_3jYMITD5oYwASw4sro8QSIBeDz-vFQgAeNt8qnBagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYxMn6vsS9lQNgAbEJSd8TXjntEHeACgGYCwHICwGiDCBiAgoAahIKEGNvbS5jdndpemFyZC50d2F4AYgBAZABAaoNAkNOyA0B6g0TCLHI_b7EvZUDFVdNLQQdZ6slFvANAogOCdgTDIgUB9AVAZgWAcoWAgoA-BYBgBcBshcEGAFQBroXAjgBshgJEgKdYxgBIgEA0BgB6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE&num=1&cid=CAQSiAIAEQoqgSPJnekMrQHiYGfXNwqA324-Rvo-zbO0Yp9eaMsNsO-ZcS8JrhcPVXpA839MMkSzLVMyzzsNUOZAt03DM5adiVoCNnaYbqu7efYbQka2yYCzp4-MqUzl3txORDSi2IzxxplE8IsjsuQ70xtR09UPQmO2DQei7txYtdEhdjjlpqJj9FiB4h8K1Y-v9DZp_-By9RLxGuVfQUFa6NBs3SEIzSipHpfTSodbik_dlGSNc3sOcVymJoQCnm9D1Ge63D6kmzuty5w_rdJcQ0ecvrTEnqp_shwT01LSjIh8cG-JQbnvRBIDKNF4qemMak2Gf0GqWsAtSpPgUbOc0f-FsTgR1C7DAxIYAQ&sig=AOD64_1J-f6SWq24RM9JRdeVBSIYIq5Kjg&client=ca-pub-9265886855150833&rf=1&nb=8&adurl=https://www.cvwizard.com/en%3Fgad_source%3D5%26gad_campaignid%3D21713828320%26gclid%3DEAIaIQobChMI5MH9vsS9lQMVV00tBB1nqyUWEAEYASAAEgLJwPD_BwE
+            - generic [ref=f17e18]: Open
+            - img [ref=f17e19]
+        - img [ref=f17e24] [cursor=pointer]
+        - button [ref=f17e26] [cursor=pointer]:
+          - img [ref=f17e27]
+        - iframe
