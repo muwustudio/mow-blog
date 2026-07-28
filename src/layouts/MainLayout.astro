@@ -371,4 +371,143 @@ const { title, description, image } = Astro.props;
       filterPosts('');
     });
   });
+
+  // ============================================================
+  // Sound — Web Audio ambient (wind day / fireplace night)
+  // ============================================================
+  var audioCtx = null;
+  var ambientSound = null;
+  var soundEnabled = true;
+
+  function initAudio() {
+    if (audioCtx) return;
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+
+  function stopAmbient() {
+    if (ambientSound) {
+      try { ambientSound.stop(); } catch(e) {}
+      ambientSound = null;
+    }
+  }
+
+  // Brown noise generator (for wind)
+  function createBrownNoiseFilter() {
+    var bufferSize = 2 * audioCtx.sampleRate;
+    var buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    var data = buffer.getChannelData(0);
+    var lastOut = 0;
+    for (var i = 0; i < bufferSize; i++) {
+      var white = Math.random() * 2 - 1;
+      data[i] = (lastOut + (0.02 * white)) / 1.02;
+      lastOut = data[i];
+      data[i] *= 3.5;
+    }
+    return buffer;
+  }
+
+  // Wind: brown noise → lowpass 400Hz → low gain
+  function playWind() {
+    if (!audioCtx || !soundEnabled) return;
+    stopAmbient();
+    var noise = audioCtx.createBufferSource();
+    noise.buffer = createBrownNoiseFilter();
+    noise.loop = true;
+    var lowpass = audioCtx.createBiquadFilter();
+    lowpass.type = 'lowpass';
+    lowpass.frequency.value = 400;
+    var gain = audioCtx.createGain();
+    gain.gain.value = 0.04;
+    noise.connect(lowpass);
+    lowpass.connect(gain);
+    gain.connect(audioCtx.destination);
+    noise.start();
+    ambientSound = noise;
+  }
+
+  // Fireplace: random short noise bursts (crackle)
+  var fireplaceTimer = null;
+
+  function playFireplace() {
+    if (!audioCtx || !soundEnabled) return;
+    stopAmbient();
+    var gain = audioCtx.createGain();
+    gain.gain.value = 0.06;
+    gain.connect(audioCtx.destination);
+    var running = true;
+    ambientSound = { stop: function() { running = false; try { gain.disconnect(); } catch(e) {} } };
+    function crackle() {
+      if (!running) return;
+      var dur = 0.01 + Math.random() * 0.04;
+      var now = audioCtx.currentTime;
+      var src = audioCtx.createBufferSource();
+      var buf = audioCtx.createBuffer(1, Math.floor(audioCtx.sampleRate * dur), audioCtx.sampleRate);
+      var d = buf.getChannelData(0);
+      for (var i = 0; i < d.length; i++) {
+        d[i] = (Math.random() * 2 - 1) * Math.exp(-i / (buf.length * 0.15));
+      }
+      src.buffer = buf;
+      var g = audioCtx.createGain();
+      g.gain.setValueAtTime(0.1 + Math.random() * 0.4, now);
+      g.gain.exponentialRampToValueAtTime(0.001, now + dur);
+      src.connect(g);
+      g.connect(gain);
+      src.start(now);
+      src.stop(now + dur + 0.01);
+      fireplaceTimer = setTimeout(crackle, 40 + Math.random() * 200);
+    }
+    crackle();
+  }
+
+  function switchAmbient() {
+    var theme = document.documentElement.getAttribute('data-theme');
+    if (theme === 'night') {
+      clearTimeout(fireplaceTimer);
+      playFireplace();
+    } else {
+      playWind();
+    }
+  }
+
+  // Toggle sound with keyboard 's'
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 's' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      var target = e.target;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
+      soundEnabled = !soundEnabled;
+      if (!soundEnabled) {
+        stopAmbient();
+        clearTimeout(fireplaceTimer);
+        showToast('🔇 环境音已关闭');
+      } else {
+        switchAmbient();
+        showToast('🔊 环境音已开启');
+      }
+    }
+  });
+
+  // Start ambient on first user interaction (browser autoplay policy)
+  var audioStarted = false;
+  function startAudioOnInteract() {
+    if (audioStarted) return;
+    initAudio();
+    switchAmbient();
+    audioStarted = true;
+    document.removeEventListener('click', startAudioOnInteract);
+    document.removeEventListener('keydown', startAudioOnInteract);
+    document.removeEventListener('touchstart', startAudioOnInteract);
+  }
+  document.addEventListener('click', startAudioOnInteract);
+  document.addEventListener('keydown', startAudioOnInteract);
+  document.addEventListener('touchstart', startAudioOnInteract);
+
+  // Switch ambient when theme changes
+  var themeObserver = new MutationObserver(function() {
+    if (audioStarted) {
+      clearTimeout(fireplaceTimer);
+      stopAmbient();
+      switchAmbient();
+    }
+  });
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 </script>

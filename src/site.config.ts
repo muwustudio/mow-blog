@@ -7,7 +7,7 @@
 export const SITE = {
   title: '牧羊人的博客',
   subtitle: "Shepherd's Blog",
-  description: '一个游戏开发者的个人空间 — UE5 C++ 游戏开发、图形学、架构设计',
+  description: '牧羊人的数字草原 — 代码、阅读、吉他，念头从烟囱飞向星空',
   url: 'https://mow-blog.pages.dev',
   lang: 'zh-CN',
   ogImage: 'https://mow-blog.pages.dev/assets/og-image.jpg',
@@ -27,18 +27,18 @@ export const SOCIAL = [
 ];
 
 export const HERO = {
-  greeting: '一个游戏开发者的个人空间',
-  headline: '在草地与木屋之间\n写下代码与思考',
-  bio: 'UE5 C++ 游戏开发 · 图形学 · 架构设计',
-  bioExtended: '白天在草地上阅读，夜晚在小木屋里编码',
+  greeting: '牧羊人的数字草原',
+  headline: 'Dreams from the Meadow\nWhere Ideas Roam Free',
+  bio: '代码 · 阅读 · 吉他 · 日落',
+  bioExtended: '白天躺在草地上看云，夜晚在暖灯下创造',
   ctaLabel: '浏览文章',
   ctaHref: '#postsSection',
 };
 
 export const FOOTER = {
   techStack: 'Astro + Cloudflare Pages',
-  sceneDesign: 'mu01 / mu02',
-  whisper: '我在风花雪月里等你',
+  sceneDesign: 'Dreams from the Meadow / Where Ideas Roam Free',
+  whisper: '风里有草的气息，念头从烟囱飞向星空',
   since: 2026,
 };
 

@@ -1,6 +1,8 @@
   /* ============================================
      Reset & Base
      ============================================ */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Noto+Serif+SC:wght@400;500;700&display=swap');
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html {
@@ -9,7 +11,7 @@
   }
 
   body {
-    font-family: 'Georgia', 'Noto Serif SC', 'Source Han Serif SC', serif;
+    font-family: var(--font-body);
     color: var(--text);
     line-height: 1.8;
     min-height: 100vh;
