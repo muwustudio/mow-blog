@@ -1,30 +1,6 @@
   /* ============================================
      前景效果层
      ============================================ */
-  .grass-layer {
-    position: fixed; bottom: 0; left: 0; right: 0; height: 180px;
-    z-index: 0; pointer-events: none;
-    opacity: var(--bg-opacity-day);
-    transition: opacity var(--transition-theme);
-  }
-
-  .grass-blade {
-    position: absolute; bottom: 0;
-    background: linear-gradient(to top, #4a7c3f, #6ba34e 40%, #8cc46a 100%);
-    border-radius: 60% 40% 0 0;
-    transform-origin: bottom center;
-    animation: grassSway var(--sway-dur, 3s) ease-in-out infinite;
-    animation-delay: var(--sway-delay, 0s);
-    opacity: 0.7;
-  }
-
-  @keyframes grassSway {
-    0%, 100% { transform: skewX(var(--skew-a, -2deg)) rotate(var(--rot-a, -1deg)); }
-    25% { transform: skewX(var(--skew-b, 3deg)) rotate(var(--rot-b, 2deg)); }
-    50% { transform: skewX(var(--skew-c, -1deg)) rotate(var(--rot-c, 0deg)); }
-    75% { transform: skewX(var(--skew-d, -3deg)) rotate(var(--rot-d, -1.5deg)); }
-  }
-
   .steam-layer {
     position: fixed; bottom: 28%; right: 18%;
     z-index: 0; pointer-events: none;

@@ -139,7 +139,6 @@ const ogImage = image ? `${SITE.url}${image}` : SITE.ogImage;
   </div>
 
   <!-- Foreground Effects -->
-  <div class="grass-layer" id="grassLayer" aria-hidden="true"></div>
   <div class="steam-layer" id="steamLayer" aria-hidden="true">
     <div class="steam-wisp" style="--steam-dur:2.8s;--steam-delay:0s;--drift:6px;width:2px;height:20px;"></div>
     <div class="steam-wisp" style="--steam-dur:3.2s;--steam-delay:0.9s;--drift:-4px;width:1.5px;height:16px;"></div>
@@ -152,6 +151,11 @@ const ogImage = image ? `${SITE.url}${image}` : SITE.ogImage;
   <div class="content" id="content">
     <slot />
   </div>
+
+  <!-- Sound Toggle -->
+  <button class="sound-toggle" id="soundToggle" aria-label="开关环境音" title="环境音">
+    <svg class="icon" style="width:1.2em;height:1.2em;"><use href="#icon-music"/></svg>
+  </button>
 
   <!-- Easter Egg -->
   <button class="easter-egg" id="easterEgg" aria-label="风花雪月">

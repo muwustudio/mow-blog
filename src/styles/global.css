@@ -66,3 +66,38 @@
     background: rgba(212, 165, 116, 0.35);
     border-radius: 2px; padding: 0 2px;
   }
+
+  /* 环境音切换按钮 */
+  .sound-toggle {
+    position: fixed; bottom: 76px; right: 24px;
+    z-index: 100; width: 40px; height: 40px;
+    border-radius: 50%; border: 1.5px solid var(--divider);
+    background: var(--card-bg);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    color: var(--icon-color);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s, background var(--transition-theme), border-color var(--transition-theme), color var(--transition-theme);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+  .sound-toggle:hover {
+    color: var(--icon-hover);
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px var(--accent-glow);
+  }
+  .sound-toggle.muted {
+    opacity: 0.5;
+  }
+  .sound-toggle.muted .icon {
+    text-decoration: line-through;
+  }
+
+  /* 文章内容卡片（毛玻璃） */
+  .post-content-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 18px;
+  }

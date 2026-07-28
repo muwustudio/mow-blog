@@ -5,8 +5,8 @@
 // ============================================================
 
 export const SITE = {
-  title: '牧羊人的博客',
-  subtitle: "Shepherd's Blog",
+  title: '牧屋',
+  subtitle: "Shepherd's Cabin",
   description: '牧羊人的数字草原 — 代码、阅读、吉他，念头从烟囱飞向星空',
   url: 'https://mow-blog.pages.dev',
   lang: 'zh-CN',
@@ -21,16 +21,16 @@ export const NAV = [
 ];
 
 export const SOCIAL = [
-  { label: 'B站', href: '#', icon: 'tv' },
-  { label: '联系', href: '#', icon: 'mail' },
-  { label: 'GitHub', href: 'https://github.com/2949078758', icon: 'github' },
+  { label: 'B站', href: 'https://space.bilibili.com/116454362', icon: 'tv' },
+  { label: 'Email', href: 'mailto:2949078758@qq.com', icon: 'mail' },
+  { label: 'GitHub', href: 'https://github.com/muwustudio', icon: 'github' },
 ];
 
 export const HERO = {
   greeting: '牧羊人的数字草原',
-  headline: 'Dreams from the Meadow\nWhere Ideas Roam Free',
+  headline: '风里有草的气息\n念头从烟囱飞向星空',
   bio: '代码 · 阅读 · 吉他 · 日落',
-  bioExtended: '白天躺在草地上看云，夜晚在暖灯下创造',
+  bioExtended: '这里是我的小木屋。白天躺在草地上看云，夜晚在暖灯下创造。',
   ctaLabel: '浏览文章',
   ctaHref: '#postsSection',
 };

@@ -38,9 +38,14 @@
     .footer-social-link { padding: 6px 12px; font-size: 0.8rem; }
 
     .easter-egg { bottom: 16px; right: 16px; width: 36px; height: 36px; }
+    .sound-toggle { bottom: 76px; right: 16px; }
 
     .header-tools { gap: 2px; }
     .header-tools .social-btn { width: 30px; height: 30px; }
+
+    /* 移动端文章详情 */
+    .post-detail { padding: 40px 16px 80px !important; }
+    .post-content-card { padding: 18px 16px; }
   }
 
   @media (max-width: 480px) {
@@ -52,4 +57,22 @@
     .theme-toggle { width: 52px; height: 26px; }
     [data-theme="night"] .theme-toggle .toggle-thumb { transform: translateX(26px); }
     .hero h1 { font-size: 1.3rem; }
+    .info-card { padding: 12px; }
+    .tag-pill { font-size: 0.8rem; padding: 4px 12px; }
+    .cta-btn { width: 100%; justify-content: center; }
+    .post-detail { padding: 30px 14px 70px !important; }
+  }
+
+  /* ============================================
+     Reduced Motion
+     ============================================ */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .scene .bg-layer { transform: none !important; }
+    .content { transform: none !important; }
+    .scroll-hint { display: none; }
   }

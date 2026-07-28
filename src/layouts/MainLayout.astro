@@ -153,28 +153,6 @@ const { title, description, image } = Astro.props;
   });
 
   // --- Parallax ---
-  // Grass generation
-  var grassLayer = document.querySelector('.grass-layer');
-  if (grassLayer) {
-    for (var i = 0; i < 80; i++) {
-      var blade = document.createElement('div');
-      blade.className = 'grass-blade';
-      blade.style.setProperty('--sway-dur', (2.5 + Math.random() * 4) + 's');
-      blade.style.setProperty('--sway-delay', (Math.random() * 5) + 's');
-      blade.style.setProperty('--skew-a', (-3 + Math.random() * 6) + 'deg');
-      blade.style.setProperty('--skew-b', (-3 + Math.random() * 6) + 'deg');
-      blade.style.setProperty('--skew-c', (-3 + Math.random() * 6) + 'deg');
-      blade.style.setProperty('--skew-d', (-3 + Math.random() * 6) + 'deg');
-      blade.style.setProperty('--rot-a', (-2 + Math.random() * 4) + 'deg');
-      blade.style.setProperty('--rot-b', (-2 + Math.random() * 4) + 'deg');
-      blade.style.setProperty('--rot-c', (-2 + Math.random() * 4) + 'deg');
-      blade.style.setProperty('--rot-d', (-2 + Math.random() * 4) + 'deg');
-      blade.style.left = (Math.random() * 100) + '%';
-      blade.style.width = (3 + Math.random() * 8) + 'px';
-      blade.style.height = (40 + Math.random() * 80) + 'px';
-      grassLayer.appendChild(blade);
-    }
-  }
 
   // Firefly generation
   var fireflyLayer = document.querySelector('.firefly-layer');
@@ -221,12 +199,10 @@ const { title, description, image } = Astro.props;
     var bgDay = document.querySelector('.bg-day');
     var bgNight = document.querySelector('.bg-night');
     var content = document.querySelector('.content');
-    var grass = document.querySelector('.grass-layer');
 
     if (bgDay) bgDay.style.transform = 'translate3d(' + (mouseX * 20) + 'px, ' + (mouseY * 20) + 'px, 0)';
     if (bgNight) bgNight.style.transform = 'translate3d(' + (mouseX * 20) + 'px, ' + (mouseY * 20) + 'px, 0)';
     if (content) content.style.transform = 'translate3d(' + (mouseX * 8) + 'px, ' + (mouseY * 8) + 'px, 0)';
-    if (grass) grass.style.transform = 'translate3d(' + (mouseX * 15) + 'px, 0, 0)';
 
     requestAnimationFrame(animateParallax);
   }
@@ -469,20 +445,46 @@ const { title, description, image } = Astro.props;
     }
   }
 
-  // Toggle sound with keyboard 's'
+  // Update sound toggle button icon
+  function updateSoundToggle() {
+    var btn = document.getElementById('soundToggle');
+    if (btn) {
+      if (soundEnabled) {
+        btn.classList.remove('muted');
+      } else {
+        btn.classList.add('muted');
+      }
+    }
+  }
+
+  // Toggle sound with keyboard 's' or button click
+  function toggleSound() {
+    soundEnabled = !soundEnabled;
+    if (!soundEnabled) {
+      stopAmbient();
+      clearTimeout(fireplaceTimer);
+      showToast('🔇 环境音已关闭');
+    } else {
+      switchAmbient();
+      showToast('🔊 环境音已开启');
+    }
+    updateSoundToggle();
+  }
+
+  var soundBtn = document.getElementById('soundToggle');
+  if (soundBtn) {
+    soundBtn.addEventListener('click', function() {
+      if (!audioStarted) { initAudio(); audioStarted = true; }
+      toggleSound();
+    });
+  }
+
   document.addEventListener('keydown', function(e) {
     if (e.key === 's' && !e.ctrlKey && !e.metaKey && !e.altKey) {
       var target = e.target;
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
-      soundEnabled = !soundEnabled;
-      if (!soundEnabled) {
-        stopAmbient();
-        clearTimeout(fireplaceTimer);
-        showToast('🔇 环境音已关闭');
-      } else {
-        switchAmbient();
-        showToast('🔊 环境音已开启');
-      }
+      if (!audioStarted) { initAudio(); audioStarted = true; }
+      toggleSound();
     }
   });
 
