@@ -368,81 +368,124 @@ const { title, description, image } = Astro.props;
     }
   }
 
-  // Brown noise generator (for wind)
-  function createBrownNoiseFilter() {
-    var bufferSize = 2 * audioCtx.sampleRate;
-    var buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-    var data = buffer.getChannelData(0);
-    var lastOut = 0;
-    for (var i = 0; i < bufferSize; i++) {
-      var white = Math.random() * 2 - 1;
-      data[i] = (lastOut + (0.02 * white)) / 1.02;
-      lastOut = data[i];
-      data[i] *= 3.5;
-    }
-    return buffer;
-  }
+  // ============================================================
+  // Ambient Sounds — Meadow (day) / Cabin Hearth (night)
+  // ============================================================
 
-  // Wind: brown noise → lowpass 400Hz → low gain
-  function playWind() {
+  // Day: Meadow breeze — gentle filtered noise + occasional bird chirps
+  function playMeadow() {
     if (!audioCtx || !soundEnabled) return;
     stopAmbient();
+
+    // Pink-ish noise (gentle grass breeze)
+    var bufSize = audioCtx.sampleRate * 3;
+    var noiseBuffer = audioCtx.createBuffer(1, bufSize, audioCtx.sampleRate);
+    var nd = noiseBuffer.getChannelData(0);
+    var b0 = 0, b1 = 0, b2 = 0;
+    for (var i = 0; i < bufSize; i++) {
+      var white = Math.random() * 2 - 1;
+      b0 = 0.99886 * b0 + white * 0.0555179;
+      b1 = 0.99332 * b1 + white * 0.0750759;
+      b2 = 0.96900 * b2 + white * 0.1538520;
+      nd[i] = (b0 + b1 + b2 + white * 0.5362) * 0.11;
+    }
     var noise = audioCtx.createBufferSource();
-    noise.buffer = createBrownNoiseFilter();
+    noise.buffer = noiseBuffer;
     noise.loop = true;
     var lowpass = audioCtx.createBiquadFilter();
     lowpass.type = 'lowpass';
-    lowpass.frequency.value = 400;
-    var gain = audioCtx.createGain();
-    gain.gain.value = 0.04;
+    lowpass.frequency.value = 600;
+    var noiseGain = audioCtx.createGain();
+    noiseGain.gain.value = 0.03;
     noise.connect(lowpass);
-    lowpass.connect(gain);
-    gain.connect(audioCtx.destination);
+    lowpass.connect(noiseGain);
+    noiseGain.connect(audioCtx.destination);
     noise.start();
-    ambientSound = noise;
+
+    // Birdsong: occasional soft harmonic chirps
+    var chirping = true;
+    function scheduleChirp() {
+      if (!chirping) return;
+      var now = audioCtx.currentTime;
+      var freq = 1800 + Math.random() * 2200; // 1800-4000Hz
+      var osc = audioCtx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      var g = audioCtx.createGain();
+      g.gain.setValueAtTime(0, now);
+      g.gain.linearRampToValueAtTime(0.015, now + 0.01);
+      g.gain.exponentialRampToValueAtTime(0.001, now + 0.15 + Math.random() * 0.2);
+      osc.connect(g);
+      g.connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + 0.2);
+      // Next chirp in 2-8 seconds
+      fireplaceTimer = setTimeout(scheduleChirp, 2000 + Math.random() * 6000);
+    }
+    scheduleChirp();
+    ambientSound = { stop: function() { chirping = false; try { noise.stop(); } catch(e) {} } };
   }
 
-  // Fireplace: random short noise bursts (crackle)
+  // Night: Cabin hearth — low warm drone + fireplace crackle
   var fireplaceTimer = null;
 
-  function playFireplace() {
+  function playCabinHearth() {
     if (!audioCtx || !soundEnabled) return;
     stopAmbient();
-    var gain = audioCtx.createGain();
-    gain.gain.value = 0.06;
-    gain.connect(audioCtx.destination);
-    var running = true;
-    ambientSound = { stop: function() { running = false; try { gain.disconnect(); } catch(e) {} } };
+
+    // Warm room tone: two detuned triangle waves
+    var osc1 = audioCtx.createOscillator();
+    osc1.type = 'triangle';
+    osc1.frequency.value = 65; // Low C
+    var osc2 = audioCtx.createOscillator();
+    osc2.type = 'triangle';
+    osc2.frequency.value = 67.5; // Slightly detuned for warmth beat
+    var droneGain = audioCtx.createGain();
+    droneGain.gain.value = 0.025;
+    osc1.connect(droneGain);
+    osc2.connect(droneGain);
+    droneGain.connect(audioCtx.destination);
+    osc1.start();
+    osc2.start();
+
+    // Fireplace crackle
+    var crackleGain = audioCtx.createGain();
+    crackleGain.gain.value = 0.05;
+    crackleGain.connect(audioCtx.destination);
+    var crackling = true;
     function crackle() {
-      if (!running) return;
-      var dur = 0.01 + Math.random() * 0.04;
+      if (!crackling) return;
+      var dur = 0.015 + Math.random() * 0.05;
       var now = audioCtx.currentTime;
       var src = audioCtx.createBufferSource();
       var buf = audioCtx.createBuffer(1, Math.floor(audioCtx.sampleRate * dur), audioCtx.sampleRate);
       var d = buf.getChannelData(0);
       for (var i = 0; i < d.length; i++) {
-        d[i] = (Math.random() * 2 - 1) * Math.exp(-i / (buf.length * 0.15));
+        d[i] = (Math.random() * 2 - 1) * Math.exp(-i / (buf.length * 0.2));
       }
       src.buffer = buf;
       var g = audioCtx.createGain();
-      g.gain.setValueAtTime(0.1 + Math.random() * 0.4, now);
+      g.gain.setValueAtTime(0.08 + Math.random() * 0.3, now);
       g.gain.exponentialRampToValueAtTime(0.001, now + dur);
       src.connect(g);
-      g.connect(gain);
+      g.connect(crackleGain);
       src.start(now);
       src.stop(now + dur + 0.01);
-      fireplaceTimer = setTimeout(crackle, 40 + Math.random() * 200);
+      fireplaceTimer = setTimeout(crackle, 50 + Math.random() * 250);
     }
     crackle();
+
+    ambientSound = { stop: function() { crackling = false; try { osc1.stop(); osc2.stop(); } catch(e) {} } };
   }
 
   function switchAmbient() {
     var theme = document.documentElement.getAttribute('data-theme');
+    clearTimeout(fireplaceTimer);
+    stopAmbient();
     if (theme === 'night') {
-      clearTimeout(fireplaceTimer);
-      playFireplace();
+      playCabinHearth();
     } else {
-      playWind();
+      playMeadow();
     }
   }
 
@@ -513,4 +556,18 @@ const { title, description, image } = Astro.props;
     }
   });
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+n  // Scroll Reveal — posts fade in as they enter viewport
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -20px 0px" });
+  setTimeout(function() {
+    document.querySelectorAll(".post-card:not(:first-child)").forEach(function(card) {
+      revealObserver.observe(card);
+    });
+  }, 100);
 </script>
