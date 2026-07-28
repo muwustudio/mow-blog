@@ -5,7 +5,6 @@ interface Props {
 
 const { post } = Astro.props;
 
-// Derive tags
 let derivedTags: string[] = [];
 if (post.data.tags && post.data.tags.length > 0) {
   derivedTags = post.data.tags;
@@ -20,18 +19,22 @@ if (post.data.tags && post.data.tags.length > 0) {
 
 const dateObj = post.data.date instanceof Date ? post.data.date : new Date(post.data.date);
 const dateStr = dateObj.toISOString().split('T')[0];
-
 const coverImage: string = post.data.image || '';
 const tagRotations = [-0.5, 1, -1.5, 0.5, -2, 1.5, -1, 0.5, -1.5, 2, -0.5];
 const difficultyLabel = post.data.difficulty || '';
 ---
 
 <article class="post-card" class:list={[{ 'has-cover': !!coverImage }]} data-tags={derivedTags.join(' ')}>
+  {coverImage && (
+    <a href={`/posts/${post.id}`} class="post-card-cover" aria-hidden="true" tabindex="-1">
+      <img src={coverImage} alt="" loading="lazy" />
+    </a>
+  )}
   <div class="post-card-body">
     <div class="post-meta">
       <span class="post-date">{dateStr}</span>
       <span class="post-tags">
-        {derivedTags.map((tag: string, i: number) => (
+        {derivedTags.slice(0, 3).map((tag: string, i: number) => (
           <span class="post-tag" style={`--tag-rot:${tagRotations[i % tagRotations.length]}deg`}>{tag}</span>
         ))}
       </span>
@@ -40,9 +43,4 @@ const difficultyLabel = post.data.difficulty || '';
     {post.data.description && <p class="post-excerpt">{post.data.description}</p>}
     {difficultyLabel && <span class="post-difficulty">{difficultyLabel}</span>}
   </div>
-  {coverImage && (
-    <div class="post-card-cover">
-      <img src={coverImage} alt={post.data.title} loading="lazy" />
-    </div>
-  )}
 </article>
