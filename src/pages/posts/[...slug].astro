@@ -38,7 +38,6 @@ const tags = post.data.tags && post.data.tags.length > 0
         {tags.map((tag: string) => (
           <span class="post-tag" style="background:var(--tag-bg);color:var(--tag-text);padding:3px 12px;border-radius:10px;font-size:0.84rem;">{tag}</span>
         ))}
-        <span class="post-difficulty">{post.data.difficulty}</span>
       </div>
     </header>
 

@@ -5,9 +5,7 @@ project: 其他
 type: 教程
 tech: [工具链]
 difficulty: 基础
-tags:
-  - 博客搭建
-  - 教程
+tags: []
 description: "手把手教你用Hugo + GitHub Pages + Stack主题搭建一个免费、快速、美观的个人技术博客"
 ---
 

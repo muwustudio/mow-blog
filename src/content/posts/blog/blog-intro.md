@@ -5,9 +5,7 @@ project: 白屋
 type: 设计决策
 tech: []
 difficulty: 基础
-tags:
-  - 牧屋
-  - 独立游戏
+tags: []
 description: "介绍牧屋工作室和我的游戏开发计划"
 ---
 

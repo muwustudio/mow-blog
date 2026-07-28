@@ -24,17 +24,15 @@ for (const post of allPosts) {
   if (post.data.project) projectSet.add(post.data.project);
 }
 
-// Build tag array with "全部" first
-const totalCount = allPosts.length;
-const tagCloud = [
-  { name: '全部', count: totalCount },
-  ...[...tagMap.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([name, count]) => ({ name, count })),
-];
+// Build tag array — only tags appearing on ≥2 posts
+const tagCloud = [...tagMap.entries()]
+  .filter(([, count]) => count >= 2)
+  .sort((a, b) => b[1] - a[1])
+  .map(([name, count]) => ({ name, count }));
 
 const projectCount = projectSet.size;
 const tagTypeCount = tagMap.size;
+const totalCount = allPosts.length;
 ---
 
 <MainLayout>

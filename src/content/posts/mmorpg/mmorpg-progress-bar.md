@@ -5,10 +5,7 @@ project: MMORPG
 type: 踩坑记录
 tech: [C#, Unity]
 difficulty: 进阶
-tags:
-  - MMORPG
-  - UI
-  - 进度条
+tags: []
 description: "MMORPG学习项目 — 协程IEnumerator、Mathf.RoundToInt、SceneManager.LoadScene"
 ---
 
