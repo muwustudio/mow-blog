@@ -139,17 +139,14 @@
 }
 
 /* ============================================
-   滚动揭示动画
+   滚动揭示动画（渐进增强 — 所有卡片默认可见）
    ============================================ */
-.post-card {
+.post-card:not(.revealed):not(:first-of-type) {
   opacity: 0;
   transform: translateY(24px);
 }
-.post-card.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-.post-card:first-child {
+.post-card.revealed,
+.post-card:first-of-type {
   opacity: 1;
   transform: none;
 }
