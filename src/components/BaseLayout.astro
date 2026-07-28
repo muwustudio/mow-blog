@@ -7,10 +7,12 @@ import { SITE } from '../site.config';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 const pageTitle = title ? `${title} — ${SITE.title}` : `${SITE.title} — ${SITE.subtitle}`;
 const pageDesc = description || SITE.description;
+const ogImage = image ? `${SITE.url}${image}` : SITE.ogImage;
 ---
 <!DOCTYPE html>
 <html lang={SITE.lang}>
@@ -25,7 +27,7 @@ const pageDesc = description || SITE.description;
   <meta property="og:description" content={pageDesc} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={SITE.url} />
-  <meta property="og:image" content={SITE.ogImage} />
+  <meta property="og:image" content={ogImage} />
 
   <!-- FOUC prevention: blocking inline script before first paint -->
   <script is:inline>

@@ -10,7 +10,7 @@ export const SITE = {
   description: '一个游戏开发者的个人空间 — UE5 C++ 游戏开发、图形学、架构设计',
   url: 'https://mow-blog.pages.dev',
   lang: 'zh-CN',
-  ogImage: '/assets/og-image.jpg',
+  ogImage: 'https://mow-blog.pages.dev/assets/og-image.jpg',
 };
 
 export const NAV = [

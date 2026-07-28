@@ -64,6 +64,28 @@ description: "一句话描述"
 
 ---
 
+## 封面图
+
+每篇文章可选一张封面图，在首页卡片和文章详情页展示。
+
+```yaml
+image: "/assets/posts/ue5/game1/cover.webp"
+```
+
+规则：
+- `image` 字段可选 — 不填则无封面图（保持纯文本卡片外观）
+- 封面图放在 `public/assets/posts/{项目}/{post-slug}/` 下
+- 首页卡片：显示 180px 高的缩略图
+- 文章详情页：显示 360px 高的头图横幅
+- 社交分享 OG image：有封面图时自动使用，无则用全局默认图
+- 格式建议：WebP，宽 1200px，≤200KB
+
+### 默认 OG 图
+
+全局默认 OG 图放在 `public/assets/og-image.jpg`。用于没有单独封面图的文章在社交媒体分享时显示。
+
+---
+
 ## 媒体资源
 
 ```

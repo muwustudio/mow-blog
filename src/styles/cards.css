@@ -87,6 +87,21 @@
   transition: color var(--transition-theme);
 }
 
+/* 封面缩略图 */
+.post-card-image {
+  margin-bottom: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 180px;
+}
+
+.post-card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
 .post-card h3 a { text-decoration: none; color: inherit; }
 
 .post-excerpt {

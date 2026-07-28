@@ -22,6 +22,9 @@ if (post.data.tags && post.data.tags.length > 0) {
 const dateObj = post.data.date instanceof Date ? post.data.date : new Date(post.data.date);
 const dateStr = dateObj.toISOString().split('T')[0];
 
+// Cover image (optional)
+const coverImage: string = post.data.image || '';
+
 // Rotation values for tags
 const tagRotations = [-0.5, 1, -1.5, 0.5, -2, 1.5, -1, 0.5, -1.5, 2, -0.5];
 
@@ -30,6 +33,11 @@ const difficultyLabel = post.data.difficulty || '';
 ---
 
 <article class="post-card" data-tags={derivedTags.join(' ')}>
+  {coverImage && (
+    <div class="post-card-image">
+      <img src={coverImage} alt={post.data.title} loading="lazy" />
+    </div>
+  )}
   <div class="post-meta">
     <span class="post-date">{dateStr}</span>
     <span class="post-tags">
