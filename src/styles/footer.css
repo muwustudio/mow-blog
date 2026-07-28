@@ -40,7 +40,9 @@
   }
 
   .footer-whisper {
-    font-style: italic; opacity: 0.5; font-size: 0.83rem;
+    font-family: var(--font-handwriting);
+    font-style: normal; opacity: 0.6; font-size: 1rem;
+    letter-spacing: 0.06em;
   }
 
   /* ============================================

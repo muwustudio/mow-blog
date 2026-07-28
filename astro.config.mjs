@@ -7,4 +7,9 @@ export default defineConfig({
   build: {
     assets: 'assets',
   },
+  markdown: {
+    shikiConfig: {
+      theme: 'css-variables',
+    },
+  },
 });

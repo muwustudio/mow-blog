@@ -102,8 +102,64 @@
     margin-bottom: 18px;
   }
 
+  /* --- Rich content typography (post body) --- */
+  .post-content-card h1 { font-size: 1.8rem; font-weight: 700; margin: 1.6em 0 0.6em; line-height: 1.3; }
+  .post-content-card h1:first-child { margin-top: 0; }
+  .post-content-card h2 {
+    font-size: 1.45rem; font-weight: 700; margin: 1.5em 0 0.5em;
+    padding-bottom: 0.4em; border-bottom: 1px solid var(--divider);
+    line-height: 1.3; transition: border-color var(--transition-theme);
+  }
+  .post-content-card h2:first-child { margin-top: 0; }
+  .post-content-card h3 { font-size: 1.2rem; font-weight: 600; margin: 1.3em 0 0.4em; line-height: 1.35; }
+  .post-content-card h3:first-child { margin-top: 0; }
+  .post-content-card h4 { font-size: 1.05rem; font-weight: 600; margin: 1.1em 0 0.35em; line-height: 1.4; }
+  .post-content-card h4:first-child { margin-top: 0; }
+
+  .post-content-card p { margin: 0 0 1em; line-height: 1.9; }
+  .post-content-card p:last-child { margin-bottom: 0; }
+
+  .post-content-card a {
+    color: var(--accent); text-decoration: none;
+    border-bottom: 1.5px solid var(--divider);
+    transition: all 0.2s, border-color var(--transition-theme);
+  }
+  .post-content-card a:hover { border-bottom-color: var(--accent); }
+
+  .post-content-card strong { font-weight: 700; color: var(--text); }
+  .post-content-card em { font-style: italic; }
+
+  .post-content-card ul, .post-content-card ol { margin: 0 0 1em; padding-left: 1.6em; line-height: 1.9; }
+  .post-content-card li { margin-bottom: 0.35em; }
+  .post-content-card li:last-child { margin-bottom: 0; }
+  .post-content-card ul ul, .post-content-card ol ol, .post-content-card ul ol, .post-content-card ol ul { margin-top: 0.35em; margin-bottom: 0; }
+
+  .post-content-card blockquote {
+    margin: 1.2em 0; padding: 14px 20px;
+    border-left: 3px solid var(--accent);
+    background: var(--tag-bg);
+    border-radius: 0 8px 8px 0;
+    color: var(--text-secondary);
+    transition: background var(--transition-theme), color var(--transition-theme);
+  }
+  .post-content-card blockquote p { margin-bottom: 0.5em; }
+  .post-content-card blockquote p:last-child { margin-bottom: 0; }
+
+  .post-content-card img { max-width: 100%; height: auto; border-radius: 8px; margin: 1.2em 0; }
+  .post-content-card hr { border: none; border-top: 1px solid var(--divider); margin: 2em 0; transition: border-color var(--transition-theme); }
+
+  .post-content-card table { width: 100%; border-collapse: collapse; margin: 1.2em 0; font-size: 0.93rem; }
+  .post-content-card th, .post-content-card td {
+    padding: 10px 14px; border: 1px solid var(--divider);
+    text-align: left; transition: border-color var(--transition-theme);
+  }
+  .post-content-card th { background: var(--tag-bg); font-weight: 600; transition: background var(--transition-theme); }
+
+  .post-content-card pre { margin: 1.2em 0; }
+
+
   /* ============================================
-     Code Blocks — Typora-inspired
+     Code Blocks — Shiki syntax highlighting
      ============================================ */
   code {
     font-family: var(--font-mono);
@@ -111,21 +167,21 @@
   }
 
   :not(pre) > code {
-    background: var(--code-inline-bg);
-    color: var(--code-inline-text);
+    background: var(--tag-bg);
+    color: var(--tag-text);
     padding: 2px 7px;
     border-radius: 4px;
     font-size: 0.88em;
   }
 
   pre {
-    background: var(--code-bg);
-    border: 1px solid var(--code-border);
+    background: var(--astro-code-background);
+    border: 1px solid var(--divider);
     border-radius: 10px;
     padding: 20px 24px;
     overflow-x: auto;
     margin: 18px 0;
-    line-height: 1.6;
+    line-height: 1.7;
     font-family: var(--font-mono);
     font-size: 0.9rem;
   }
@@ -134,23 +190,5 @@
     background: none;
     padding: 0;
     font-size: inherit;
-    color: var(--code-text);
-  }
-
-  /* Syntax highlighting — day theme */
-  [data-theme="day"] {
-    --code-bg: #faf8f5;
-    --code-border: rgba(139, 90, 43, 0.15);
-    --code-text: #3d3226;
-    --code-inline-bg: rgba(139, 90, 43, 0.08);
-    --code-inline-text: #8b5a2b;
-  }
-
-  /* Syntax highlighting — night theme */
-  [data-theme="night"] {
-    --code-bg: #1e1a16;
-    --code-border: rgba(180, 140, 100, 0.15);
-    --code-text: #d4c5b2;
-    --code-inline-bg: rgba(212, 165, 116, 0.12);
-    --code-inline-text: #d4a574;
+    color: var(--astro-code-foreground);
   }

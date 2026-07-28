@@ -6,6 +6,7 @@ type: 设计决策
 tech: []
 difficulty: 基础
 tags: []
+image: "/assets/baymax.jpg"
 description: "介绍牧屋工作室和我的游戏开发计划"
 ---
 
