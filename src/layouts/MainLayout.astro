@@ -556,7 +556,8 @@ const { title, description, image } = Astro.props;
     }
   });
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-n  // Scroll Reveal — posts fade in as they enter viewport
+
+  // Scroll Reveal — posts fade in as they enter viewport
   var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
