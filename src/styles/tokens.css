@@ -5,7 +5,8 @@
     --bg-day: url('/assets/mu01.jpg');
     --bg-night: url('/assets/mu02.jpg');
     --transition-theme: 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --font-display: 'Playfair Display', 'Noto Serif SC', serif;
+    --font-display: 'Cormorant Garamond', 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
     --font-body: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
   }
 

@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+
+// Group by project
+const projectMap = new Map<string, { posts: typeof allPosts; description: string; icon: string }>();
+const projectMeta: Record<string, { description: string; icon: string }> = {
+  '四游戏-1': { description: 'UE5 C++ 从零到一 — 障碍突袭 3D 跑酷游戏', icon: '🎮' },
+  '四游戏-2': { description: 'UE5 C++ 进阶项目', icon: '🎯' },
+  '四游戏-3': { description: 'UE5 C++ 高级项目', icon: '⚔️' },
+  '四游戏-4': { description: 'UE5 C++ 综合项目', icon: '🏆' },
+  'MMORPG': { description: 'Unity 大型多人在线角色扮演游戏开发', icon: '🌍' },
+  '白屋': { description: 'AI 多 Agent 协作系统', icon: '🤖' },
+  '其他': { description: '读书笔记、随想与杂谈', icon: '📖' },
+};
+
+for (const post of allPosts) {
+  const project = post.data.project;
+  if (!projectMap.has(project)) {
+    projectMap.set(project, {
+      posts: [],
+      description: projectMeta[project]?.description || '',
+      icon: projectMeta[project]?.icon || '📌',
+    });
+  }
+  projectMap.get(project)!.posts.push(post);
+}
+---
+
+<MainLayout title="项目" description="牧屋的所有项目">
+  <div style="max-width:820px;margin:0 auto;padding:60px 32px 100px;">
+    <header style="text-align:center;margin-bottom:48px;">
+      <h1 style="font-size:clamp(1.8rem,4vw,2.4rem);font-weight:700;color:var(--text);">项目</h1>
+      <p style="color:var(--text-secondary);margin-top:8px;">代码 · 阅读 · 吉他 · 日落</p>
+    </header>
+
+    <div style="display:grid;gap:20px;">
+      {[...projectMap.entries()].map(([project, { posts, description, icon }]) => (
+        <div class="project-card" style="background:var(--card-bg);backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:14px;padding:24px 28px;box-shadow:var(--card-shadow);">
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:12px;">
+            <span style="font-size:1.6rem;">{icon}</span>
+            <div>
+              <h2 style="font-size:1.2rem;font-weight:700;color:var(--text);margin:0;">{project}</h2>
+              {description && <p style="color:var(--text-muted);font-size:0.9rem;margin:4px 0 0;">{description}</p>}
+            </div>
+            <span style="margin-left:auto;font-size:0.84rem;color:var(--text-muted);">{posts.length} 篇</span>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;">
+            {posts.map(post => (
+              <li style="padding:6px 0;border-bottom:1px solid var(--divider);">
+                <a href={`/posts/${post.id}`} style="color:var(--accent);text-decoration:none;font-size:0.95rem;">
+                  {post.data.title}
+                </a>
+                <span style="float:right;color:var(--text-muted);font-size:0.82rem;">
+                  {post.data.date instanceof Date ? post.data.date.toISOString().split('T')[0] : ''}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <footer style="margin-top:60px;padding-top:30px;border-top:1px solid var(--divider);text-align:center;">
+      <a href="/" style="color:var(--accent);text-decoration:none;font-size:0.95rem;">← 返回首页</a>
+    </footer>
+  </div>
+</MainLayout>

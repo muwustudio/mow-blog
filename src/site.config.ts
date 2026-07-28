@@ -16,8 +16,7 @@ export const SITE = {
 export const NAV = [
   { label: '文章', href: '/', icon: 'book' },
   { label: '项目', href: '/projects', icon: 'folder' },
-  { label: '标签', href: '/tags', icon: 'tag' },
-  { label: '关于', href: '/about', icon: 'user' },
+  { label: '关于', href: '/about', icon: 'heart' },
 ];
 
 export const SOCIAL = [

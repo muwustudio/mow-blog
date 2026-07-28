@@ -47,32 +47,37 @@
   }
 
   .hero h1 {
-    font-size: clamp(2.4rem, 6vw, 3.8rem);
-    font-weight: 700; color: var(--text);
-    margin-bottom: 12px; letter-spacing: 0.02em; line-height: 1.25;
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-family: var(--font-display); font-weight: 400; color: var(--text);
+    margin-bottom: 12px; letter-spacing: 0.01em; line-height: 1.2;
     transition: color var(--transition-theme);
   }
 
   /* 双主题标语 — 纯 CSS [data-theme] 控制显隐 */
   .hero-line-day,
   .hero-line-night {
+    letter-spacing: 0.04em;
     display: block;
   }
 
   .hero-line-day {
-    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+    
     font-style: italic;
     font-weight: 400;
   }
 
   .hero-line-night {
-    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+    
     font-style: normal;
     font-weight: 500;
   }
 
-  [data-theme="day"] .hero-line-night { display: none; }
-  [data-theme="night"] .hero-line-day { display: none; }
+  [data-theme="day"] .hero-line-night {
+    letter-spacing: 0.04em; display: none; }
+  [data-theme="night"] .hero-line-day {
+    letter-spacing: 0.02em; display: none; }
 
   .hero .bio {
     font-size: 1.05rem; color: var(--text-secondary);

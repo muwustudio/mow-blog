@@ -1,0 +1,53 @@
+---
+import { SITE, SOCIAL, HERO } from '../../site.config';
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="关于" description="关于牧屋和 Castiel">
+  <div style="max-width:680px;margin:0 auto;padding:60px 32px 100px;">
+    <header style="text-align:center;margin-bottom:48px;">
+      <div style="width:80px;height:80px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:3px solid var(--avatar-border);">
+        <img src="/assets/head.jpeg" alt="Castiel" style="width:100%;height:100%;object-fit:cover;" />
+      </div>
+      <h1 style="font-size:clamp(1.6rem,3vw,2rem);font-weight:700;color:var(--text);">关于牧屋</h1>
+    </header>
+
+    <div class="post-content-card" style="margin-bottom:20px;">
+      <p style="color:var(--text);line-height:1.9;">{HERO.bioExtended}</p>
+      <p style="color:var(--text-secondary);line-height:1.9;margin-top:12px;">
+        牧屋是 Castiel 的数字小木屋。这里记录了一个游戏开发者的学习历程 —
+        UE5 C++ 游戏开发、图形学、引擎架构，以及一些读书笔记和随想。
+      </p>
+      <p style="color:var(--text-secondary);line-height:1.9;margin-top:12px;">
+        博客基于 Astro 7 构建，部署在 Cloudflare Pages。
+        主题设计灵感来自草原与木屋 — 白天是"Dreams from the Meadow"，夜晚是"Where Ideas Roam Free"。
+      </p>
+    </div>
+
+    <div class="post-content-card" style="margin-bottom:20px;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:16px;">📬 找到我</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        {SOCIAL.map(s => (
+          <a href={s.href} target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:var(--tag-bg);color:var(--tag-text);border-radius:20px;text-decoration:none;font-size:0.9rem;transition:all 0.2s;">
+            <svg class="icon" style="width:1em;height:1em;"><use href={`#icon-${s.icon}`}/></svg>
+            {s.label}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="post-content-card">
+      <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:16px;">🛠 技术栈</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        {['Astro 7','Cloudflare Pages','UE5','C++','C#','Unity','Vanilla JS','CSS'].map(t => (
+          <span style="padding:4px 12px;background:var(--tag-bg);color:var(--tag-text);border-radius:9px;font-size:0.84rem;">{t}</span>
+        ))}
+      </div>
+    </div>
+
+    <footer style="margin-top:60px;padding-top:30px;border-top:1px solid var(--divider);text-align:center;">
+      <a href="/" style="color:var(--accent);text-decoration:none;font-size:0.95rem;">← 返回首页</a>
+    </footer>
+  </div>
+</MainLayout>

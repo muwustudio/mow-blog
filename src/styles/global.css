@@ -1,7 +1,7 @@
   /* ============================================
      Reset & Base
      ============================================ */
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Noto+Serif+SC:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@400;500;700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -100,4 +100,57 @@
     border-radius: 14px;
     padding: 28px 32px;
     margin-bottom: 18px;
+  }
+
+  /* ============================================
+     Code Blocks — Typora-inspired
+     ============================================ */
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  :not(pre) > code {
+    background: var(--code-inline-bg);
+    color: var(--code-inline-text);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    overflow-x: auto;
+    margin: 18px 0;
+    line-height: 1.6;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    color: var(--code-text);
+  }
+
+  /* Syntax highlighting — day theme */
+  [data-theme="day"] {
+    --code-bg: #faf8f5;
+    --code-border: rgba(139, 90, 43, 0.15);
+    --code-text: #3d3226;
+    --code-inline-bg: rgba(139, 90, 43, 0.08);
+    --code-inline-text: #8b5a2b;
+  }
+
+  /* Syntax highlighting — night theme */
+  [data-theme="night"] {
+    --code-bg: #1e1a16;
+    --code-border: rgba(180, 140, 100, 0.15);
+    --code-text: #d4c5b2;
+    --code-inline-bg: rgba(212, 165, 116, 0.12);
+    --code-inline-text: #d4a574;
   }

@@ -358,6 +358,7 @@ const { title, description, image } = Astro.props;
   function initAudio() {
     if (audioCtx) return;
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
   }
 
   function stopAmbient() {
